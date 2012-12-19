@@ -1,0 +1,386 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BECE5AA-A34F-4B6E-84B8-E1B12464C6B6}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>TapirDotNETAdmin</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Uddi.Sdk, Version=2.0.2128.1, Culture=neutral, PublicKeyToken=a48752033f5d4384">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Include\Microsoft.Uddi.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>system.xml</Name>
+    </Reference>
+    <ProjectReference Include="..\TapirDotNETClasses\TapirDotNETClasses.csproj">
+      <Name>TapirDotNETClasses</Name>
+      <Project>{88934C83-3394-409F-877C-396062B944AF}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="check.aspx.cs">
+      <DependentUpon>check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="check.aspx.designer.cs">
+      <DependentUpon>check.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configurator.aspx.cs">
+      <DependentUpon>configurator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configurator.aspx.designer.cs">
+      <DependentUpon>configurator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FixedValueMappingControl.ascx.cs">
+      <DependentUpon>FixedValueMappingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FixedValueMappingControl.ascx.designer.cs">
+      <DependentUpon>FixedValueMappingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\help.tmpl.aspx.cs">
+      <DependentUpon>help.tmpl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\help.tmpl.aspx.designer.cs">
+      <DependentUpon>help.tmpl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HelpForm.ascx.cs">
+      <DependentUpon>HelpForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HelpForm.ascx.designer.cs">
+      <DependentUpon>HelpForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LSIDDataMappingControl.ascx.cs">
+      <DependentUpon>LSIDDataMappingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LSIDDataMappingControl.ascx.designer.cs">
+      <DependentUpon>LSIDDataMappingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageControl.ascx.cs">
+      <DependentUpon>MessageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MessageControl.ascx.designer.cs">
+      <DependentUpon>MessageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SingleColumnMappingControl.ascx.cs">
+      <DependentUpon>SingleColumnMappingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SingleColumnMappingControl.ascx.designer.cs">
+      <DependentUpon>SingleColumnMappingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\tapir_client.ascx.cs">
+      <DependentUpon>tapir_client.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\tapir_client.ascx.designer.cs">
+      <DependentUpon>tapir_client.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpDataSourceForm.ascx.cs">
+      <DependentUpon>TpDataSourceForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpDataSourceForm.ascx.designer.cs">
+      <DependentUpon>TpDataSourceForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpImportForm.ascx.cs">
+      <DependentUpon>TpImportForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpImportForm.ascx.designer.cs">
+      <DependentUpon>TpImportForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpLocalFilterForm.ascx.cs">
+      <DependentUpon>TpLocalFilterForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpLocalFilterForm.ascx.designer.cs">
+      <DependentUpon>TpLocalFilterForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpMappingForm.ascx.cs">
+      <DependentUpon>TpMappingForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpMappingForm.ascx.designer.cs">
+      <DependentUpon>TpMappingForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpMetadataForm.ascx.cs">
+      <DependentUpon>TpMetadataForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpMetadataForm.ascx.designer.cs">
+      <DependentUpon>TpMetadataForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpResourceForm.ascx.cs">
+      <DependentUpon>TpResourceForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpResourceForm.ascx.designer.cs">
+      <DependentUpon>TpResourceForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpSettingsForm.ascx.cs">
+      <DependentUpon>TpSettingsForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpSettingsForm.ascx.designer.cs">
+      <DependentUpon>TpSettingsForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpTablesForm.ascx.cs">
+      <DependentUpon>TpTablesForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpTablesForm.ascx.designer.cs">
+      <DependentUpon>TpTablesForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TpUddiForm.ascx.cs">
+      <DependentUpon>TpUddiForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TpUddiForm.ascx.designer.cs">
+      <DependentUpon>TpUddiForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\wizard_footer.ascx.cs">
+      <DependentUpon>wizard_footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\wizard_footer.ascx.designer.cs">
+      <DependentUpon>wizard_footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\wizard_header.ascx.cs">
+      <DependentUpon>wizard_header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\wizard_header.ascx.designer.cs">
+      <DependentUpon>wizard_header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="help.aspx.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="help.aspx.designer.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Content Include="check.aspx" />
+    <Content Include="configurator.aspx" />
+    <Content Include="Controls\FixedValueMappingControl.ascx" />
+    <Content Include="Controls\help.tmpl.aspx" />
+    <Content Include="Controls\HelpForm.ascx" />
+    <Content Include="Controls\LSIDDataMappingControl.ascx" />
+    <Content Include="Controls\MessageControl.ascx" />
+    <Content Include="Controls\SingleColumnMappingControl.ascx" />
+    <Content Include="Controls\tapir_client.ascx" />
+    <Content Include="Controls\TpDataSourceForm.ascx" />
+    <Content Include="Controls\TpImportForm.ascx" />
+    <Content Include="Controls\TpLocalFilterForm.ascx" />
+    <Content Include="Controls\TpMappingForm.ascx" />
+    <Content Include="Controls\TpMetadataForm.ascx" />
+    <Content Include="Controls\TpResourceForm.ascx" />
+    <Content Include="Controls\TpSettingsForm.ascx" />
+    <Content Include="Controls\TpTablesForm.ascx" />
+    <Content Include="Controls\TpUddiForm.ascx" />
+    <Content Include="Controls\wizard_footer.ascx" />
+    <Content Include="Controls\wizard_header.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="help.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="layout.css" />
+    <Content Include="utils.js" />
+    <Content Include="Web.config" />
+    <EmbeddedResource Include="check.aspx.resx">
+      <DependentUpon>check.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurator.aspx.resx">
+      <DependentUpon>configurator.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FixedValueMappingControl.ascx.resx">
+      <DependentUpon>FixedValueMappingControl.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\help.tmpl.aspx.resx">
+      <DependentUpon>help.tmpl.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HelpForm.ascx.resx">
+      <DependentUpon>HelpForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LSIDDataMappingControl.ascx.resx">
+      <DependentUpon>LSIDDataMappingControl.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MessageControl.ascx.resx">
+      <DependentUpon>MessageControl.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SingleColumnMappingControl.ascx.resx">
+      <DependentUpon>SingleColumnMappingControl.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\tapir_client.ascx.resx">
+      <DependentUpon>tapir_client.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TpDataSourceForm.ascx.resx">
+      <DependentUpon>TpDataSourceForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TpLocalFilterForm.ascx.resx">
+      <DependentUpon>TpLocalFilterForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TpMappingForm.ascx.resx">
+      <DependentUpon>TpMappingForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TpMetadataForm.ascx.resx">
+      <DependentUpon>TpMetadataForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TpResourceForm.ascx.resx">
+      <DependentUpon>TpResourceForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TpSettingsForm.ascx.resx">
+      <DependentUpon>TpSettingsForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TpTablesForm.ascx.resx">
+      <DependentUpon>TpTablesForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TpUddiForm.ascx.resx">
+      <DependentUpon>TpUddiForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\wizard_footer.ascx.resx">
+      <DependentUpon>wizard_footer.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="help.aspx.resx">
+      <DependentUpon>help.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="index.aspx.resx">
+      <DependentUpon>index.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://cssgromit/tapirdotnetadmin</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

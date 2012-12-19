@@ -1,0 +1,120 @@
+>> System message: Could not import content from XML file (D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml) : Could not find file 'D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml'.
+>> System message: SQL to count: SELECT vwIxFungorum.NAME OF FUNGUS AS c0, vwIxFungorum.NameLSID AS c1, count(*) as cnt FROM vwIxFungorum WHERE NOT (upper(IndexFungorum.LAST FIVE YEARS FLAG) = 'X') GROUP BY vwIxFungorum.NAME OF FUNGUS, vwIxFungorum.NameLSID
+Incorrect syntax near the keyword 'OF'.:   at System.Data.OleDb.OleDbDataReader.ProcessResults(OleDbHResult hr)
+   at System.Data.OleDb.OleDbDataReader.NextResult()
+   at System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   at System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at TapirDotNET.TpDataAccess.Execute(OleDbConnection cn, String sql) in D:\Development\TAPIR\TapirDotNETClasses\classes\TpDataAccess.cs:line 73
+>> Returned Error: Failed to count matched records
+>> System message: Could not import content from XML file (D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml) : Could not find file 'D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml'.
+>> System message: SQL to count: SELECT [vwIxFungorum].[NAME OF FUNGUS] AS c0, [vwIxFungorum].[NameLSID] AS c1, count(*) as cnt FROM vwIxFungorum WHERE NOT (upper([IndexFungorum].[LAST FIVE YEARS FLAG]) = 'X') GROUP BY [vwIxFungorum].[NAME OF FUNGUS], [vwIxFungorum].[NameLSID]
+The multi-part identifier "IndexFungorum.LAST FIVE YEARS FLAG" could not be bound.:   at System.Data.OleDb.OleDbDataReader.ProcessResults(OleDbHResult hr)
+   at System.Data.OleDb.OleDbDataReader.NextResult()
+   at System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   at System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at TapirDotNET.TpDataAccess.Execute(OleDbConnection cn, String sql) in D:\Development\TAPIR\TapirDotNETClasses\classes\TpDataAccess.cs:line 73
+>> Returned Error: Failed to count matched records
+>> System message: Table "IndexFungorum" is referenced by the current filter but does not exist in the database.
+>> System message: Table "IndexFungorum" is referenced by the current filter but does not exist in the database.
+>> System message: Could not import content from XML file (D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml) : Could not find file 'D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml'.
+>> System message: SQL to count: SELECT [vwIxFungorum].[NAME OF FUNGUS] AS c0, [vwIxFungorum].[NameLSID] AS c1, count(*) as cnt FROM vwIxFungorum WHERE NOT (upper([IndexFungorum].[LAST FIVE YEARS FLAG]) = 'X') GROUP BY [vwIxFungorum].[NAME OF FUNGUS], [vwIxFungorum].[NameLSID]
+The multi-part identifier "IndexFungorum.LAST FIVE YEARS FLAG" could not be bound.:   at System.Data.OleDb.OleDbDataReader.ProcessResults(OleDbHResult hr)
+   at System.Data.OleDb.OleDbDataReader.NextResult()
+   at System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   at System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at TapirDotNET.TpDataAccess.Execute(OleDbConnection cn, String sql) in D:\Development\TAPIR\TapirDotNETClasses\classes\TpDataAccess.cs:line 73
+>> Returned Error: Failed to count matched records
+>> System message: Could not import content from XML file (D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml) : Could not find file 'D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml'.
+>> System message: SQL to count: SELECT [vwIxFungorum].[NAME OF FUNGUS] AS c0, [vwIxFungorum].[NameLSID] AS c1, count(*) as cnt FROM vwIxFungorum WHERE NOT (upper([vwIxFungorum].[LAST FIVE YEARS FLAG]) = 'X') GROUP BY [vwIxFungorum].[NAME OF FUNGUS], [vwIxFungorum].[NameLSID]
+>> System message: SQL to get records: SELECT [vwIxFungorum].[NAME OF FUNGUS] AS c0, [vwIxFungorum].[NameLSID] AS c1, count(*) as cnt FROM vwIxFungorum WHERE NOT (upper([vwIxFungorum].[LAST FIVE YEARS FLAG]) = 'X') GROUP BY [vwIxFungorum].[NAME OF FUNGUS], [vwIxFungorum].[NameLSID] ORDER BY [vwIxFungorum].[NAME OF FUNGUS], [vwIxFungorum].[NameLSID]
+>> System message: Could not import content from XML file (D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml) : Could not find file 'D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml'.
+>> System message: SQL to get records: SELECT [vwIxFungorum].[NAME OF FUNGUS] AS c0, [vwIxFungorum].[NameLSID] AS c1 FROM vwIxFungorum WHERE NOT (upper([vwIxFungorum].[LAST FIVE YEARS FLAG]) = 'X') GROUP BY [vwIxFungorum].[NAME OF FUNGUS], [vwIxFungorum].[NameLSID] ORDER BY [vwIxFungorum].[NAME OF FUNGUS], [vwIxFungorum].[NameLSID]
+>> System message: Could not import content from XML file (D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml) : Could not find file 'D:\Development\TAPIR\config\IxFungorum_1_capabilities.xml'.
+>> System message: SQL to get records: SELECT [vwIxFungorum].[NAME OF FUNGUS] AS c0 FROM vwIxFungorum WHERE NOT (upper([vwIxFungorum].[LAST FIVE YEARS FLAG]) = 'X') GROUP BY [vwIxFungorum].[NAME OF FUNGUS] ORDER BY [vwIxFungorum].[NAME OF FUNGUS]
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not find resource identified by code "FRDBI". Please check installation.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not open a database connection using these settings!
+Error : Login failed for user 'dbi_user'.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Concept "GlobalUniqueIdentifier" was not mapped!
+>> System message: Concept "DateLastModified" was not mapped!
+>> System message: Concept "BasisOfRecord" was not mapped!
+>> System message: Concept "InstitutionCode" was not mapped!
+>> System message: Concept "CollectionCode" was not mapped!
+>> System message: Concept "CatalogNumber" was not mapped!
+>> System message: Concept "ScientificName" was not mapped!
+>> System message: Concept "GlobalUniqueIdentifier" was not mapped!
+>> System message: Concept "DateLastModified" was not mapped!
+>> System message: Concept "BasisOfRecord" was not mapped!
+>> System message: Concept "InstitutionCode" was not mapped!
+>> System message: Concept "CollectionCode" was not mapped!
+>> System message: Concept "CatalogNumber" was not mapped!
+>> System message: Concept "ScientificName" was not mapped!
+>> System message: Not a single schema has been mapped.
+It is necessary to map at least one schema.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not find resource identified by code "FRDBI". Please check installation.
+>> System message: Could not find resource identified by code "FRDBI". Please check installation.
+>> System message: Could not find resource identified by code "FRDBI". Please check installation.
+>> System message: Could not find resource identified by code "FRDBI". Please check installation.
+>> System message: Could not load the XML file (frdbi_config.xml) associated with resource "FRDBI". Please check provider installation.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 99, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 99, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 99, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 99, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not load the XML file (frdbi_config.xml) associated with resource "FRDBI". Please check provider installation.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Please, provide a minimum set of data to connect to a SQL database!
+It won't be possible to continue without openning a connection.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not import content from XML file: '', hexadecimal value 0x06, is an invalid character. Line 94, position 67.
+>> System message: Could not import content from XML file: Name cannot begin with the '' character, hexadecimal value 0x06. Line 135, position 7.
+>> System message: Could not import content from XML file: Name cannot begin with the '' character, hexadecimal value 0x06. Line 135, position 7.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: SQL to count: SELECT [vwFRDBI].[NameOfFungus] AS c0, count(*) as cnt FROM vwFRDBI GROUP BY [vwFRDBI].[NameOfFungus]
+>> System message: SQL to get records: SELECT [vwFRDBI].[NameOfFungus] AS c0, count(*) as cnt FROM vwFRDBI GROUP BY [vwFRDBI].[NameOfFungus] ORDER BY [vwFRDBI].[NameOfFungus]
+>> System message: One of the entity acronyms was not specified!
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not find resource identified by code "Cyril". Please check installation.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not open a database connection using these settings!
+Error : Format of the initialization string does not conform to specification starting at index 103.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.
+>> System message: Could not write resources file: error(IO_ERROR):Failed to open file: 'D:\Development\TAPIR\config\resources.xml'.  Access to the path 'D:\Development\TAPIR\config\resources.xml' is denied.

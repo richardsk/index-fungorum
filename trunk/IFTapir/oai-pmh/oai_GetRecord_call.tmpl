@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<request 
+    xmlns="http://rs.tdwg.org/tapir/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://rs.tdwg.org/tapir/1.0 
+                        http://rs.tdwg.org/tapir/1.0/schema/tapir.xsd">
+  <header>
+    <source sendtime="2005-11-11T12:23:56.023+01:00">
+      <software name="tapir_client.aspx" version="1.0"/>
+    </source>
+  </header>
+  <search count="true" start="0" limit="20" envelope="false">
+    <outputModel>
+      <structure>
+        <xs:schema location="http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xsi:schemaLocation="http://www.w3.org/2001/XMLSchema http://www.w3.org/2001/XMLSchema.xsd"/>
+
+      </structure>
+      <indexingElement path="/OAI-PMH/GetRecord/record"/>
+      <mapping>
+        <node path="/OAI-PMH/responseDate">
+          <variable name="date"/>
+        </node>
+        <node path="/OAI-PMH/request/@verb">
+          <literal value="GetRecord"/>
+        </node>
+        <node path="/OAI-PMH/GetRecord/record/header/identifier">
+          <concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:header/oai:identifier"/>
+        </node>
+        <node path="/OAI-PMH/GetRecord/record/header/datestamp">
+          <concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:header/oai:datestamp"/>
+        </node>
+        <node path="/OAI-PMH/GetRecord/record/metadata/any">
+          <concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata"/>
+        </node>
+      </mapping>
+    </outputModel>
+    <filter>
+        <equals>
+          <concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:header/oai:identifier"/>
+          <literal value="[OAIPMH_IDENTIFIER]"/>
+        </equals>
+    </filter>
+  </search>
+</request>

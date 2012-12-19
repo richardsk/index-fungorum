@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <datasource constr="data source=spencern-laptop;initial catalog=cyril;user id=dbi_user;password=dbi_user;persist security info=true" uid="" pwd="" database="" dbtype="sqloledb" encoding="ISO-8859-1" />
+  <table name="tblCyril" key="GlobalUniqueIdentifier" join="">
+  </table>
+  <filter>
+  </filter>
+  <mapping>
+    <schema namespace="http://rs.tdwg.org/dwc/dwcore/" location="http://rs.tdwg.org/dwc/tdwg_dw_core.xsd" alias="DarwinCore" handler="DarwinSchemaHandler_v2">
+      <concept id="http://rs.tdwg.org/dwc/dwcore/GlobalUniqueIdentifier" name="GlobalUniqueIdentifier" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/GlobalUniqueIdentifier" required="true" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="GlobalUniqueIdentifier" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/DateLastModified" name="DateLastModified" type="xs:dateTime" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/DateLastModified" required="true" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="DateLastModified" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/BasisOfRecord" name="BasisOfRecord" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/BasisOfRecord" required="true" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="BasisOfRecord" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/InstitutionCode" name="InstitutionCode" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/InstitutionCode" required="true" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="InstitutionCode" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/CollectionCode" name="CollectionCode" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/CollectionCode" required="true" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="CollectionCode" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/CatalogNumber" name="CatalogNumber" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/CatalogNumber" required="true" searchable="true">
+        <singleColumnMapping type="numeric">
+          <column table="tblCyril" field="CatalogNumber" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/InformationWithheld" name="InformationWithheld" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/InformationWithheld" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Remarks" name="Remarks" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Remarks" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/ScientificName" name="ScientificName" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/ScientificName" required="true" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="ScientificName" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/HigherTaxon" name="HigherTaxon" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/HigherTaxon" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Kingdom" name="Kingdom" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Kingdom" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="Kingdom" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Phylum" name="Phylum" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Phylum" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Class" name="Class" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Class" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Order" name="Order" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Order" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="Order" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Family" name="Family" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Family" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="Family" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Genus" name="Genus" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Genus" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="Genus" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/SpecificEpithet" name="SpecificEpithet" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/SpecificEpithet" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="SpecificEpithet" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/InfraspecificRank" name="InfraspecificRank" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/InfraspecificRank" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="InfraspecificRank" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/InfraspecificEpithet" name="InfraspecificEpithet" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/InfraspecificEpithet" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="InfraspecificEpithet" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/AuthorYearOfScientificName" name="AuthorYearOfScientificName" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/AuthorYearOfScientificName" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="AuthorYearOfScientificName" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/NomenclaturalCode" name="NomenclaturalCode" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/NomenclaturalCode" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="NomenclaturalCode" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/IdentificationQualifier" name="IdentificationQualifier" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/IdentificationQualifier" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="IdentificationQualifier" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/HigherGeography" name="HigherGeography" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/HigherGeography" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Continent" name="Continent" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Continent" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="Continent" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/WaterBody" name="WaterBody" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/WaterBody" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/IslandGroup" name="IslandGroup" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/IslandGroup" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Island" name="Island" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Island" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Country" name="Country" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Country" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="Country" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/StateProvince" name="StateProvince" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/StateProvince" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="StateProvince" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/County" name="County" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/County" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="County" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Locality" name="Locality" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Locality" required="false" searchable="true">
+        <singleColumnMapping type="text">
+          <column table="tblCyril" field="Locality" />
+        </singleColumnMapping>
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/MinimumElevationInMeters" name="MinimumElevationInMeters" type="xs:double" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/MinimumElevationInMeters" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/MaximumElevationInMeters" name="MaximumElevationInMeters" type="xs:double" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/MaximumElevationInMeters" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/MinimumDepthInMeters" name="MinimumDepthInMeters" type="xs:double" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/MinimumDepthInMeters" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/MaximumDepthInMeters" name="MaximumDepthInMeters" type="xs:double" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/MaximumDepthInMeters" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/CollectingMethod" name="CollectingMethod" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/CollectingMethod" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/ValidDistributionFlag" name="ValidDistributionFlag" type="xs:boolean" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/ValidDistributionFlag" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/EarliestDateCollected" name="EarliestDateCollected" type="dwc:DateTimeISO" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/EarliestDateCollected" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/LatestDateCollected" name="LatestDateCollected" type="dwc:DateTimeISO" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/LatestDateCollected" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/DayOfYear" name="DayOfYear" type="dwc:dayOfYearDataType" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/DayOfYear" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Collector" name="Collector" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Collector" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Sex" name="Sex" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Sex" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/LifeStage" name="LifeStage" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/LifeStage" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/Attributes" name="Attributes" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/Attributes" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/ImageURL" name="ImageURL" type="xs:anyURI" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/ImageURL" required="false" searchable="true">
+      </concept>
+      <concept id="http://rs.tdwg.org/dwc/dwcore/RelatedInformation" name="RelatedInformation" type="xs:string" documentation="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/RelatedInformation" required="false" searchable="true">
+      </concept>
+    </schema>
+  </mapping>
+	<settings>
+		<dateLastModified fromField="tblCyril.DateLastModified" />
+		<maxElementRepetitions>200</maxElementRepetitions>
+		<maxElementLevels>20</maxElementLevels>
+	</settings>
+</configuration>

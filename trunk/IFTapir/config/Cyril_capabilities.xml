@@ -1,0 +1,101 @@
+	<capabilities>
+		<operations>
+			<ping/>
+			<metadata/>
+			<capabilities/>
+			<inventory>
+				<anyConcepts/>
+			</inventory>
+			<search>
+				<outputModels>
+					<anyOutputModels>
+						<responseStructure>
+							<basicSchemaLanguage/>
+						</responseStructure>
+					</anyOutputModels>
+				</outputModels>
+			</search>
+		</operations>
+		<requests>
+			<encoding>
+				<kvp/>
+				<xml/>
+			</encoding>
+			<globalParameters>
+				<logOnly>accepted</logOnly>
+			</globalParameters>
+			<filter>
+				<encoding>
+					<expression>
+						<concept/>
+						<literal/>
+						<parameter/>
+						<variable/>
+					</expression>
+					<booleanOperators>
+						<logical>
+							<not/>
+							<and/>
+							<or/>
+						</logical>
+						<comparative>
+							<equals caseSensitive="false"/>
+							<greaterThan/>
+							<greaterThanOrEquals/>
+							<lessThan/>
+							<lessThanOrEquals/>
+							<in/>
+							<isNull/>
+							<like caseSensitive="false"/>
+						</comparative>
+					</booleanOperators>
+				</encoding>
+			</filter>
+		</requests>
+			<concepts>
+		<schema namespace="http://rs.tdwg.org/dwc/dwcore/" location="http://rs.tdwg.org/dwc/tdwg_dw_core.xsd">
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/GlobalUniqueIdentifier</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/DateLastModified</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/BasisOfRecord</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/InstitutionCode</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/CollectionCode</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/CatalogNumber</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/ScientificName</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/Kingdom</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/Order</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/Family</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/Genus</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/SpecificEpithet</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/InfraspecificRank</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/InfraspecificEpithet</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/AuthorYearOfScientificName</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/NomenclaturalCode</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/IdentificationQualifier</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/Continent</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/Country</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/StateProvince</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/County</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/dwc/dwcore/Locality</mappedConcept>
+		</schema>
+	</concepts>
+
+		<variables>
+			<environment>
+				<date/>
+				<timestamp/>
+				<dataSourceName/>
+				<accessPoint/>
+				<lastUpdated/>
+				<dateCreated/>
+				<metadataLanguage/>
+				<dataSourceLanguage/>
+				<dataSourceDescription/>
+				<rights/>
+			</environment>
+		</variables>
+		<settings>
+			<maxElementRepetitions>200</maxElementRepetitions>
+			<maxElementLevels>20</maxElementLevels>
+		</settings>
+	</capabilities>
+	
