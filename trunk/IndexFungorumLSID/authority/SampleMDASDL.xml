@@ -1,0 +1,27 @@
+<lsid-authority name="Sample_RDF" xmlns="http://www.ibm.com/LSID/Standard/ASDL">
+	<services>
+		<service name="Sample_RDF_HTTP">
+			<protocol>http</protocol>
+			<hostname>localhost</hostname>
+			<path>/authority/metadata</path>
+			<port>80</port>
+		</service>
+		<service name="Sample_RDF_SOAP">
+			<soap-endpoint>http://localhost/authority/metadata</soap-endpoint>
+		</service>
+	</services>
+	<lsids>
+		<lsid urn="urn:lsid:lsidsample.org:predicates:*">
+			<meta-data-services>
+				<service-ptr name="Sample_RDF_SOAP" />
+				<service-ptr name="Sample_RDF_HTTP" />
+			</meta-data-services>
+		</lsid>
+		<lsid urn="urn:lsid:lsidsample.org:types:*">
+			<meta-data-services>
+				<service-ptr name="Sample_RDF_SOAP" />
+				<service-ptr name="Sample_RDF_HTTP" />
+			</meta-data-services>
+		</lsid>
+	</lsids>
+</lsid-authority>
