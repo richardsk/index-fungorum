@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <datasource constr="data source=edwinbutler;initial catalog=IndexFungorum;password=fred;persist security info=True;user id=if_user;packet size=4096" uid="" pwd="" database="" dbtype="sqloledb" encoding="ISO-8859-1" />
+  <table name="vwIndexFungorumNames" key="NameLSID" join="">
+  </table>
+  <settings>
+    <dateLastModified fromField="vwIndexFungorumNames.UpdatedDate" />
+    <maxElementRepetitions>200</maxElementRepetitions>
+    <maxElementLevels>20</maxElementLevels>
+  </settings>
+  <filter>
+    <not>
+      <equals>
+        <t_concept table="vwIndexFungorumNames" field="LAST FIVE YEARS FLAG" type="text" />
+        <literal value="X" />
+      </equals>
+    </not>
+  </filter>
+	<mapping>
+		<schema namespace="http://www.openarchives.org/OAI/2.0/" location="http://rs.tdwg.org/ontology/voc/tapir/structure/OAI_PMH/oai_pmh.txt" alias="OAI-PMH" handler="CnsSchemaHandler_v1">
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:Identify/oai:repositoryName" name="identifyRepository" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:Identify/oai:baseURL" name="identifyUrl" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:Identify/oai:protocolVerion" name="identifyVersion" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:Identify/oai:adminEmail" name="identifyEmail" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:Identify/oai:description" name="identifyDescription" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:ListMetadataFormats/oai:metadataFormat/oai:metadataPrefix" name="metadataFormatPrefix" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:ListMetadataFormats/oai:metadataFormat/oai:schema" name="metadataFormatSchema" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:ListMetadataFormats/oai:metadataFormat/oai:metadataNamespace" name="metadataFormatNamespace" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:header/oai:identifier" name="getRecordIdentifier" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="NameLSID" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:header/oai:datestamp" name="getRecordDatestamp" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+				<singleColumnMapping type="datetime">
+					<column table="vwIndexFungorumNames" field="UpdatedDate" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata" name="getRecordMetadata" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+				<lsidDataMapping type="text">
+					<column table="vwIndexFungorumNames" field="NameLSID" />
+				</lsidDataMapping>			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:ListIdentifiers/oai:header/oai:identifier" name="listIdsIdentifier" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="NameLSID" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:ListIdentifiers/oai:header/oai:datestamp" name="listIdsDatestamp" type="http://www.w3.org/2001/XMLSchema:string" required="false" searchable="true">
+				<singleColumnMapping type="datetime">
+					<column table="vwIndexFungorumNames" field="UpdatedDate" />
+				</singleColumnMapping>			</concept>
+		</schema>
+		<schema namespace="http://rs.tdwg.org/ontology/voc/TaxonName#" location="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.txt" alias="TDWG Ontology - TaxonName" handler="CnsSchemaHandler_v1">
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:title" name="dc_title" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dc_title" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="NAME OF FUNGUS" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/owl:sameAs/@rdf:resource" name="owl_sameAs" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#owl_sameAs" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:identifier" name="dc_identifier" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dc_identifier" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="NameLSID" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:creator" name="dc_creator" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dc_creator" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:contributor" name="dc_contributor" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dc_contributor" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:publisher" name="dc_publisher" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dc_publisher" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:license/@rdf:resouce" name="dcterm_license" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_license" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:rightsHolder/@rdf:resouce" name="dcterm_rightsHolder" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_rightsHolder" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:accessRight" name="dcterm_accessRights" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_accessRights" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:date" name="dc_date" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dc_date" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:created" name="dcterm_created" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_created" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:dateSubmitted" name="dcterm_dateSubmitted" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_dateSubmitted" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:modified" name="dcterm_modified" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_modified" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:issued" name="dcterm_issued" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_issued" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:available" name="dcterm_available" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_available" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:isReferencedBy/@rdf:resouce" name="dcterm_isReferencedBy" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_isReferencedBy" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:references/@rdf:resouce" name="dcterm_references" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_references" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:isRequiredBy/@rdf:resouce" name="dcterm_isRequiredBy" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_isRequiredBy" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:relation/@rdf:resouce" name="dc_relation" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dc_relation" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:source/@rdf:resouce" name="dc_source" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dc_source" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:replaces/@rdf:resouce" name="dcterm_replaces" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_replaces" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:provenance" name="dcterm_provenance" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_provenance" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:hasVersion/@rdf:resouce" name="dcterm_hasVersion" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_hasVersion" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dcterm:isVersionOf/@rdf:resouce" name="dcterm_isVersionOf" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#dcterm_isVersionOf" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/owl:versionInfo" name="owl_versionInfo" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#owl_versionInfo" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tcom:isDeprecated" name="tcom_isDeprecated" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#tcom_isDeprecated" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tcom:versionedAs/@rdf:resouce" name="tcom_versionedAs" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#tcom_versionedAs" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tcom:publishedIn" name="tcom_publishedIn" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#tcom_publishedIn" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tcom:publishedInCitation/@rdf:resouce" name="tcom_publishedInCitation" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#tcom_publishedInCitation" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tcom:microReference" name="tcom_microReference" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#tcom_microReference" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:nomenclaturalCode/@rdf:resouce" name="nomenclaturalCode" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#nomenclaturalCode" required="false" searchable="true">
+				<fixedValueMapping type="text">
+					<value v="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+				</fixedValueMapping>			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:nameComplete" name="nameComplete" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#nameComplete" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="NAME OF FUNGUS" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:uninomial" name="uninomial" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#uninomial" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:genusPart" name="genusPart" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#genusPart" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:infragenericEpithet" name="infragenericEpithet" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#infragenericEpithet" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:specificEpithet" name="specificEpithet" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#specificEpithet" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:infraspecificEpithet" name="infraspecificEpithet" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#infraspecificEpithet" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:cultivarNameGroup" name="cultivarNameGroup" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#cultivarNameGroup" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorship" name="authorship" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorship" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="AUTHORS" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:basionymAuthorship" name="basionymAuthorship" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#basionymAuthorship" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:combinationAuthorship" name="combinationAuthorship" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#combinationAuthorship" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorTeam/@rdf:resource" name="authorTeam" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorTeam" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorTeam/tt:Team/tt:hasMember/tt:TeamMember/tt:member/tp:Person/dc:title" name="authorTeamMember" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorTeamMember" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorTeam/tt:Team/tt:hasMember/tt:TeamMember/tt:member/tt:role" name="authorTeamMemberRole" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorTeamMemberRole" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorTeam/tt:Team/tt:hasMember/tt:TeamMember/tt:member/tt:index" name="authorTeamMemberIndex" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorTeamMemberIndex" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorTeam/tt:Team/tt:hasMember/tt:TeamMember/tt:member/tp:Person/tp:alias/tp:PersonNameAlias/tp:surname" name="authorTeamMemberSurname" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorTeamMemberSurname" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorTeam/tt:Team/tt:hasMember/tt:TeamMember/tt:member/tp:Person/tp:alias/tp:PersonNameAlias/tp:forenames" name="authorTeamMemberForenames" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorTeamMemberForenames" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorTeam/tt:Team/tt:hasMember/tt:TeamMember/tt:member/tp:Person/tp:alias/tp:PersonNameAlias/tp:standardForm" name="authorTeamMemberStandardForm" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorTeamMemberStandardForm" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorTeam/tt:Team/tt:hasMember/tt:TeamMember/tt:member/tp:Person/tp:alias/tp:PersonNameAlias/dcterm:conformsTo" name="authorTeamMemberConformsTo" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#authorTeamMemberConformsTo" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasBasionym/@rdf:resouce" name="hasBasionym" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#hasBasionym" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="BasionymLSID" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:basionymFor/@rdf:resouce" name="basionymFor" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#basionymFor" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:rank/@rdf:resouce" name="rank" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#rank" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:rankString" name="rankString" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#rankString" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="INFRASPECIFIC RANK" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:year" name="year" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#year" required="false" searchable="true">
+				<singleColumnMapping type="text">
+					<column table="vwIndexFungorumNames" field="YEAR OF PUBLICATION" />
+				</singleColumnMapping>			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasAnnotation/@rdf:resouce" name="hasAnnotation" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#hasAnnotation" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasAnnotation/tn:NomenclaturalNote/dc:title" name="hasAnnotationTitle" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#hasAnnotationTitle" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasAnnotation/tn:NomenclaturalNote/tn:noteType/@rdf:resource" name="hasAnnotationType" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#hasAnnotationType" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasAnnotation/tn:NomenclaturalNote/tn:objectTaxonName/@rdf:resource" name="hasAnnotationObjectName" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#hasAnnotationObjectName" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasAnnotation/tn:NomenclaturalNote/tn:note" name="hasAnnotationText" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#hasAnnotationText" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasAnnotation/tn:NomenclaturalNote/tn:ruleConsidered" name="hasAnnotationRule" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#hasAnnotationRule" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasAnnotation/tn:NomenclaturalNote/tn:code/@rdf:resource" name="hasAnnotationCode" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#hasAnnotationCode" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:typificationString" name="typificationString" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#typificationString" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:typifiedBy/@rdf:resouce" name="typifiedBy" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#typifiedBy" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:typifiedBy/tn:NomenclaturalType/dc:title" name="typifiedByTitle" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#typifiedByTitle" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:typifiedBy/tn:NomenclaturalType/tn:typeName/@rdf:resource" name="typifiedByName" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#typifiedByName" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:typifiedBy/tn:NomenclaturalType/tn:typeSpecimen/@rdf:resource" name="typifiedBySpecimen" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#typifiedBySpecimen" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:typifiedBy/tn:NomenclaturalType/tn:typeOfType/@rdf:resource" name="typifiedByTypeOfType" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#typifiedByTypeOfType" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:typifiedBy/tn:NomenclaturalType/tcom:publishedIn" name="typifiedByTypeOfType" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#typifiedByTypeOfType" required="false" searchable="true">
+			</concept>
+			<concept id="http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:typifiedBy/tn:NomenclaturalType/tcom:publishedInCitation/@rdf:resource" name="typifiedByTypeOfType" type="http://www.w3.org/2001/XMLSchema:string" documentation="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.html#typifiedByTypeOfType" required="false" searchable="true">
+			</concept>
+		</schema>
+	</mapping>
+</configuration>
