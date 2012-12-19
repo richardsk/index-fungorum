@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<html>
+<head>
+<title>Retirement Timer</title>
+
+<script language="javascript" type="text/javascript">
+
+today  = new Date();
+todayEpoch  = today.getTime();
+
+target = new Date("28 August, 2012"); 
+targetEpoch = target.getTime();
+
+daysLeft = Math.floor(((targetEpoch - todayEpoch) / (60*60*24)) / 1000);
+
+</script>
+
+</head>
+<body>
+
+<h1>Retirement in
+
+<script>document.write(daysLeft);</script>
+
+days ... yipeee
+
+</h1>
+
+</body>
+</html>
