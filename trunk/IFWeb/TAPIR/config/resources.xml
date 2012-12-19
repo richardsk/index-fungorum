@@ -1,0 +1,3 @@
+<resources>
+	<resource code="IndexFungorum" status="active" accesspoint="http://lsid.indexfungorum.org/TapirDotNET/tapir.aspx/IndexFungorum" metadataFile="IndexFungorum_metadata.xml" configFile="IndexFungorum_config.xml" capabilitiesFile="IndexFungorum_capabilities.xml"/>
+</resources>

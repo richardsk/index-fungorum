@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schemas>
+ <schema alias="DarwinCore">
+    <namespace>http://rs.tdwg.org/dwc/dwcore/</namespace>
+    <location>http://rs.tdwg.org/dwc/tdwg_dw_core.xsd</location>
+    <handler>DarwinSchemaHandler_v2</handler>
+  </schema>
+  <schema alias="DarwinCore curatorial extension">
+    <namespace>http://rs.tdwg.org/dwc/curatorial/</namespace>
+    <location>http://rs.tdwg.org/dwc/tdwg_dw_curatorial.xsd</location>
+    <handler>DarwinSchemaHandler_v2</handler>
+  </schema>
+ <schema alias="DarwinCore geospatial extension">
+    <namespace>http://rs.tdwg.org/dwc/geospatial/</namespace>
+    <location>http://rs.tdwg.org/dwc/tdwg_dw_geospatial.xsd</location>
+    <handler>DarwinSchemaHandler_v2</handler>
+  </schema>
+  <schema alias="TDWG Ontology - Specimens">
+     <namespace>http://rs.tdwg.org/ontology/voc/Specimen#</namespace>
+     <location>http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonOccurrence/TaxonOccurrence.txt</location>
+     <handler>CnsSchemaHandler_v1</handler>
+  </schema>
+  <schema alias="TDWG Ontology - TaxonName">
+     <namespace>http://rs.tdwg.org/ontology/voc/TaxonName#</namespace>
+     <location>http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.txt</location>
+     <handler>CnsSchemaHandler_v1</handler>
+  </schema>
+  <schema alias="OAI-PMH">
+     <namespace>http://www.openarchives.org/OAI/2.0/</namespace>
+     <location>http://rs.tdwg.org/ontology/voc/tapir/structure/OAI_PMH/oai_pmh.txt</location>
+     <handler>CnsSchemaHandler_v1</handler>
+  </schema>
+</schemas> 

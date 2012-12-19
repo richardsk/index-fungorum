@@ -1,0 +1,29 @@
+<metadata xml:lang="en">
+	<dc:title>Herb IMI Fungal Specimens</dc:title>
+	<dc:type>http://purl.org/dc/dcmitype/Service</dc:type>
+	<accesspoint>[ACCESS_POINT]</accesspoint>
+	<dc:description>Herb IMI specimen data</dc:description>
+	<dc:language>en</dc:language>
+	<dct:modified>[LAST_MODIFIED_DATE]</dct:modified>
+	<dct:created>2007-08-21T10:26:18</dct:created>
+	<relatedEntity>
+		<role>data supplier</role>
+		<role>technical host</role>
+		<entity>
+			<identifier>CABI</identifier>
+			<name xml:lang="en">CABI Bioscience</name>
+			<acronym>CABI</acronym>
+			<description></description>
+			<address>Egham, London, UK</address>
+			<hasContact>
+				<role>data administrator</role>
+				<role>system administrator</role>
+				<vcard:VCARD>
+					<vcard:FN>Kevin Richards</vcard:FN>
+					<vcard:TITLE></vcard:TITLE>
+					<vcard:EMAIL>richardsk@landcareresearch.co.nz</vcard:EMAIL>
+				</vcard:VCARD>
+			</hasContact>
+		</entity>
+	</relatedEntity>
+</metadata>

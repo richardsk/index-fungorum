@@ -1,0 +1,95 @@
+	<capabilities>
+		<operations>
+			<ping/>
+			<metadata/>
+			<capabilities/>
+			<inventory>
+				<anyConcepts/>
+			</inventory>
+			<search>
+				<outputModels>
+					<anyOutputModels>
+						<responseStructure>
+							<basicSchemaLanguage/>
+						</responseStructure>
+					</anyOutputModels>
+				</outputModels>
+			</search>
+		</operations>
+		<requests>
+			<encoding>
+				<kvp/>
+				<xml/>
+			</encoding>
+			<globalParameters>
+				<logOnly>accepted</logOnly>
+			</globalParameters>
+			<filter>
+				<encoding>
+					<expression>
+						<concept/>
+						<literal/>
+						<parameter/>
+						<variable/>
+					</expression>
+					<booleanOperators>
+						<logical>
+							<not/>
+							<and/>
+							<or/>
+						</logical>
+						<comparative>
+							<equals caseSensitive="false"/>
+							<greaterThan/>
+							<greaterThanOrEquals/>
+							<lessThan/>
+							<lessThanOrEquals/>
+							<in/>
+							<isNull/>
+							<like caseSensitive="false"/>
+						</comparative>
+					</booleanOperators>
+				</encoding>
+			</filter>
+		</requests>
+			<concepts>
+		<conceptNameServers/>
+		<schema namespace="http://www.openarchives.org/OAI/2.0/" location="http://rs.tdwg.org/ontology/voc/tapir/structure/OAI_PMH/oai_pmh.txt">
+			<mappedConcept searchable="true">http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:header/oai:identifier</mappedConcept>
+			<mappedConcept searchable="true">http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:header/oai:datestamp</mappedConcept>
+			<mappedConcept searchable="true">http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata</mappedConcept>
+			<mappedConcept searchable="true">http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:ListIdentifiers/oai:header/oai:identifier</mappedConcept>
+			<mappedConcept searchable="true">http://www.openarchives.org/OAI/2.0/oai:OAI-PMH/oai:ListIdentifiers/oai:header/oai:datestamp</mappedConcept>
+		</schema>
+		<schema namespace="http://rs.tdwg.org/ontology/voc/TaxonName#" location="http://rs.tdwg.org/ontology/voc/tapir/structure/TaxonName/TaxonName.txt">
+			<mappedConcept searchable="true">http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:title</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/dc:identifier</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:nomenclaturalCode/@rdf:resouce</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:nameComplete</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:authorship</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:hasBasionym/@rdf:resouce</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:rankString</mappedConcept>
+			<mappedConcept searchable="true">http://rs.tdwg.org/ontology/voc/tapir/TaxonName#/rdf:RDF/tn:TaxonName/tn:year</mappedConcept>
+		</schema>
+	</concepts>
+
+		<variables>
+			<environment>
+				<date/>
+				<timestamp/>
+				<dataSourceName/>
+				<accessPoint/>
+				<lastUpdated/>
+				<dateCreated/>
+				<metadataLanguage/>
+				<dataSourceLanguage/>
+				<dataSourceDescription/>
+				<rights/>
+			</environment>
+		</variables>
+		<settings>
+			<maxElementRepetitions>200</maxElementRepetitions>
+			<maxElementLevels>20</maxElementLevels>
+		</settings>
+	</capabilities>
+	

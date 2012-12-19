@@ -1,0 +1,36 @@
+<metadata xml:lang="en">
+	<dc:title xml:lang="en">Index Fungorum</dc:title>
+	<dc:type>http://purl.org/dc/dcmitype/Service</dc:type>
+	<accesspoint>[ACCESS_POINT]</accesspoint>
+	<dc:description>Index of Fungi Names.</dc:description>
+	<dc:language>en</dc:language>
+	<dct:modified>[LAST_MODIFIED_DATE]</dct:modified>
+	<dct:created>2007-10-18T10:00:21</dct:created>
+	<relatedEntity>
+		<role>data supplier</role>
+		<role>technical host</role>
+		<entity>
+			<identifier>CABI</identifier>
+			<name>CABI</name>
+			<acronym>CABI</acronym>
+			<description></description>
+			<address>Egham, UK</address>
+			<hasContact>
+				<role>data administrator</role>
+				<vcard:VCARD>
+					<vcard:FN>Paul Kirk</vcard:FN>
+					<vcard:TITLE></vcard:TITLE>
+					<vcard:EMAIL>p.kirk@cabi.org</vcard:EMAIL>
+				</vcard:VCARD>
+			</hasContact>
+			<hasContact>
+				<role>system administrator</role>
+				<vcard:VCARD>
+					<vcard:FN>Kevin Richards</vcard:FN>
+					<vcard:TITLE></vcard:TITLE>
+					<vcard:EMAIL>richardsk@landcareresearch.co.nz</vcard:EMAIL>
+				</vcard:VCARD>
+			</hasContact>
+		</entity>
+	</relatedEntity>
+</metadata>

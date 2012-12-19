@@ -1,0 +1,372 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88934C83-3394-409F-877C-396062B944AF}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>TapirDotNETClasses</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TapirDotNET</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DNSResolver">
+      <Name>DNSResolver</Name>
+      <HintPath>..\Include\DNSResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="LSIDClient">
+      <Name>LSIDClient</Name>
+      <HintPath>..\Include\LSIDClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\CnsSchemaHandler_v1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\DarwinSchemaHandler_v1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\DarwinSchemaHandler_v2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\FixedValueMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\LSIDDataMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\OAI_PMHRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\SingleColumnMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpBooleanOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpBusinessObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpCapabilitiesResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpComparisonOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpConcept.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpConceptMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpConceptMappingFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpConceptualSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpConceptualSchemaHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpConceptualSchemaHandlerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpConfigManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpConfigUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpContact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpDataSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpDiagnostic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpDiagnostics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpFilterRefresher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpFilterToHtml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpFilterVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpHtmlUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpIndexingPreferences.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpInventoryParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpInventoryResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpLangString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpLocalFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpLocalMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpLogicalOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpMetadataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpNamespace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpNamespaceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpNestedList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpOperationParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpOutputModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classes\TpPingResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpRelatedContact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpRelatedEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpResourceMetadata.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpResources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpResponseStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpSchemaInspector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpSchemaVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpSearchParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpSearchResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpServiceUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpSqlBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpStatistics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpTables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpTransparentConcept.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpWizardForm.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classes\TpXmlGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpXmlNamespace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpXmlReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\TpXmlSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\Utility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\XsAttributeDecl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\XsAttributeUse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\XsComplexType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\XsDeclaration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\XsElementDecl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\XsModelGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\XsSimpleType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\XsType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="classes\capabilities.xml">
+      <SubType>Form</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
