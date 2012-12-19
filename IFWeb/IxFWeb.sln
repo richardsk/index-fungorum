@@ -1,0 +1,117 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LibriFungorum", "http://localhost/LibriFungorum", "{CE5367DA-04B9-49A4-B1B6-503D326D40E0}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/CABI/IxFWeb/LibriFungorum"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/LibriFungorum"
+		Debug.AspNetCompiler.PhysicalPath = "LibriFungorum\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LibriFungorum\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/LibriFungorum"
+		Release.AspNetCompiler.PhysicalPath = "LibriFungorum\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\LibriFungorum\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "LibriFungorum\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SpeciesFungorum", "http://localhost/SpeciesFungorum", "{DB3E03CC-D091-4D7D-A878-2046DE415ED9}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/CABI/IxFWeb/SpeciesFungorum"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/SpeciesFungorum"
+		Debug.AspNetCompiler.PhysicalPath = "SpeciesFungorum\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SpeciesFungorum\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SpeciesFungorum"
+		Release.AspNetCompiler.PhysicalPath = "SpeciesFungorum\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SpeciesFungorum\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "SpeciesFungorum\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IndexFungorum", "http://localhost/IndexFungorum", "{564A3457-4441-4A69-86B8-2440D76E54CA}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/CABI/IxFWeb/IXFWeb"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/IndexFungorum"
+		Debug.AspNetCompiler.PhysicalPath = "IXFWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\IndexFungorum\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/IndexFungorum"
+		Release.AspNetCompiler.PhysicalPath = "IXFWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\IndexFungorum\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "IndexFungorum\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccWebProject0 = true
+		SccProjectUniqueName0 = http://localhost/LibriFungorum
+		SccProjectName0 = $/CABI/IxFWeb/LibriFungorum
+		SccLocalPath0 = C:\\Development\\CABI\\IxFWeb\\LibriFungorum
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice0 = 2
+		SccWebProject1 = true
+		SccProjectUniqueName1 = http://localhost/SpeciesFungorum
+		SccProjectName1 = $/CABI/IxFWeb/SpeciesFungorum
+		SccLocalPath1 = C:\\Development\\CABI\\IxFWeb\\SpeciesFungorum
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice1 = 2
+		SccWebProject2 = true
+		SccProjectUniqueName2 = http://localhost/IndexFungorum
+		SccProjectName2 = $/CABI/IxFWeb/IXFWeb
+		SccLocalPath2 = C:\\Development\\CABI\\IxFWeb\\IXFWeb
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice2 = 2
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE5367DA-04B9-49A4-B1B6-503D326D40E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5367DA-04B9-49A4-B1B6-503D326D40E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3E03CC-D091-4D7D-A878-2046DE415ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3E03CC-D091-4D7D-A878-2046DE415ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564A3457-4441-4A69-86B8-2440D76E54CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564A3457-4441-4A69-86B8-2440D76E54CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
