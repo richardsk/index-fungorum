@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment-descriptor xmlns="http://www.ibm.com/LSID/Standard/rsdl">
+  <maps>
+    <map name="imiMap">
+      <pattern auth="herbimi.info" ns="*" />
+    </map>
+  </maps>
+  <services>
+    <service name="HerbIMIAuthority">
+      <components>
+        <auth map="imiMap" type="class" assemblyname="HerbIMILSID.dll">HerbIMILSID.HerbIMIAuthority</auth>
+		<meta map="imiMap" type="class" assemblyname="HerbIMILSID.dll">HerbIMILSID.HerbIMIAuthority</meta> 	
+		<data map="imiMap" type="class" assemblyname="HerbIMILSID.dll">HerbIMILSID.HerbIMIAuthority</data>
+		<!--authentication map="ifMap" type="class" assemblyname="IndexFungorumLSID.dll">IndexFungorumLSID.IFAuthentication</authentication-->
+      </components>
+    </service>
+  </services>
+</deployment-descriptor>
