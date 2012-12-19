@@ -1,0 +1,22 @@
+﻿<deployment-descriptor xmlns="http://www.ibm.com/LSID/Standard/rsdl">
+	  <maps>
+    <map name="sampleMap">
+      <pattern auth="lsidsample.org" ns="*" />
+    </map>
+  </maps>
+  <services>
+    <service name="sample">
+      <components>
+        <auth map="sampleMap" type="class" assemblyname="SampleLSIDAuthority.dll">SampleLSIDAuthority.SampleAuthority</auth>
+		<meta map="sampleMap" type="class" assemblyname="SampleLSIDAuthority.dll">SampleLSIDAuthority.SampleAuthority</meta> 	
+		<data map="sampleMap" type="class" assemblyname="SampleLSIDAuthority.dll">SampleLSIDAuthority.SampleAuthority</data> 	
+      </components>
+    </service>
+	<service name="sampleAsdl">
+		<components>
+			<auth map="sampleMap" type="asdl" location="dotnet-resource">sampleAuthority.xml</auth>
+			<data map="sampleMap" type="asdl" location="dotnet-resource">sampleAuthority.xml</data>
+		</components>	
+	</service>
+  </services>
+</deployment-descriptor>

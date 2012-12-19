@@ -1,0 +1,33 @@
+﻿<deployment-descriptor xmlns="http://www.ibm.com/LSID/Standard/rsdl">
+	<maps>
+		<map name="sampleMap">
+			<pattern auth="lsidsample.org" ns="sample" />
+		</map>
+		<!--map name="sampleRDFMap">
+			<pattern auth="lsidsample.org" ns="predicates" />
+		</map-->
+		<map name="sampleFTP">
+			<pattern auth="lsidsample.org" ns="ftpTest"></pattern>
+		</map>
+	</maps>
+	<services>
+		<service name="sample">
+			<components>
+				<authentication map="sampleMap" type="class" assemblyname="LSIDAuthoritySample.dll">LSIDAuthoritySample.SampleAuthentication</authentication>
+				
+				<auth map="sampleMap" type="class" assemblyname="LSIDAuthoritySample.dll">LSIDAuthoritySample.SampleAuthority</auth>
+				<meta map="sampleMap" type="class" assemblyname="LSIDAuthoritySample.dll">LSIDAuthoritySample.SampleAuthority</meta>
+				<data map="sampleMap" type="class" assemblyname="LSIDAuthoritySample.dll">LSIDAuthoritySample.SampleAuthority</data>
+				
+				<!--auth map="sampleRDFMap" type="asdl" location="file">c:\lsid\sampleMDASDL.xml</auth-->
+				<!--meta map="sampleRDFMap" type="msdl" location="file">c:\lsid\samplePreds.xml</meta-->
+			</components>
+		</service>
+		
+		<service name="sampleFTP">
+			<components>
+				<auth map="sampleFTP" type="class" assemblyname="LSIDAuthoritySample.dll">LSIDAuthoritySample.SampleFTPAuthority</auth>
+			</components>
+		</service>
+	</services>
+</deployment-descriptor>

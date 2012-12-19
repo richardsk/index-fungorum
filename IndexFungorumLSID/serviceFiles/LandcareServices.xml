@@ -1,0 +1,34 @@
+<deployment-descriptor xmlns="http://www.ibm.com/LSID/Standard/rsdl">
+  <maps>
+    <map name="NamesMap">
+      <pattern auth="landcareresearch.co.nz" ns="names" />
+    </map>
+    <map name="ReferencesMap">
+      <pattern auth="landcareresearch.co.nz" ns="references" />
+    </map>
+  </maps>
+  <services>
+    <service name="LandcareNames">
+      <components>
+        <!-- todo authentication map="NamesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.?</authentication-->
+
+        <auth map="NamesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.LandcareNamesAuthority</auth>
+        <meta map="NamesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.LandcareNamesAuthority</meta>
+        <data map="NamesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.LandcareNamesAuthority</data>
+
+      </components>
+    </service>
+
+    <service name="LandcareReferences">
+      <components>
+        <!-- todo authentication map="NamesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.?</authentication-->
+
+        <auth map="ReferencesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.LandcareLiteratureAuthority</auth>
+        <meta map="ReferencesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.LandcareLiteratureAuthority</meta>
+        <data map="ReferencesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.LandcareLiteratureAuthority</data>
+
+      </components>
+    </service>
+    
+  </services>
+</deployment-descriptor>

@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[authority.csproj]
+SCC_Aux_Path = http://vault.landcareresearch.co.nz/VaultService|:31
+SCC_Project_Name = $/LCR/SemanticWeb/authority

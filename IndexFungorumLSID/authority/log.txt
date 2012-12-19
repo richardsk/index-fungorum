@@ -1,0 +1,4 @@
+Thursday, 14 September 2006 : Object reference not set to an instance of an object. : AuthorityWebService :    at AuthorityWebService.AuthorityServlet.processGet(HttpContext req, LSIDRequestContext rc) in D:\Development\LSID Project\LSIDDotNET\AuthorityWebService\AuthorityServlet.cs:line 108
+   at AuthorityWebService.BaseServlet.doGet(HttpContext req) in D:\Development\LSID Project\LSIDDotNET\AuthorityWebService\BaseServlet.cs:line 131
+Thursday, 14 September 2006 : Object reference not set to an instance of an object. : AuthorityWebService :    at AuthorityWebService.AuthorityServlet.processGet(HttpContext req, LSIDRequestContext rc) in D:\Development\LSID Project\LSIDDotNET\AuthorityWebService\AuthorityServlet.cs:line 108
+   at AuthorityWebService.BaseServlet.doGet(HttpContext req) in D:\Development\LSID Project\LSIDDotNET\AuthorityWebService\BaseServlet.cs:line 131
