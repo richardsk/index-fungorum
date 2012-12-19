@@ -1,0 +1,163 @@
+<!-- DTD for SPICE Response 2001 December,20 -->
+<!-- Which compatible with SPICE CDM1.20    -->
+<!-- Here the expression of Exception and the Enum in XML DTD is still a problem, we will defer to XMLSchema which have powerful to do it -->
+<!-- In DTD,
+    (Item1 |Item2) means: that separates a set of alternatives, only one may appear;
+    (Item*) means the Item appears zero or more times;
+    (Item1, item2,Item3) means separates items in a sequences in the order in which they appear;
+    (Item+) means item appear at least once;
+    (Item?) means the item appears once or not at all.
+    #PCDATA  is parsed character data which may contain XML markup and hence has to be handled by the XML parser.
+    #CDATA is plain text character data which is not parsed through the engine of the XML parser. The default data type for elements is PCDATA but CDATA can be very useful. 
+    For Attribute, the meaning of the following KEYWORDs are :
+    #REQUIRED means that the attribute must be included when the element is used. Failure to do so will result in the parser raising an error. 
+    #FIXED means as a default, a specific value will be used if the attribute is not included.
+    #IMPLIED optional and can be safely ignored if no value is given. 
+-->
+<!ELEMENT XMLRESPONSE (CDMVERSION | TYPE1RESULT | TYPE2RESULT | TYPE3RESULT | TYPE4RESULT | TYPE5RESULT)>
+<!ELEMENT CDMVERSION (#PCDATA)>
+<!-- CDMVERSION is the version of the common data model  GSD wrapper used, which is defined in this version of the Common Data Model to be 1.20 , All future version numbers will be arithmetically greater than all their predecessors -->
+<!-- Define TYPE1RESULTS ELEMENT   -->
+<!ELEMENT TYPE1RESULT (SPECIESNAME*)>
+<!-- SPECIESNAME will give a list of the species names(0-N), if the Limit value is 0 , or the number is 0, it can be empty, -->
+<!ATTLIST TYPE1RESULT
+	NUMBER CDATA #REQUIRED
+>
+<!-- NUMBER is the total number of matching names for type1 request, which may be more than the number returned. If the GSD can provide it without extra work, but required if Searchlimit =0, -->
+<!ELEMENT SPECIESNAME (AVCNAME | SYNONYMWITHAVC | COMMONNAMEWITHAVC)>
+<!ATTLIST SPECIESNAME
+	IDENTIFIER CDATA #REQUIRED
+>
+<!-- IDENTIFIER is a string representing the unique identifier of a Taxon -->
+<!-- SPECIESNAME is a AVCNAME , a SYNONYMWITHAVC or a COMMONNAMEWITHAVC  -->
+<!ELEMENT AVCNAME (NAME)>
+<!ATTLIST AVCNAME
+	STATUS CDATA #REQUIRED
+>
+<!-- STATUS is one of the following accepted, provisional, synonym, unambiguous, variant , infraspecific, ambiguous, proparte, misapplied, doubtful. And for the AVCName case , it is either accepted or provisional -->
+<!-- IDENTIFIER is a string here -->
+<!ELEMENT NAME (FULLNAME | VIRUSNAME)>
+<!ELEMENT FULLNAME EMPTY>
+<!ATTLIST FULLNAME
+	GENUS CDATA #REQUIRED
+	SPECIFICEPITHET CDATA #REQUIRED
+	AUTHORITY CDATA #REQUIRED
+>
+<!ELEMENT VIRUSNAME (#PCDATA)>
+<!ELEMENT SYNONYMWITHAVC (SYNONYM, AVCNAME?)>
+<!-- Here the AVCNAME is optional -->
+<!ELEMENT SYNONYM (FULLNAME)>
+<!ATTLIST SYNONYM
+	INFRASPECIFICPORTION CDATA #IMPLIED
+	STATUS CDATA #REQUIRED
+>
+<!-- Here the status of the Synonym can be one of Synonym, unabiguous, variant, infraspecific, ambiguous, proparte, misapplied, doubtful -->
+<!ELEMENT COMMONNAMEWITHAVC (COMMONNAME, AVCNAME?)>
+<!ELEMENT COMMONNAME (PLACENAME+)>
+<!ATTLIST COMMONNAME
+	VERNAME CDATA #REQUIRED
+	LANGUAGE CDATA #IMPLIED
+>
+<!-- Here the VERNAME is a must and the LANGUAGE is optional -->
+<!ELEMENT PLACENAME (#PCDATA)>
+<!-- DTD for TYPE2RESULT    -->
+<!-- Define TYPE2RESULT ELEMENT  -->
+<!ELEMENT TYPE2RESULT (STANDARDDATA)>
+<!ELEMENT STANDARDDATA (SCRUTINY, OTHERLINK*, AVCNAMEWITHREFS, SYNONYMWITHREFS*, COMMONNAMEWITHREFS*, PLACE*)>
+<!ATTLIST STANDARDDATA
+	COMMENT CDATA #IMPLIED
+	FAMILY CDATA #REQUIRED
+>
+<!-- define the SCRUTINY ELEMENT   -->
+<!ELEMENT SCRUTINY (DATE)>
+<!ATTLIST SCRUTINY
+	PERSON CDATA #REQUIRED
+	LINK CDATA #IMPLIED
+>
+<!-- Define the OTHERLINK ELEMENT  -->
+<!ELEMENT OTHERLINK (#PCDATA)>
+<!-- Define the AVCNAMEWITHREFS ELEMENT  -->
+<!ELEMENT AVCNAMEWITHREFS (AVCNAME, STATUSREF*)>
+<!-- STATUSREF is reference to the nomenclatural validity or taxonomic status of a name as an AVC name or as a synonym, in the case of misapplied names, may be a reference which either commits or rectifies the misapplication -->
+<!ELEMENT STATUSREF (REFERENCE)>
+<!ATTLIST STATUSREF
+	REFTYPE CDATA #REQUIRED
+>
+<!--  REFTYPE is one of validity, acceptance, synonymy, misapplication, correction -->
+<!ELEMENT REFERENCE (REFLINK | LITREF | EMPTY)>
+<!--Here, ATTLIST REFID is used to uniquely identify the current reference, REFTOID is used to refer to another REFERENCE whose REFID=REFTOID -->
+<!ATTLIST REFERENCE
+	REFID ID #REQUIRED
+	REFTOID IDREF #IMPLIED
+>
+<!ELEMENT REFLINK (#PCDATA)>
+<!ELEMENT LITREF EMPTY>
+<!ATTLIST LITREF
+	AUTHOR CDATA #REQUIRED
+	YEAR CDATA #REQUIRED
+	TITLE CDATA #REQUIRED
+	DETAILS CDATA #REQUIRED
+>
+<!--  Define  the DATE ELEMENT  -->
+<!ELEMENT DATE EMPTY>
+<!ATTLIST DATE
+	YEAR CDATA #REQUIRED
+	MONTH CDATA #IMPLIED
+	DAY CDATA #IMPLIED
+>
+<!-- Constraint here: the value of  YEAR should be an integer as xxxx -->
+<!--Constraint here: the value of  MONTH should be an integer between 1-12 -->
+<!--Constraint here: the value of  DAY should be an integer between 1-31 -->
+<!-- Define the  SYNONYMWITHREFS ELEMENT  -->
+<!-- SYNONYMWITHREFS consists of Synonym, NAMEREFLIST, where NAMEREFLIST consists of STATUSREF[0-N]  -->
+<!ELEMENT SYNONYMWITHREFS (SYNONYM, STATUSREF*)>
+<!-- Define the COMMONNAMEWITHREFS ELEMENT, which consists of CommonName, Reference[0-N]  -->
+<!ELEMENT COMMONNAMEWITHREFS (COMMONNAME, REFERENCE*)>
+<!--  Define the GEOGRAPHY ELEMENT, which consists of PLACE[0-N]-->
+<!--  Define the PLACE ELEMENT, which consists of PLACENAME, OCCURRENCE, REFERENCE  -->
+<!ELEMENT PLACE (REFERENCE)>
+<!ATTLIST PLACE
+	PLACENAME CDATA #REQUIRED
+	OCCURRENCE CDATA #REQUIRED
+>
+<!-- OCCURRENCE is one of native, introduced, uncertain, absent -->
+<!-- Define TYPE3RESULT ELEMENT  -->
+<!ELEMENT TYPE3RESULT (GSDINFO)>
+<!-- GSDINFO consists of GSDNAME, DESCRIPTION, VERSION,DATE(GSDDATE),WRAPPERVERSION, ,[HOMELINK], [SEARCHLINK], [LOGOLINK] -->
+<!ELEMENT GSDINFO (DATE)>
+<!ATTLIST GSDINFO
+	GSDIDENTIFIER CDATA #IMPLIED
+	GSDSHORTNAME CDATA #REQUIRED
+	GSDTITLE CDATA #REQUIRED
+	DESCRIPTION CDATA #REQUIRED
+	VERSION CDATA #REQUIRED
+	VIEW CDATA #REQUIRED
+	WRAPPERVERSION CDATA #REQUIRED
+	HOMELINK CDATA #IMPLIED
+	CONTACTLINK CDATA #IMPLIED
+	SEARCHLINK CDATA #IMPLIED
+	LOGOLINK CDATA #IMPLIED
+>
+<!-- IDENTIFIER referred to  the higher taxon it contains -->
+<!-- VIEW is the preferred or only the taxonomic view supported by the GSD -->
+<!-- SEARCHLINK (Optional) is the URL of the species search web pages -->
+<!-- HOMELINK (Optional) is the URL of the home web pages -->
+<!-- WRAPPERVERSION is the version of the wrapper, not the GSD or the CDM -->
+<!-- CONTACTLINK (Optional) to tell the email address or web pages of te person responsible for maintenance or who is best able to handle enquiries by email . -->
+<!-- LOGOLINK is a link to the GSD's or GSDO's Log, URL -->
+<!-- Define GSD TYPE4 RESPONSE RESULT ELEMENT   -->
+<!ELEMENT TYPE4RESULT (HIGHERTAXON*)>
+<!ELEMENT HIGHERTAXON (STATUSREF*)>
+<!ATTLIST HIGHERTAXON
+	IDENTIFIER CDATA #REQUIRED
+	RANK CDATA #REQUIRED
+	TAXONNAME CDATA #REQUIRED
+	AUTHORITY CDATA #REQUIRED
+	VIEW CDATA #IMPLIED
+>
+<!-- Define TYPE5RESULT ELEMENT  -->
+<!ELEMENT TYPE5RESULT (TAXON)*>
+<!ELEMENT TAXON (HIGHERTAXON | AVCNAME)>
+<!ATTLIST TAXON
+	IDENTIFIER CDATA #IMPLIED
+>

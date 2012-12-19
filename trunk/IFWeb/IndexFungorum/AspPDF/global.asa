@@ -1,0 +1,32 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Session_OnStart
+
+	Session("ConnectStr") = "Provider=SQLOLEDB;Server=localhost;Database=pdf;UID=sa;PWD=xxxxxxxxx"
+	
+	Set Conn = Server.CreateObject("ADODB.Connection")
+	Conn.Open Session("ConnectStr")
+
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 1, 'Business lunch with Mr Smith', 1, '3/2/2003', 45.20 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 1, 'Business dinner in Washington', 1, '5/4/2003', 80.00 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 1, 'Breakfast at Tiffany''s', 0, '12/1/2003', 158.00 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 4, 'Trip to New York', 1, '5/12/2003', 650.00 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 4, 'Bahamas Getaway', 0, '11/4/2003', 1850.00 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 3, 'Paper for printer', 1, '04/15/2003', 15.66 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 3, 'Sony PDA', 1, '04/15/2003', 299.00 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 3, 'Canon Digital Camera', 0, '04/15/2003', 899.00 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 2, 'Parking ticket', 1, '11/2/2003', 105.00 )"
+	Conn.Execute "insert into demo_expense(sessionid, category, description, billable, expensedate, amount) values(" & Session.SessionID & ", 2, 'Jetski rental', 0, '11/2/2003', 60.00 )"
+end sub
+
+Sub Session_OnEnd
+	Set Conn = Server.CreateObject("ADODB.Connection")
+	Conn.Open Session("ConnectStr")
+
+	Conn.Execute "delete from demo_expense where sessionid=" & Session.SessionID
+end sub
+
+Sub Session_OnEnd
+
+end sub
+
+</SCRIPT>

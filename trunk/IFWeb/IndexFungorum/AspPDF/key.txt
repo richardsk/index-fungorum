@@ -1,0 +1,17 @@
+Thank-you for evaluating AspPDF. Below is your free 30-day evaluation key: 
+IWez4j8Pt1XkIAcSTQkAwU5g1HMdS++4siECBLLw8JNmXYKy49+yaZjCXTXRhFnTnD/LMpyzjJm+ 
+
+To install this evaluation key in the system registry, use one of the following two methods:
+
+Method 1: Run the installer AspPDF.exe. When prompted, enter this key.
+
+Method 2: Run regedit, create a registry key HKEY_LOCAL_MACHINE\Software\Persits Software\AspPDF\RegKey, and enter your registration key as a default value.
+
+Alternatively, the registration key can be specified in your script via PdfManager's RegKey property, as follows:
+
+objPdf.RegKey = "..."
+
+If you have questions, please do not hesitate to contact us. We hope you will find AspPDF useful for your development needs.
+
+Persits Software Development Team
+www.persits.com 

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#" xmlns:tpub="http://rs.tdwg.org/ontology/voc/PublicationCitation#" xmlns:tto="http://rs.tdwg.org/ontology/voc/Specimen#" xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#" xmlns:tc="http://rs.tdwg.org/ontology/voc/TaxonConcept#" xmlns:trank="http://rs.tdwg.org/ontology/voc/TaxonRank#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dcterms="http://purl.org/dc/terms/">
+  <tn:TaxonName rdf:about="urn:lsid:indexfungorum.org:names:213645">
+    <dc:title>Amanita abrupta Peck 1897</dc:title>
+    <owl:versionInfo>1.1.2.1</owl:versionInfo>
+    <tn:nameComplete>Amanita abrupta</tn:nameComplete>
+    <tn:genusPart>Amanita</tn:genusPart>
+    <tn:specificEpithet>abrupta</tn:specificEpithet>
+    <tn:authorship>Peck</tn:authorship>
+    <tn:basionymAuthorship>Peck</tn:basionymAuthorship>
+    <tn:year>1897</tn:year>
+    <tcom:publishedIn>Bull. Torrey bot. Club 24: 138 (1897)</tcom:publishedIn>
+    <tn:publication>
+      <tpub:PublicationCitation>
+        <dc:identifier>2916</dc:identifier>
+        <tpub:year>1897</tpub:year>
+        <tpub:title>Bull. Torrey bot. Club</tpub:title>
+        <tpub:volume>24</tpub:volume>
+        <tpub:pages>138</tpub:pages>
+      </tpub:PublicationCitation>
+    </tn:publication>
+    <tn:rankString>sp.</tn:rankString>
+    <tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+  </tn:TaxonName>
+  <tn:NomenclaturalCodeTerm rdf:about="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+</rdf:RDF>
