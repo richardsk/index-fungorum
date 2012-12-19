@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment-descriptor xmlns="http://www.ibm.com/LSID/Standard/rsdl">
+  <maps>
+    <map name="ifMap">
+      <pattern auth="indexfungorum.org" ns="*" />
+    </map>
+  </maps>
+  <services>
+    <service name="IFAuthority">
+      <components>
+        <auth map="ifMap" type="class">IFAuthority</auth>
+		<meta map="ifMap" type="class">IFAuthority</meta> 	
+		<data map="ifMap" type="class">IFAuthority</data>
+      </components>
+    </service>
+  </services>
+</deployment-descriptor>
