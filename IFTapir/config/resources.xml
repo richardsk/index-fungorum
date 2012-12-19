@@ -1,0 +1,5 @@
+<resources>
+	<resource code="test" status="active" accesspoint="http://localhost/tapirdotnet/tapir.aspx/test" metadataFile="test_metadata.xml" configFile="test_config.xml" capabilitiesFile="test_capabilities.xml"/>
+	<resource code="IxFungorum" status="active" accesspoint="http://localhost/tapirdotnet/tapir.aspx/ixfungorum" metadataFile="ixfungorum_metadata.xml" configFile="ixfungorum_config.xml" />
+	<resource code="FRDBI" status="active" accesspoint="http://localhost/tapirdotnet/tapir.aspx/frdbi" metadataFile="frdbi_metadata.xml" configFile="frdbi_config.xml" capabilitiesFile="frdbi_capabilities.xml"/>
+</resources>

@@ -1,0 +1,28 @@
+<metadata xml:lang="en">
+	<dc:title>Cyrillic Literature Records</dc:title>
+	<dc:type>http://purl.org/dc/dcmitype/Service</dc:type>
+	<accesspoint>[ACCESS_POINT]</accesspoint>
+	<dc:description>todo</dc:description>
+	<dc:language>en</dc:language>
+	<dct:modified>[LAST_MODIFIED_DATE]</dct:modified>
+	<dct:created>2008-05-14T08:50:37</dct:created>
+	<relatedEntity>
+		<role>data supplier</role>
+		<role>technical host</role>
+		<entity>
+			<identifier>CABI</identifier>
+			<name>CABI</name>
+			<acronym>CABI</acronym>
+			<description></description>
+			<address>Egham, UK</address>
+			<hasContact>
+				<role>system administrator</role>
+				<vcard:VCARD>
+					<vcard:FN>Paul Kirk</vcard:FN>
+					<vcard:TITLE></vcard:TITLE>
+					<vcard:EMAIL>p.kirk@cabi.org</vcard:EMAIL>
+				</vcard:VCARD>
+			</hasContact>
+		</entity>
+	</relatedEntity>
+</metadata>
