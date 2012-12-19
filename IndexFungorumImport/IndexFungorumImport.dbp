@@ -1,0 +1,34 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "IndexFungorumImport"
+   MSDTVersion = "70"
+   DefDBRef = "DEVSERVER01.NUKU_DEV.dbo"
+   SccProjectName = "SAK"
+   SccLocalPath = "SAK"
+   SccAuxPath = "SAK"
+   SccProvider = "SAK"
+   Begin Folder = "Change Scripts"
+   End
+   Begin Folder = "Create Scripts"
+      Script = "InsertClasses.sql"
+      Script = "InsertFamilies.sql"
+      Script = "InsertGenuses.sql"
+      Script = "InsertKingdoms.sql"
+      Script = "InsertOrders.sql"
+      Script = "InsertPhylums.sql"
+      Script = "InsertRanks.sql"
+      Script = "InsertSpecies.sql"
+      Script = "InsertSubClasses.sql"
+      Script = "InsertSubSpecies.sql"
+      Script = "RunImport.sql"
+      Script = "spGetName.sql"
+      Script = "UpdateAllNames.sql"
+   End
+   Begin DBRefFolder = "Database References"
+      Begin DBRefNode = "DEVSERVER01.NUKU_DEV.dbo"
+         ConnectStr = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Initial Catalog=NUKU_DEV;Data Source=DEVSERVER01;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=RICHARDSK;Use Encryption for Data=False;Tag with column collation when possible=False"
+         Colorizer = 5
+      End
+   End
+   Begin Folder = "Queries"
+   End
+End
