@@ -1,0 +1,17 @@
+<WSDLGenConfig WSDLGenVersion="3.0" serviceName="CabiSoapServer" COMObjectPath="c:\Inetpub\wwwroot\CabiSoapServer\CabiSoapServer.dll" listenerURI="http://dev10/CabiSoapServer/" listenerType="ISAPI" XSDSchemaNS="2001" definitionsTNS="http://tempuri.org/CabiSoapServer/wsdl/" schemaTNS="http://tempuri.org/CabiSoapServer/type/" soapBodyNS="http://tempuri.org/CabiSoapServer/message/" soapActionURI="http://tempuri.org/CabiSoapServer/action/" characterSet="UTF-8" outputPath="c:\Inetpub\wwwroot\CabiSoapServer" >
+   <selectedInterfaces>
+      <interface name="FungiNames">
+         <selectedMethods>
+            <method name="NameByKey">
+            </method>
+            <method name="EpithetSearch">
+            </method>
+            <method name="NameSearch">
+            </method>
+            <method name="IsAlive">
+            </method>
+         </selectedMethods>
+      </interface>
+   </selectedInterfaces>
+</WSDLGenConfig>
+

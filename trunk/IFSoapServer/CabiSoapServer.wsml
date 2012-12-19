@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+ <!-- Generated 10/31/02 by Microsoft SOAP Toolkit WSDL File Generator, Version 3.00.1325.0 --> 
+  <servicemapping name='CabiSoapServer' xmlns:dime='http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/'>
+  <service name='CabiSoapServer'>
+    <using PROGID='CabiSoapServer.FungiNames' cachable='0' ID='FungiNamesObject' />
+   
+    <port name='FungiNamesSoapPort'>
+      <operation name='IsAlive'>
+        <execute uses='FungiNamesObject' method='IsAlive' dispID='1610809361'>
+          <parameter callIndex='-1' name='retval' elementName='Result' />
+        </execute>
+      </operation>
+      <operation name='NameSearch'>
+        <execute uses='FungiNamesObject' method='NameSearch' dispID='1610809362'>
+          <parameter callIndex='-1' name='retval' elementName='Result' />
+          <parameter callIndex='1' name='SearchText' elementName='SearchText' />
+          <parameter callIndex='2' name='AnywhereInText' elementName='AnywhereInText' />
+          <parameter callIndex='3' name='MaxNumber' elementName='MaxNumber' />
+        </execute>
+      </operation>
+      <operation name='EpithetSearch'>
+        <execute uses='FungiNamesObject' method='EpithetSearch' dispID='1610809363'>
+          <parameter callIndex='-1' name='retval' elementName='Result' />
+          <parameter callIndex='1' name='SearchText' elementName='SearchText' />
+          <parameter callIndex='2' name='AnywhereInText' elementName='AnywhereInText' />
+          <parameter callIndex='3' name='MaxNumber' elementName='MaxNumber' />
+        </execute>
+      </operation>
+      <operation name='NameByKey'>
+        <execute uses='FungiNamesObject' method='NameByKey' dispID='1610809364'>
+          <parameter callIndex='-1' name='retval' elementName='Result' />
+          <parameter callIndex='1' name='NameKey' elementName='NameKey' />
+        </execute>
+      </operation>
+    </port>
+    <types>
+		<type name='Recordset' targetNamespace='http://tempuri.org/CabiSoapServer/type/' uses='FungiNamesObject' iid='{00000556-0000-0010-8000-00AA006D2EA4}'/>
+    </types>
+  </service>
+</servicemapping>
+ 

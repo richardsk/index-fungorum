@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+
+<servicemapping name='CabiSoapServer' xmlns:dime='http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/'>
+  <service name='CabiSoapServer'>
+    <using PROGID='CabiSoapServer.FungiNames' cachable='0' ID='FungiNamesObject' />
+    <using PROGID='MSSOAP.GenericCustomTypeMapper30' cachable='0' ID='GCTM' />
+    <types>
+      <type name='Recordset' targetNamespace='http://tempuri.org/CabiSoapServer/type/' uses='GCTM' iid='{00000556-0000-0010-8000-00AA006D2EA4}'/>
+	</types>
+    <port name='CabiSoapServerSoapPort'>
+      <operation name='IsAlive'>
+        <execute uses='FungiNamesObject' method='IsAlive' dispID='1610809345'>
+          <parameter callIndex='-1' name='retval' elementName='Result' />
+        </execute>
+      </operation>
+    </port>
+  </service>
+</servicemapping>
