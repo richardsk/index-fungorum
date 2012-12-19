@@ -1,0 +1,34 @@
+p {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt}
+h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16pt}
+h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14pt}
+h3 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt}
+br {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt}
+body {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt}
+table {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt}
+INPUT {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt}
+textarea {font-family: Verdana, Arial, Helvetica, sans-serif;}
+.mainbody {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	border-top-width: 0pt;
+	border-right-width: 0pt;
+	border-bottom-width: 0pt;
+	border-left-width: 0pt;
+	margin-top: 0pt;
+	margin-right: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 0pt;
+	font-size: 8pt;
+}
+.h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.LinkColour1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt; color: #0000FF;}
+.LinkColour2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt; color: #CC0000;}
+.LinkColour3 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt; color: #000000;}
+.LinkColour4 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt; color: #339900;}
+
+.Footer {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #333333;}
