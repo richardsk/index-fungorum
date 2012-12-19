@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- Generated 10/31/02 by Microsoft SOAP Toolkit WSDL File Generator, Version 3.00.1325.0 --> 
+<definitions
+	name='CabiSoapServer'
+	targetNamespace='http://tempuri.org/CabiSoapServer/wsdl/'
+	xmlns:wsdlns='http://tempuri.org/CabiSoapServer/wsdl/'
+	xmlns:typens='http://tempuri.org/CabiSoapServer/type/'
+	xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+	xmlns:stk='http://schemas.microsoft.com/soap-toolkit/wsdl-extension'
+	xmlns:dime='http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/'
+	xmlns:ref='http://schemas.xmlsoap.org/ws/2002/04/reference/'
+	xmlns:content='http://schemas.xmlsoap.org/ws/2002/04/content-type/'
+	xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+	xmlns='http://schemas.xmlsoap.org/wsdl/'>
+
+	<types>
+		<schema
+			targetNamespace='http://tempuri.org/CabiSoapServer/type/'
+			xmlns='http://www.w3.org/2001/XMLSchema'
+			xmlns:SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/'
+			xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+			elementFormDefault='qualified'>
+
+			<import namespace='http://schemas.xmlsoap.org/soap/encoding/'/>
+			<import namespace='http://schemas.xmlsoap.org/wsdl/'/>
+			<import namespace='http://schemas.xmlsoap.org/ws/2002/04/reference/'/>
+			<import namespace='http://schemas.xmlsoap.org/ws/2002/04/content-type/'/>
+
+ <complexType  name ='Recordset'>
+        <sequence>
+        	<any/>
+        </sequence>
+      </complexType>
+
+		</schema>
+	</types>
+
+	<message name='FungiNames.IsAlive'>
+	</message>
+
+	<message name='FungiNames.IsAliveResponse'>
+		<part name='Result' type='xsd:boolean'/>
+	</message>
+
+	<message name='FungiNames.NameSearch'>
+		<part name='SearchText' type='xsd:string'/>
+		<part name='AnywhereInText' type='xsd:boolean'/>
+		<part name='MaxNumber' type='xsd:int'/>
+	</message>
+
+	<message name='FungiNames.NameSearchResponse'>
+		<part name='Result' type='typens:Recordset'/>
+	</message>
+
+	<message name='FungiNames.EpithetSearch'>
+		<part name='SearchText' type='xsd:string'/>
+		<part name='AnywhereInText' type='xsd:boolean'/>
+		<part name='MaxNumber' type='xsd:int'/>
+	</message>
+
+	<message name='FungiNames.EpithetSearchResponse'>
+		<part name='Result' type='typens:Recordset'/>
+	</message>
+
+	<message name='FungiNames.NameByKey'>
+		<part name='NameKey' type='xsd:int'/>
+	</message>
+
+	<message name='FungiNames.NameByKeyResponse'>
+		<part name='Result' type='typens:Recordset'/>
+	</message>
+
+	<portType name='FungiNamesSoapPort'>
+
+		<operation name='IsAlive' parameterOrder=''>
+			<input message='wsdlns:FungiNames.IsAlive'/>
+			<output message='wsdlns:FungiNames.IsAliveResponse'/>
+		</operation>
+
+		<operation name='NameSearch' parameterOrder='SearchText AnywhereInText MaxNumber'>
+			<input message='wsdlns:FungiNames.NameSearch'/>
+			<output message='wsdlns:FungiNames.NameSearchResponse'/>
+		</operation>
+
+		<operation name='EpithetSearch' parameterOrder='SearchText AnywhereInText MaxNumber'>
+			<input message='wsdlns:FungiNames.EpithetSearch'/>
+			<output message='wsdlns:FungiNames.EpithetSearchResponse'/>
+		</operation>
+
+		<operation name='NameByKey' parameterOrder='NameKey'>
+			<input message='wsdlns:FungiNames.NameByKey'/>
+			<output message='wsdlns:FungiNames.NameByKeyResponse'/>
+		</operation>
+
+	</portType>
+
+	<binding name='FungiNamesSoapBinding' type='wsdlns:FungiNamesSoapPort' >
+
+		<stk:binding preferredEncoding='UTF-8'/>
+		<soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/>
+
+		<operation name='IsAlive'>
+			<soap:operation soapAction='http://tempuri.org/CabiSoapServer/action/FungiNames.IsAlive'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='http://tempuri.org/CabiSoapServer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='http://tempuri.org/CabiSoapServer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+		<operation name='NameSearch'>
+			<soap:operation soapAction='http://tempuri.org/CabiSoapServer/action/FungiNames.NameSearch'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='http://tempuri.org/CabiSoapServer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='SearchText AnywhereInText MaxNumber'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='http://tempuri.org/CabiSoapServer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+		<operation name='EpithetSearch'>
+			<soap:operation soapAction='http://tempuri.org/CabiSoapServer/action/FungiNames.EpithetSearch'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='http://tempuri.org/CabiSoapServer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='SearchText AnywhereInText MaxNumber'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='http://tempuri.org/CabiSoapServer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+		<operation name='NameByKey'>
+			<soap:operation soapAction='http://tempuri.org/CabiSoapServer/action/FungiNames.NameByKey'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='http://tempuri.org/CabiSoapServer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='NameKey'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='http://tempuri.org/CabiSoapServer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+	</binding>
+
+	<service name='CabiSoapServer' >
+		<port name='FungiNamesSoapPort' binding='wsdlns:FungiNamesSoapBinding' >
+			<soap:address location='http://DEV10/CabiSoapServer/CabiSoapServer.WSDL'/>
+		</port>
+	</service>
+
+</definitions>
