@@ -1,0 +1,9 @@
+<!-- add to appSettings node-->
+    <add key="FRDBIConnectionString" value="data source=spencern-laptop;initial catalog=britishfungi;password=dbi_user;persist security info=True;user id=dbi_user;packet size=4096"/>
+    <add key="MetadataExpiryDays" value="100"/>
+	<add key="AuthenticatedIPs" value="202.27.241.100,127.0.0.1"/>
+    <add key="AuthenticatedPasswords" value=""/>
+    <add key="UnauthenticatedMessage" value="The data for this record is restricted.  To retreive the full data you must either be at a registered IP address, or use LSID credentials, specifying your assigned password."/> 
+    <!-- If you are not in possession of either of these then buy a subscription to the Index of Fungi, supporting Index Fungorum, which will then give you full access."/-->
+
+

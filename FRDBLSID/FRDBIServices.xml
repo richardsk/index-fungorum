@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment-descriptor xmlns="http://www.ibm.com/LSID/Standard/rsdl">
+  <maps>
+    <map name="frdbiMap">
+      <pattern auth="frdbi.info" ns="*" />
+    </map>
+  </maps>
+  <services>
+    <service name="FRDBIAuthority">
+      <components>
+        <auth map="frdbiMap" type="class" assemblyname="FRDBILSID.dll">FRDBILSID.FRDBIAuthority</auth>
+		<meta map="frdbiMap" type="class" assemblyname="FRDBILSID.dll">FRDBILSID.FRDBIAuthority</meta> 	
+		<data map="frdbiMap" type="class" assemblyname="FRDBILSID.dll">FRDBILSID.FRDBIAuthority</data>
+		<!--authentication map="frdbiMap" type="class" assemblyname="FRDBI.dll">FRDBI.FRDBIAuthentication</authentication-->
+      </components>
+    </service>
+  </services>
+</deployment-descriptor>
