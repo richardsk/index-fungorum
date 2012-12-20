@@ -1,0 +1,180 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FRDBILSID", "FRDBILSID\FRDBILSID.vbproj", "{5DBEB541-2A67-43F4-936E-27BBFA2E0740}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HerbIMILSID", "HerbIMILSID\HerbIMILSID.vbproj", "{A5F03D51-B516-4BCA-9BD6-3F06DEE65104}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IndexFungorumLSID", "IndexFungorumLSID\IndexFungorumLSID.vbproj", "{36B1DD90-A591-4194-A5A1-27D9B3CA2A66}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IXFWebService", "IFWebService\IXFWebService.vbproj", "{B7D367A3-6F03-4C54-8EA7-A8A19E4F86BA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IFDataAccess", "IFDataAccess\IFDataAccess.vbproj", "{7869A87A-DD5D-42DD-8F1C-6DAD8F40EDD5}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NameRegistrationService", "NameRegistrationService\NameRegistrationService.vbproj", "{170BB7A7-A431-4DDF-A6F3-0CD7DE6DF033}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IndexFungorum", "IFWeb\IndexFungorum", "{6E81C5AD-A823-42B5-AB62-9911859DEBB1}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/IndexFungorum/IFWeb/IndexFungorum"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/IndexFungorum"
+		Debug.AspNetCompiler.PhysicalPath = "IFWeb\IndexFungorum\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\IndexFungorum\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/IndexFungorum"
+		Release.AspNetCompiler.PhysicalPath = "IFWeb\IndexFungorum\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\IndexFungorum\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62853"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LibriFungorum", "IFWeb\LibriFungorum", "{EEA5EC13-30C3-426F-8AD3-424AA18923B1}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/IndexFungorum/IFWeb/LibriFungorum"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/LibriFungorum"
+		Debug.AspNetCompiler.PhysicalPath = "IFWeb\LibriFungorum\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LibriFungorum\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/LibriFungorum"
+		Release.AspNetCompiler.PhysicalPath = "IFWeb\LibriFungorum\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\LibriFungorum\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62859"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SpeciesFungorum", "IFWeb\SpeciesFungorum", "{69C7BF4F-F256-4982-9597-346A772E65C4}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/IndexFungorum/IFWeb/SpeciesFungorum"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/SpeciesFungorum"
+		Debug.AspNetCompiler.PhysicalPath = "IFWeb\SpeciesFungorum\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SpeciesFungorum\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SpeciesFungorum"
+		Release.AspNetCompiler.PhysicalPath = "IFWeb\SpeciesFungorum\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SpeciesFungorum\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62860"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 10
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = FRDBILSID\\FRDBILSID.vbproj
+		SccProjectName1 = $/IndexFungorum/FRDBILSID
+		SccLocalPath1 = FRDBILSID
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = HerbIMILSID\\HerbIMILSID.vbproj
+		SccProjectName2 = $/IndexFungorum/HerbIMILSID
+		SccLocalPath2 = HerbIMILSID
+		CanCheckoutShared = false
+		SccProjectUniqueName3 = IndexFungorumLSID\\IndexFungorumLSID.vbproj
+		SccProjectName3 = $/IndexFungorum/IndexFungorumLSID
+		SccLocalPath3 = IndexFungorumLSID
+		CanCheckoutShared = false
+		SccProjectUniqueName4 = IFWebService\\IXFWebService.vbproj
+		SccProjectName4 = $/IndexFungorum/IFWebService
+		SccLocalPath4 = IFWebService
+		CanCheckoutShared = false
+		SccProjectUniqueName5 = IFDataAccess\\IFDataAccess.vbproj
+		SccProjectName5 = $/IndexFungorum/IFDataAccess
+		SccLocalPath5 = IFDataAccess
+		CanCheckoutShared = false
+		SccProjectUniqueName6 = NameRegistrationService\\NameRegistrationService.vbproj
+		SccProjectName6 = $/IndexFungorum/NameRegistrationService
+		SccLocalPath6 = NameRegistrationService
+		CanCheckoutShared = false
+		SccWebProject7 = true
+		SccProjectUniqueName7 = IFWeb\\IndexFungorum
+		SccProjectName7 = $/IndexFungorum/IFWeb/IndexFungorum
+		SccLocalPath7 = C:\\Development\\IndexFungorum\\IFWeb\\IndexFungorum
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice7 = 2
+		SccWebProject8 = true
+		SccProjectUniqueName8 = IFWeb\\LibriFungorum
+		SccProjectName8 = $/IndexFungorum/IFWeb/LibriFungorum
+		SccLocalPath8 = C:\\Development\\IndexFungorum\\IFWeb\\LibriFungorum
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice8 = 2
+		SccWebProject9 = true
+		SccProjectUniqueName9 = IFWeb\\SpeciesFungorum
+		SccProjectName9 = $/IndexFungorum/IFWeb/SpeciesFungorum
+		SccLocalPath9 = C:\\Development\\IndexFungorum\\IFWeb\\SpeciesFungorum
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice9 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DBEB541-2A67-43F4-936E-27BBFA2E0740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBEB541-2A67-43F4-936E-27BBFA2E0740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBEB541-2A67-43F4-936E-27BBFA2E0740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBEB541-2A67-43F4-936E-27BBFA2E0740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F03D51-B516-4BCA-9BD6-3F06DEE65104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F03D51-B516-4BCA-9BD6-3F06DEE65104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F03D51-B516-4BCA-9BD6-3F06DEE65104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F03D51-B516-4BCA-9BD6-3F06DEE65104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B1DD90-A591-4194-A5A1-27D9B3CA2A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B1DD90-A591-4194-A5A1-27D9B3CA2A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B1DD90-A591-4194-A5A1-27D9B3CA2A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B1DD90-A591-4194-A5A1-27D9B3CA2A66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D367A3-6F03-4C54-8EA7-A8A19E4F86BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D367A3-6F03-4C54-8EA7-A8A19E4F86BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D367A3-6F03-4C54-8EA7-A8A19E4F86BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D367A3-6F03-4C54-8EA7-A8A19E4F86BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7869A87A-DD5D-42DD-8F1C-6DAD8F40EDD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7869A87A-DD5D-42DD-8F1C-6DAD8F40EDD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7869A87A-DD5D-42DD-8F1C-6DAD8F40EDD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7869A87A-DD5D-42DD-8F1C-6DAD8F40EDD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{170BB7A7-A431-4DDF-A6F3-0CD7DE6DF033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{170BB7A7-A431-4DDF-A6F3-0CD7DE6DF033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{170BB7A7-A431-4DDF-A6F3-0CD7DE6DF033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{170BB7A7-A431-4DDF-A6F3-0CD7DE6DF033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E81C5AD-A823-42B5-AB62-9911859DEBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E81C5AD-A823-42B5-AB62-9911859DEBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E81C5AD-A823-42B5-AB62-9911859DEBB1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E81C5AD-A823-42B5-AB62-9911859DEBB1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{EEA5EC13-30C3-426F-8AD3-424AA18923B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA5EC13-30C3-426F-8AD3-424AA18923B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA5EC13-30C3-426F-8AD3-424AA18923B1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA5EC13-30C3-426F-8AD3-424AA18923B1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{69C7BF4F-F256-4982-9597-346A772E65C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C7BF4F-F256-4982-9597-346A772E65C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C7BF4F-F256-4982-9597-346A772E65C4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C7BF4F-F256-4982-9597-346A772E65C4}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
