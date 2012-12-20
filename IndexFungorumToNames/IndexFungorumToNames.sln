@@ -1,0 +1,76 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IndexFungorumToNames", "IndexFungorumToNames.vbproj", "{C2DC5ADF-EB9B-4290-8445-A5C23BDD1010}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NameLiteratureDataAccess", "..\NameLiterature\NameLiteratureDataAccess\NameLiteratureDataAccess.vbproj", "{B15AAD45-6D64-4EB3-8CD9-38678726CA94}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NameLiteratureSystemFrameworks", "..\NameLiterature\NameLiteratureSystemFrameworks\NameLiteratureSystemFrameworks.vbproj", "{D3E75CBB-79F9-44A9-8241-DD5D42E28AED}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NameLiteratureDataTypes", "..\NameLiterature\NameLiteratureDataTypes\NameLiteratureDataTypes.vbproj", "{D35D5BF9-5C6C-44D3-AB0B-A632ECFD368F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Diagnostics", "..\Diagnostics\Diagnostics.vbproj", "{44159D8E-06A4-4A64-9978-33B86C1548F4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccProjectUniqueName0 = ..\\NameLiterature\\NameLiteratureDataAccess\\NameLiteratureDataAccess.vbproj
+		SccProjectName0 = \u0022$/Development/Database\u0020Integration/NameLiterature/NameLiteratureDataAccess\u0022,\u0020NHEBAAAA
+		SccLocalPath0 = ..\\NameLiterature\\NameLiteratureDataAccess
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = ..\\NameLiterature\\NameLiteratureSystemFrameworks\\NameLiteratureSystemFrameworks.vbproj
+		SccProjectName1 = \u0022$/Development/Database\u0020Integration/NameLiterature/NameLiteratureSystemFrameworks\u0022,\u0020PHEBAAAA
+		SccLocalPath1 = ..\\NameLiterature\\NameLiteratureSystemFrameworks
+		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = ..\\NameLiterature\\NameLiteratureDataTypes\\NameLiteratureDataTypes.vbproj
+		SccProjectName2 = \u0022$/Development/Database\u0020Integration/NameLiterature/NameLiteratureDataTypes\u0022,\u0020ERTBAAAA
+		SccLocalPath2 = ..\\NameLiterature\\NameLiteratureDataTypes
+		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName3 = ..\\Diagnostics\\Diagnostics.vbproj
+		SccProjectName3 = \u0022$/Development/Database\u0020Integration/Diagnostics\u0022,\u0020NTTBAAAA
+		SccLocalPath3 = ..\\Diagnostics
+		SccProvider3 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C2DC5ADF-EB9B-4290-8445-A5C23BDD1010}.Debug.ActiveCfg = Debug|.NET
+		{C2DC5ADF-EB9B-4290-8445-A5C23BDD1010}.Debug.Build.0 = Debug|.NET
+		{C2DC5ADF-EB9B-4290-8445-A5C23BDD1010}.Release.ActiveCfg = Release|.NET
+		{C2DC5ADF-EB9B-4290-8445-A5C23BDD1010}.Release.Build.0 = Release|.NET
+		{B15AAD45-6D64-4EB3-8CD9-38678726CA94}.Debug.ActiveCfg = Debug|.NET
+		{B15AAD45-6D64-4EB3-8CD9-38678726CA94}.Debug.Build.0 = Debug|.NET
+		{B15AAD45-6D64-4EB3-8CD9-38678726CA94}.Release.ActiveCfg = Release|.NET
+		{B15AAD45-6D64-4EB3-8CD9-38678726CA94}.Release.Build.0 = Release|.NET
+		{D3E75CBB-79F9-44A9-8241-DD5D42E28AED}.Debug.ActiveCfg = Debug|.NET
+		{D3E75CBB-79F9-44A9-8241-DD5D42E28AED}.Debug.Build.0 = Debug|.NET
+		{D3E75CBB-79F9-44A9-8241-DD5D42E28AED}.Release.ActiveCfg = Release|.NET
+		{D3E75CBB-79F9-44A9-8241-DD5D42E28AED}.Release.Build.0 = Release|.NET
+		{D35D5BF9-5C6C-44D3-AB0B-A632ECFD368F}.Debug.ActiveCfg = Debug|.NET
+		{D35D5BF9-5C6C-44D3-AB0B-A632ECFD368F}.Debug.Build.0 = Debug|.NET
+		{D35D5BF9-5C6C-44D3-AB0B-A632ECFD368F}.Release.ActiveCfg = Release|.NET
+		{D35D5BF9-5C6C-44D3-AB0B-A632ECFD368F}.Release.Build.0 = Release|.NET
+		{44159D8E-06A4-4A64-9978-33B86C1548F4}.Debug.ActiveCfg = Debug|.NET
+		{44159D8E-06A4-4A64-9978-33B86C1548F4}.Debug.Build.0 = Debug|.NET
+		{44159D8E-06A4-4A64-9978-33B86C1548F4}.Release.ActiveCfg = Release|.NET
+		{44159D8E-06A4-4A64-9978-33B86C1548F4}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
