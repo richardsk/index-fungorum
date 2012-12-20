@@ -1,0 +1,1626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Cabi/FungusServer/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://Cabi/FungusServer/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Cabi/FungusServer/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="IsAlive">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsAliveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsAliveResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AnywhereInText" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxNumber" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameSearchResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameSearchDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AnywhereInText" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxNumber" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameSearchDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameSearchDsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EpithetSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AnywhereInText" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxNumber" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EpithetSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EpithetSearchResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EpithetSearchDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AnywhereInText" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxNumber" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EpithetSearchDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EpithetSearchDsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameByKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NameKey" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameByKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameByKeyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameByKeyDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NameKey" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameByKeyDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameByKeyDsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameFullByKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameLsid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameFullByKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameFullByKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameByKeyRDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameLsid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameByKeyRDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameByKeyRDFResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AnywhereInText" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxNumber" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorSearchResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorSearchDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AnywhereInText" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxNumber" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorSearchDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorSearchDsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NamesByCurrentKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CurrentKey" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NamesByCurrentKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NamesByCurrentKeyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NamesByCurrentKeyDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CurrentKey" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NamesByCurrentKeyDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NamesByCurrentKeyDsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllUpdatedNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllUpdatedNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllUpdatedNamesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatedNamesInRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatedNamesInRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatedNamesInRangeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatedNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatedNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatedNamesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewNamesInRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewNamesInRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewNamesInRangeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewNamesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeprecatedNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeprecatedNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeprecatedNamesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeprecatedNamesByRank">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeprecatedNamesByRankResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeprecatedNamesByRankResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IsAliveSoapIn">
+    <wsdl:part name="parameters" element="tns:IsAlive" />
+  </wsdl:message>
+  <wsdl:message name="IsAliveSoapOut">
+    <wsdl:part name="parameters" element="tns:IsAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:NameSearch" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:NameSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchDsSoapIn">
+    <wsdl:part name="parameters" element="tns:NameSearchDs" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchDsSoapOut">
+    <wsdl:part name="parameters" element="tns:NameSearchDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:EpithetSearch" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:EpithetSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchDsSoapIn">
+    <wsdl:part name="parameters" element="tns:EpithetSearchDs" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchDsSoapOut">
+    <wsdl:part name="parameters" element="tns:EpithetSearchDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeySoapIn">
+    <wsdl:part name="parameters" element="tns:NameByKey" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeySoapOut">
+    <wsdl:part name="parameters" element="tns:NameByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyDsSoapIn">
+    <wsdl:part name="parameters" element="tns:NameByKeyDs" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyDsSoapOut">
+    <wsdl:part name="parameters" element="tns:NameByKeyDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameFullByKeySoapIn">
+    <wsdl:part name="parameters" element="tns:NameFullByKey" />
+  </wsdl:message>
+  <wsdl:message name="NameFullByKeySoapOut">
+    <wsdl:part name="parameters" element="tns:NameFullByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyRDFSoapIn">
+    <wsdl:part name="parameters" element="tns:NameByKeyRDF" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyRDFSoapOut">
+    <wsdl:part name="parameters" element="tns:NameByKeyRDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorSearch" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchDsSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorSearchDs" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchDsSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorSearchDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeySoapIn">
+    <wsdl:part name="parameters" element="tns:NamesByCurrentKey" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeySoapOut">
+    <wsdl:part name="parameters" element="tns:NamesByCurrentKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyDsSoapIn">
+    <wsdl:part name="parameters" element="tns:NamesByCurrentKeyDs" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyDsSoapOut">
+    <wsdl:part name="parameters" element="tns:NamesByCurrentKeyDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllUpdatedNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:AllUpdatedNames" />
+  </wsdl:message>
+  <wsdl:message name="AllUpdatedNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:AllUpdatedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesInRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatedNamesInRange" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesInRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatedNamesInRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatedNames" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesInRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:NewNamesInRange" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesInRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:NewNamesInRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:NewNames" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:NewNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:DeprecatedNames" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:DeprecatedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesByRankSoapIn">
+    <wsdl:part name="parameters" element="tns:DeprecatedNamesByRank" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesByRankSoapOut">
+    <wsdl:part name="parameters" element="tns:DeprecatedNamesByRankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsAliveHttpGetIn" />
+  <wsdl:message name="IsAliveHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchHttpGetIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchDsHttpGetIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchHttpGetIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchDsHttpGetIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyHttpGetIn">
+    <wsdl:part name="NameKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyDsHttpGetIn">
+    <wsdl:part name="NameKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NameFullByKeyHttpGetIn">
+    <wsdl:part name="NameLsid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameFullByKeyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyRDFHttpGetIn">
+    <wsdl:part name="NameLsid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyRDFHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchHttpGetIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchDsHttpGetIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyHttpGetIn">
+    <wsdl:part name="CurrentKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyDsHttpGetIn">
+    <wsdl:part name="CurrentKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AllUpdatedNamesHttpGetIn">
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AllUpdatedNamesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesInRangeHttpGetIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesInRangeHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesHttpGetIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesInRangeHttpGetIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesInRangeHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesHttpGetIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesHttpGetIn">
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesByRankHttpGetIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesByRankHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="IsAliveHttpPostIn" />
+  <wsdl:message name="IsAliveHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchHttpPostIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchDsHttpPostIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchHttpPostIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchDsHttpPostIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EpithetSearchDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyHttpPostIn">
+    <wsdl:part name="NameKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyDsHttpPostIn">
+    <wsdl:part name="NameKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NameFullByKeyHttpPostIn">
+    <wsdl:part name="NameLsid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameFullByKeyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyRDFHttpPostIn">
+    <wsdl:part name="NameLsid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NameByKeyRDFHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchHttpPostIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchDsHttpPostIn">
+    <wsdl:part name="SearchText" type="s:string" />
+    <wsdl:part name="AnywhereInText" type="s:string" />
+    <wsdl:part name="MaxNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorSearchDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyHttpPostIn">
+    <wsdl:part name="CurrentKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyDsHttpPostIn">
+    <wsdl:part name="CurrentKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NamesByCurrentKeyDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AllUpdatedNamesHttpPostIn">
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AllUpdatedNamesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesInRangeHttpPostIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesInRangeHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesHttpPostIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatedNamesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesInRangeHttpPostIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesInRangeHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesHttpPostIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NewNamesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesHttpPostIn">
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesByRankHttpPostIn">
+    <wsdl:part name="rank" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeprecatedNamesByRankHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="FungusSoap">
+    <wsdl:operation name="IsAlive">
+      <wsdl:input message="tns:IsAliveSoapIn" />
+      <wsdl:output message="tns:IsAliveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <wsdl:input message="tns:NameSearchSoapIn" />
+      <wsdl:output message="tns:NameSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameSearchDs">
+      <wsdl:input message="tns:NameSearchDsSoapIn" />
+      <wsdl:output message="tns:NameSearchDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearch">
+      <wsdl:input message="tns:EpithetSearchSoapIn" />
+      <wsdl:output message="tns:EpithetSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearchDs">
+      <wsdl:input message="tns:EpithetSearchDsSoapIn" />
+      <wsdl:output message="tns:EpithetSearchDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKey">
+      <wsdl:input message="tns:NameByKeySoapIn" />
+      <wsdl:output message="tns:NameByKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyDs">
+      <wsdl:input message="tns:NameByKeyDsSoapIn" />
+      <wsdl:output message="tns:NameByKeyDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameFullByKey">
+      <wsdl:input message="tns:NameFullByKeySoapIn" />
+      <wsdl:output message="tns:NameFullByKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyRDF">
+      <wsdl:input message="tns:NameByKeyRDFSoapIn" />
+      <wsdl:output message="tns:NameByKeyRDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearch">
+      <wsdl:input message="tns:AuthorSearchSoapIn" />
+      <wsdl:output message="tns:AuthorSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearchDs">
+      <wsdl:input message="tns:AuthorSearchDsSoapIn" />
+      <wsdl:output message="tns:AuthorSearchDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKey">
+      <wsdl:input message="tns:NamesByCurrentKeySoapIn" />
+      <wsdl:output message="tns:NamesByCurrentKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKeyDs">
+      <wsdl:input message="tns:NamesByCurrentKeyDsSoapIn" />
+      <wsdl:output message="tns:NamesByCurrentKeyDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllUpdatedNames">
+      <wsdl:input message="tns:AllUpdatedNamesSoapIn" />
+      <wsdl:output message="tns:AllUpdatedNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNamesInRange">
+      <wsdl:input message="tns:UpdatedNamesInRangeSoapIn" />
+      <wsdl:output message="tns:UpdatedNamesInRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNames">
+      <wsdl:input message="tns:UpdatedNamesSoapIn" />
+      <wsdl:output message="tns:UpdatedNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewNamesInRange">
+      <wsdl:input message="tns:NewNamesInRangeSoapIn" />
+      <wsdl:output message="tns:NewNamesInRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewNames">
+      <wsdl:input message="tns:NewNamesSoapIn" />
+      <wsdl:output message="tns:NewNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNames">
+      <wsdl:input message="tns:DeprecatedNamesSoapIn" />
+      <wsdl:output message="tns:DeprecatedNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNamesByRank">
+      <wsdl:input message="tns:DeprecatedNamesByRankSoapIn" />
+      <wsdl:output message="tns:DeprecatedNamesByRankSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="FungusHttpGet">
+    <wsdl:operation name="IsAlive">
+      <wsdl:input message="tns:IsAliveHttpGetIn" />
+      <wsdl:output message="tns:IsAliveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <wsdl:input message="tns:NameSearchHttpGetIn" />
+      <wsdl:output message="tns:NameSearchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameSearchDs">
+      <wsdl:input message="tns:NameSearchDsHttpGetIn" />
+      <wsdl:output message="tns:NameSearchDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearch">
+      <wsdl:input message="tns:EpithetSearchHttpGetIn" />
+      <wsdl:output message="tns:EpithetSearchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearchDs">
+      <wsdl:input message="tns:EpithetSearchDsHttpGetIn" />
+      <wsdl:output message="tns:EpithetSearchDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKey">
+      <wsdl:input message="tns:NameByKeyHttpGetIn" />
+      <wsdl:output message="tns:NameByKeyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyDs">
+      <wsdl:input message="tns:NameByKeyDsHttpGetIn" />
+      <wsdl:output message="tns:NameByKeyDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameFullByKey">
+      <wsdl:input message="tns:NameFullByKeyHttpGetIn" />
+      <wsdl:output message="tns:NameFullByKeyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyRDF">
+      <wsdl:input message="tns:NameByKeyRDFHttpGetIn" />
+      <wsdl:output message="tns:NameByKeyRDFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearch">
+      <wsdl:input message="tns:AuthorSearchHttpGetIn" />
+      <wsdl:output message="tns:AuthorSearchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearchDs">
+      <wsdl:input message="tns:AuthorSearchDsHttpGetIn" />
+      <wsdl:output message="tns:AuthorSearchDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKey">
+      <wsdl:input message="tns:NamesByCurrentKeyHttpGetIn" />
+      <wsdl:output message="tns:NamesByCurrentKeyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKeyDs">
+      <wsdl:input message="tns:NamesByCurrentKeyDsHttpGetIn" />
+      <wsdl:output message="tns:NamesByCurrentKeyDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllUpdatedNames">
+      <wsdl:input message="tns:AllUpdatedNamesHttpGetIn" />
+      <wsdl:output message="tns:AllUpdatedNamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNamesInRange">
+      <wsdl:input message="tns:UpdatedNamesInRangeHttpGetIn" />
+      <wsdl:output message="tns:UpdatedNamesInRangeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNames">
+      <wsdl:input message="tns:UpdatedNamesHttpGetIn" />
+      <wsdl:output message="tns:UpdatedNamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewNamesInRange">
+      <wsdl:input message="tns:NewNamesInRangeHttpGetIn" />
+      <wsdl:output message="tns:NewNamesInRangeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewNames">
+      <wsdl:input message="tns:NewNamesHttpGetIn" />
+      <wsdl:output message="tns:NewNamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNames">
+      <wsdl:input message="tns:DeprecatedNamesHttpGetIn" />
+      <wsdl:output message="tns:DeprecatedNamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNamesByRank">
+      <wsdl:input message="tns:DeprecatedNamesByRankHttpGetIn" />
+      <wsdl:output message="tns:DeprecatedNamesByRankHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="FungusHttpPost">
+    <wsdl:operation name="IsAlive">
+      <wsdl:input message="tns:IsAliveHttpPostIn" />
+      <wsdl:output message="tns:IsAliveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <wsdl:input message="tns:NameSearchHttpPostIn" />
+      <wsdl:output message="tns:NameSearchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameSearchDs">
+      <wsdl:input message="tns:NameSearchDsHttpPostIn" />
+      <wsdl:output message="tns:NameSearchDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearch">
+      <wsdl:input message="tns:EpithetSearchHttpPostIn" />
+      <wsdl:output message="tns:EpithetSearchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearchDs">
+      <wsdl:input message="tns:EpithetSearchDsHttpPostIn" />
+      <wsdl:output message="tns:EpithetSearchDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKey">
+      <wsdl:input message="tns:NameByKeyHttpPostIn" />
+      <wsdl:output message="tns:NameByKeyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyDs">
+      <wsdl:input message="tns:NameByKeyDsHttpPostIn" />
+      <wsdl:output message="tns:NameByKeyDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameFullByKey">
+      <wsdl:input message="tns:NameFullByKeyHttpPostIn" />
+      <wsdl:output message="tns:NameFullByKeyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyRDF">
+      <wsdl:input message="tns:NameByKeyRDFHttpPostIn" />
+      <wsdl:output message="tns:NameByKeyRDFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearch">
+      <wsdl:input message="tns:AuthorSearchHttpPostIn" />
+      <wsdl:output message="tns:AuthorSearchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearchDs">
+      <wsdl:input message="tns:AuthorSearchDsHttpPostIn" />
+      <wsdl:output message="tns:AuthorSearchDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKey">
+      <wsdl:input message="tns:NamesByCurrentKeyHttpPostIn" />
+      <wsdl:output message="tns:NamesByCurrentKeyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKeyDs">
+      <wsdl:input message="tns:NamesByCurrentKeyDsHttpPostIn" />
+      <wsdl:output message="tns:NamesByCurrentKeyDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllUpdatedNames">
+      <wsdl:input message="tns:AllUpdatedNamesHttpPostIn" />
+      <wsdl:output message="tns:AllUpdatedNamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNamesInRange">
+      <wsdl:input message="tns:UpdatedNamesInRangeHttpPostIn" />
+      <wsdl:output message="tns:UpdatedNamesInRangeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNames">
+      <wsdl:input message="tns:UpdatedNamesHttpPostIn" />
+      <wsdl:output message="tns:UpdatedNamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewNamesInRange">
+      <wsdl:input message="tns:NewNamesInRangeHttpPostIn" />
+      <wsdl:output message="tns:NewNamesInRangeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewNames">
+      <wsdl:input message="tns:NewNamesHttpPostIn" />
+      <wsdl:output message="tns:NewNamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNames">
+      <wsdl:input message="tns:DeprecatedNamesHttpPostIn" />
+      <wsdl:output message="tns:DeprecatedNamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNamesByRank">
+      <wsdl:input message="tns:DeprecatedNamesByRankHttpPostIn" />
+      <wsdl:output message="tns:DeprecatedNamesByRankHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FungusSoap" type="tns:FungusSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsAlive">
+      <soap:operation soapAction="http://Cabi/FungusServer/IsAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <soap:operation soapAction="http://Cabi/FungusServer/NameSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearchDs">
+      <soap:operation soapAction="http://Cabi/FungusServer/NameSearchDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearch">
+      <soap:operation soapAction="http://Cabi/FungusServer/EpithetSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearchDs">
+      <soap:operation soapAction="http://Cabi/FungusServer/EpithetSearchDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKey">
+      <soap:operation soapAction="http://Cabi/FungusServer/NameByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyDs">
+      <soap:operation soapAction="http://Cabi/FungusServer/NameByKeyDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameFullByKey">
+      <soap:operation soapAction="http://Cabi/FungusServer/NameFullByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyRDF">
+      <soap:operation soapAction="http://Cabi/FungusServer/NameByKeyRDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearch">
+      <soap:operation soapAction="http://Cabi/FungusServer/AuthorSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearchDs">
+      <soap:operation soapAction="http://Cabi/FungusServer/AuthorSearchDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKey">
+      <soap:operation soapAction="http://Cabi/FungusServer/NamesByCurrentKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKeyDs">
+      <soap:operation soapAction="http://Cabi/FungusServer/NamesByCurrentKeyDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllUpdatedNames">
+      <soap:operation soapAction="http://Cabi/FungusServer/AllUpdatedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNamesInRange">
+      <soap:operation soapAction="http://Cabi/FungusServer/UpdatedNamesInRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNames">
+      <soap:operation soapAction="http://Cabi/FungusServer/UpdatedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewNamesInRange">
+      <soap:operation soapAction="http://Cabi/FungusServer/NewNamesInRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewNames">
+      <soap:operation soapAction="http://Cabi/FungusServer/NewNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNames">
+      <soap:operation soapAction="http://Cabi/FungusServer/DeprecatedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNamesByRank">
+      <soap:operation soapAction="http://Cabi/FungusServer/DeprecatedNamesByRank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FungusHttpGet" type="tns:FungusHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="IsAlive">
+      <http:operation location="/IsAlive" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <http:operation location="/NameSearch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearchDs">
+      <http:operation location="/NameSearchDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearch">
+      <http:operation location="/EpithetSearch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearchDs">
+      <http:operation location="/EpithetSearchDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKey">
+      <http:operation location="/NameByKey" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyDs">
+      <http:operation location="/NameByKeyDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameFullByKey">
+      <http:operation location="/NameFullByKey" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyRDF">
+      <http:operation location="/NameByKeyRDF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearch">
+      <http:operation location="/AuthorSearch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearchDs">
+      <http:operation location="/AuthorSearchDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKey">
+      <http:operation location="/NamesByCurrentKey" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKeyDs">
+      <http:operation location="/NamesByCurrentKeyDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllUpdatedNames">
+      <http:operation location="/AllUpdatedNames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNamesInRange">
+      <http:operation location="/UpdatedNamesInRange" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNames">
+      <http:operation location="/UpdatedNames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewNamesInRange">
+      <http:operation location="/NewNamesInRange" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewNames">
+      <http:operation location="/NewNames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNames">
+      <http:operation location="/DeprecatedNames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNamesByRank">
+      <http:operation location="/DeprecatedNamesByRank" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FungusHttpPost" type="tns:FungusHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="IsAlive">
+      <http:operation location="/IsAlive" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <http:operation location="/NameSearch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearchDs">
+      <http:operation location="/NameSearchDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearch">
+      <http:operation location="/EpithetSearch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpithetSearchDs">
+      <http:operation location="/EpithetSearchDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKey">
+      <http:operation location="/NameByKey" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyDs">
+      <http:operation location="/NameByKeyDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameFullByKey">
+      <http:operation location="/NameFullByKey" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameByKeyRDF">
+      <http:operation location="/NameByKeyRDF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearch">
+      <http:operation location="/AuthorSearch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorSearchDs">
+      <http:operation location="/AuthorSearchDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKey">
+      <http:operation location="/NamesByCurrentKey" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NamesByCurrentKeyDs">
+      <http:operation location="/NamesByCurrentKeyDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllUpdatedNames">
+      <http:operation location="/AllUpdatedNames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNamesInRange">
+      <http:operation location="/UpdatedNamesInRange" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatedNames">
+      <http:operation location="/UpdatedNames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewNamesInRange">
+      <http:operation location="/NewNamesInRange" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewNames">
+      <http:operation location="/NewNames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNames">
+      <http:operation location="/DeprecatedNames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeprecatedNamesByRank">
+      <http:operation location="/DeprecatedNamesByRank" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Fungus">
+    <wsdl:port name="FungusSoap" binding="tns:FungusSoap">
+      <soap:address location="http://www.indexfungorum.org/IXFWebService/Fungus.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FungusHttpGet" binding="tns:FungusHttpGet">
+      <http:address location="http://www.indexfungorum.org/IXFWebService/Fungus.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FungusHttpPost" binding="tns:FungusHttpPost">
+      <http:address location="http://www.indexfungorum.org/IXFWebService/Fungus.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
