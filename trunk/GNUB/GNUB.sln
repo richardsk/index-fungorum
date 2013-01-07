@@ -1,0 +1,113 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AdminWeb", "AdminWeb", "{B9B90315-36A8-4728-B5D6-FC3AEBAAD01F}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/TDWG/GNUB"
+		SccAuxPath = ""
+		SccLocalPath = ".."
+		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		TargetFramework = "3.5"
+		ProjectReferences = "{3B224DC8-ECAA-448C-82AE-AE80542D5D5A}|GNUBBusinessRules.dll;{4D2E8538-DF67-4B00-994A-83AB76657BD8}|GNUBDataAccess.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/AdminWeb"
+		Debug.AspNetCompiler.PhysicalPath = "AdminWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AdminWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AdminWeb"
+		Release.AspNetCompiler.PhysicalPath = "AdminWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AdminWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1246"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GNUBBusinessRules", "GNUBBusinessRules\GNUBBusinessRules.vbproj", "{3B224DC8-ECAA-448C-82AE-AE80542D5D5A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GNUBDataAccess", "GNUBDataAccess\GNUBDataAccess.vbproj", "{4D2E8538-DF67-4B00-994A-83AB76657BD8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GNUBSetup", "GNUBSetup\GNUBSetup.vdproj", "{B4FDDAAA-C3F2-4B95-BD92-A86EA6A636FC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GNUBServiceTest", "GNUBServiceTest\GNUBServiceTest.vbproj", "{DDD3823E-B061-4B96-B523-8D1BBE6B91EE}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GNUBService", "GNUBService\GNUBService.vbproj", "{70A2F944-D448-4DBA-B3D7-AD70F8401594}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GNUBDump", "GNUBDump\GNUBDump.vbproj", "{9A47D015-97BD-4E56-8F49-E43EA2905EE6}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 8
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = GNUBBusinessRules\\GNUBBusinessRules.vbproj
+		SccProjectName1 = $/TDWG/GNUB/GNUBBusinessRules
+		SccLocalPath1 = GNUBBusinessRules
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = GNUBDataAccess\\GNUBDataAccess.vbproj
+		SccProjectName2 = $/TDWG/GNUB/GNUBDataAccess
+		SccLocalPath2 = GNUBDataAccess
+		CanCheckoutShared = false
+		SccProjectUniqueName3 = GNUBSetup\\GNUBSetup.vdproj
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = GNUBSetup\\
+		SccWebProject4 = true
+		SccProjectUniqueName4 = AdminWeb
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = AdminWeb\\
+		SccProjectEnlistmentChoice4 = 2
+		SccProjectUniqueName5 = GNUBServiceTest\\GNUBServiceTest.vbproj
+		SccLocalPath5 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection5 = GNUBServiceTest\\
+		SccProjectUniqueName6 = GNUBService\\GNUBService.vbproj
+		SccLocalPath6 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection6 = GNUBService\\
+		SccProjectUniqueName7 = GNUBDump\\GNUBDump.vbproj
+		SccLocalPath7 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection7 = GNUBDump\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9B90315-36A8-4728-B5D6-FC3AEBAAD01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B90315-36A8-4728-B5D6-FC3AEBAAD01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B90315-36A8-4728-B5D6-FC3AEBAAD01F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B90315-36A8-4728-B5D6-FC3AEBAAD01F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3B224DC8-ECAA-448C-82AE-AE80542D5D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B224DC8-ECAA-448C-82AE-AE80542D5D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B224DC8-ECAA-448C-82AE-AE80542D5D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B224DC8-ECAA-448C-82AE-AE80542D5D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D2E8538-DF67-4B00-994A-83AB76657BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D2E8538-DF67-4B00-994A-83AB76657BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D2E8538-DF67-4B00-994A-83AB76657BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D2E8538-DF67-4B00-994A-83AB76657BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4FDDAAA-C3F2-4B95-BD92-A86EA6A636FC}.Debug|Any CPU.ActiveCfg = Debug
+		{B4FDDAAA-C3F2-4B95-BD92-A86EA6A636FC}.Release|Any CPU.ActiveCfg = Release
+		{DDD3823E-B061-4B96-B523-8D1BBE6B91EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD3823E-B061-4B96-B523-8D1BBE6B91EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD3823E-B061-4B96-B523-8D1BBE6B91EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD3823E-B061-4B96-B523-8D1BBE6B91EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70A2F944-D448-4DBA-B3D7-AD70F8401594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A2F944-D448-4DBA-B3D7-AD70F8401594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A2F944-D448-4DBA-B3D7-AD70F8401594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A2F944-D448-4DBA-B3D7-AD70F8401594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A47D015-97BD-4E56-8F49-E43EA2905EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A47D015-97BD-4E56-8F49-E43EA2905EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A47D015-97BD-4E56-8F49-E43EA2905EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A47D015-97BD-4E56-8F49-E43EA2905EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

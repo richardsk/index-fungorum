@@ -1,0 +1,131 @@
+﻿body {
+}
+
+.H1
+{
+	font-size:large;
+	font-weight:bold;
+}
+
+.error
+{
+	color:Red;	
+}
+
+.master
+{
+	width: 100%;
+	
+}
+
+.content
+{
+	width:760px;
+}
+.content a
+{
+	color:Black;
+	text-decoration:none;
+}
+
+
+.mainTable
+{
+	border-style:solid;
+	border-color:Black;
+	height:780px;
+}
+
+.mainTop
+{
+	/*border-width:0px;*/
+}
+
+.mainBottom
+{
+	border-width:0px;
+	height: 95%;
+	vertical-align: top;
+	text-align: center;
+}
+
+.menu
+{
+	/* border: 1 solid Black; */
+	text-decoration: none;
+	background-color: #ADC9C9; /* #F0EEC1; */
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.currentmenu
+{
+	border: 1 solid Black;
+	text-decoration: none;
+	background-color: white; /*#ADC9C9;*/
+	text-align: center;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.contentLabel
+{
+	font-size:small;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	width:200px;
+	
+}
+
+.contentText
+{
+	font-size:small;
+	font-family:Arial, Helvetica, sans-serif;
+	
+}
+
+.provTable
+{
+	width:90%;
+	padding:0px;
+	margin:0px;
+	border-spacing: 0px;
+	border-collapse:collapse;
+	border: 0px solid #000000;
+}
+
+.provTableHeader
+{
+	font-weight:bold;
+	margin: 0px;	
+	border-spacing: 0px;
+	border-collapse:collapse;
+	border: 0px solid #000000;
+	background-color: #ADC9C9;
+}
+
+.updateTable
+{
+	width:100%;
+}
+
+.contentForm
+{
+	text-align:left;
+	width:90%;
+}
+
+.searchPage
+{
+	width:90%;
+	text-align:left;
+}
+
+.tnuDetails
+{
+	width:80%;
+	text-align:left;
+}

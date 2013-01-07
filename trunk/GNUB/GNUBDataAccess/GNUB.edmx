@@ -1,0 +1,2572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GNUBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="GNUBModelStoreContainer">
+          <EntitySet Name="Provider" EntityType="GNUBModel.Store.Provider" store:Type="Tables" Schema="admin" />
+          <EntitySet Name="Agent" EntityType="GNUBModel.Store.Agent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Comment" EntityType="GNUBModel.Store.Comment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Hybrid" EntityType="GNUBModel.Store.Hybrid" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Identifier" EntityType="GNUBModel.Store.Identifier" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="IdentifierDomain" EntityType="GNUBModel.Store.IdentifierDomain" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NewCombination" EntityType="GNUBModel.Store.NewCombination" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NomenclaturalCode" EntityType="GNUBModel.Store.NomenclaturalCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NomenclaturalEvent" EntityType="GNUBModel.Store.NomenclaturalEvent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NomenclaturalEventType" EntityType="GNUBModel.Store.NomenclaturalEventType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Organization" EntityType="GNUBModel.Store.Organization" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Person" EntityType="GNUBModel.Store.Person" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PK" EntityType="GNUBModel.Store.PK" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Protonym" EntityType="GNUBModel.Store.Protonym" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Reference" EntityType="GNUBModel.Store.Reference" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RegisteredIdentifier" EntityType="GNUBModel.Store.RegisteredIdentifier" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaxonNameUsage" EntityType="GNUBModel.Store.TaxonNameUsage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaxonRank" EntityType="GNUBModel.Store.TaxonRank" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Typification" EntityType="GNUBModel.Store.Typification" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TypificationType" EntityType="GNUBModel.Store.TypificationType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Username" EntityType="GNUBModel.Store.Username" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Agent_Agent" Association="GNUBModel.Store.FK_Agent_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Agent1" EntitySet="Agent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Agent_PK" Association="GNUBModel.Store.FK_Agent_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Agent" EntitySet="Agent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_Agent" Association="GNUBModel.Store.FK_Comment_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_PK" Association="GNUBModel.Store.FK_Comment_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_PK1" Association="GNUBModel.Store.FK_Comment_PK1">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Hybrid_PK" Association="GNUBModel.Store.FK_Hybrid_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Hybrid" EntitySet="Hybrid" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Hybrid_TaxonNameUsage" Association="GNUBModel.Store.FK_Hybrid_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="Hybrid" EntitySet="Hybrid" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Hybrid_TaxonNameUsage1" Association="GNUBModel.Store.FK_Hybrid_TaxonNameUsage1">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="Hybrid" EntitySet="Hybrid" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Identifier_IdentifierDomain" Association="GNUBModel.Store.FK_Identifier_IdentifierDomain">
+            <End Role="IdentifierDomain" EntitySet="IdentifierDomain" />
+            <End Role="Identifier" EntitySet="Identifier" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Identifier_PK" Association="GNUBModel.Store.FK_Identifier_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Identifier" EntitySet="Identifier" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Identifier_PK1" Association="GNUBModel.Store.FK_Identifier_PK1">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Identifier" EntitySet="Identifier" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IdentifierDomain_Agent" Association="GNUBModel.Store.FK_IdentifierDomain_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="IdentifierDomain" EntitySet="IdentifierDomain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IdentifierDomain_PK" Association="GNUBModel.Store.FK_IdentifierDomain_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="IdentifierDomain" EntitySet="IdentifierDomain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewCombination_Protonym" Association="GNUBModel.Store.FK_NewCombination_Protonym">
+            <End Role="Protonym" EntitySet="Protonym" />
+            <End Role="NewCombination" EntitySet="NewCombination" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewCombination_Protonym1" Association="GNUBModel.Store.FK_NewCombination_Protonym1">
+            <End Role="Protonym" EntitySet="Protonym" />
+            <End Role="NewCombination" EntitySet="NewCombination" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewCombination_Protonym2" Association="GNUBModel.Store.FK_NewCombination_Protonym2">
+            <End Role="Protonym" EntitySet="Protonym" />
+            <End Role="NewCombination" EntitySet="NewCombination" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewCombination_TaxonNameUsage" Association="GNUBModel.Store.FK_NewCombination_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="NewCombination" EntitySet="NewCombination" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalAct_NomenclaturalAct" Association="GNUBModel.Store.FK_NomenclaturalAct_NomenclaturalAct">
+            <End Role="NomenclaturalEvent" EntitySet="NomenclaturalEvent" />
+            <End Role="NomenclaturalEvent1" EntitySet="NomenclaturalEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalAct_NomenclaturalActType" Association="GNUBModel.Store.FK_NomenclaturalAct_NomenclaturalActType">
+            <End Role="NomenclaturalEventType" EntitySet="NomenclaturalEventType" />
+            <End Role="NomenclaturalEvent" EntitySet="NomenclaturalEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalAct_TaxonNameUsage" Association="GNUBModel.Store.FK_NomenclaturalAct_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="NomenclaturalEvent" EntitySet="NomenclaturalEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalActType_NomenclaturalCode" Association="GNUBModel.Store.FK_NomenclaturalActType_NomenclaturalCode">
+            <End Role="NomenclaturalCode" EntitySet="NomenclaturalCode" />
+            <End Role="NomenclaturalEventType" EntitySet="NomenclaturalEventType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalEvent_PK" Association="GNUBModel.Store.FK_NomenclaturalEvent_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="NomenclaturalEvent" EntitySet="NomenclaturalEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organization_Agent" Association="GNUBModel.Store.FK_Organization_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Organization" EntitySet="Organization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organization_Organization" Association="GNUBModel.Store.FK_Organization_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Organization1" EntitySet="Organization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Person_Agent" Association="GNUBModel.Store.FK_Person_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Person" EntitySet="Person" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PK_PK" Association="GNUBModel.Store.FK_PK_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="PK1" EntitySet="PK" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Protonym_TaxonNameUsage" Association="GNUBModel.Store.FK_Protonym_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="Protonym" EntitySet="Protonym" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reference_PK" Association="GNUBModel.Store.FK_Reference_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Reference" EntitySet="Reference" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_PK" Association="GNUBModel.Store.FK_TaxonNameUsage_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_Protonym" Association="GNUBModel.Store.FK_TaxonNameUsage_Protonym">
+            <End Role="Protonym" EntitySet="Protonym" />
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_Reference" Association="GNUBModel.Store.FK_TaxonNameUsage_Reference">
+            <End Role="Reference" EntitySet="Reference" />
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_TaxonNameUsage" Association="GNUBModel.Store.FK_TaxonNameUsage_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="TaxonNameUsage1" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_TaxonNameUsage1" Association="GNUBModel.Store.FK_TaxonNameUsage_TaxonNameUsage1">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="TaxonNameUsage1" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_TaxonRank" Association="GNUBModel.Store.FK_TaxonNameUsage_TaxonRank">
+            <End Role="TaxonRank" EntitySet="TaxonRank" />
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonRank_NomenclaturalCode" Association="GNUBModel.Store.FK_TaxonRank_NomenclaturalCode">
+            <End Role="NomenclaturalCode" EntitySet="NomenclaturalCode" />
+            <End Role="TaxonRank" EntitySet="TaxonRank" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonRank_PK" Association="GNUBModel.Store.FK_TaxonRank_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="TaxonRank" EntitySet="TaxonRank" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Typification_PK" Association="GNUBModel.Store.FK_Typification_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Typification" EntitySet="Typification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Typification_TaxonNameUsage" Association="GNUBModel.Store.FK_Typification_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="Typification" EntitySet="Typification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Typification_TypificationType" Association="GNUBModel.Store.FK_Typification_TypificationType">
+            <End Role="TypificationType" EntitySet="TypificationType" />
+            <End Role="Typification" EntitySet="Typification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Username_Agent" Association="GNUBModel.Store.FK_Username_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Username" EntitySet="Username" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Username_Agent1" Association="GNUBModel.Store.FK_Username_Agent1">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Username" EntitySet="Username" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Username_PK" Association="GNUBModel.Store.FK_Username_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Username" EntitySet="Username" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="ProviderID" />
+          </Key>
+          <Property Name="ProviderID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProviderName" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Url" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Protocol" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="AgentID" />
+          </Key>
+          <Property Name="AgentID" Type="int" Nullable="false" />
+          <Property Name="ValidAgentID" Type="int" Nullable="false" />
+          <Property Name="IsAmbiguous" Type="bit" Nullable="false" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="DeathDate" Type="datetime" />
+          <Property Name="CacheFullAgentName" Type="nvarchar" Nullable="false" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="int" Nullable="false" />
+          <Property Name="PKID" Type="int" Nullable="false" />
+          <Property Name="AuthorID" Type="int" Nullable="false" />
+          <Property Name="CommentType" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Hybrid">
+          <Key>
+            <PropertyRef Name="HybridID" />
+          </Key>
+          <Property Name="HybridID" Type="int" Nullable="false" />
+          <Property Name="TaxonNameUsageID" Type="int" Nullable="false" />
+          <Property Name="HybridParentID" Type="int" Nullable="false" />
+          <Property Name="Sequence" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Identifier">
+          <Key>
+            <PropertyRef Name="IdentifierID" />
+          </Key>
+          <Property Name="IdentifierID" Type="int" Nullable="false" />
+          <Property Name="IdentifierDomainID" Type="int" Nullable="false" />
+          <Property Name="PKID" Type="int" Nullable="false" />
+          <Property Name="Identifier" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="ResolutionNote" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="IdentifierDomain">
+          <Key>
+            <PropertyRef Name="IdentifierDomainID" />
+          </Key>
+          <Property Name="IdentifierDomainID" Type="int" Nullable="false" />
+          <Property Name="IdentifierClassID" Type="tinyint" Nullable="false" />
+          <Property Name="AgentID" Type="int" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdentifierDomain" Type="nvarchar" MaxLength="255" />
+          <Property Name="ObjectType" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsRegistry" Type="bit" Nullable="false" />
+          <Property Name="URLPrefix" Type="nvarchar" MaxLength="255" />
+          <Property Name="URLSuffix" Type="nvarchar" MaxLength="255" />
+          <Property Name="LogoPath" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="NewCombination">
+          <Key>
+            <PropertyRef Name="NewCombinationID" />
+          </Key>
+          <Property Name="NewCombinationID" Type="int" Nullable="false" />
+          <Property Name="CacheGenusProtonymID" Type="int" />
+          <Property Name="CacheSpeciesProtonymID" Type="int" />
+          <Property Name="CacheInfraspecificProtonymID" Type="int" />
+        </EntityType>
+        <EntityType Name="NomenclaturalCode">
+          <Key>
+            <PropertyRef Name="NomenclaturalCodeID" />
+          </Key>
+          <Property Name="NomenclaturalCodeID" Type="tinyint" Nullable="false" />
+          <Property Name="NomenclaturalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="NomenclaturalCodeLabel" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NomenclaturalEvent">
+          <Key>
+            <PropertyRef Name="NomenclaturalEventID" />
+          </Key>
+          <Property Name="NomenclaturalEventID" Type="int" Nullable="false" />
+          <Property Name="TaxonNameUsageID" Type="int" Nullable="false" />
+          <Property Name="NomenclaturalEventTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="RelatedNomenclaturalEventID" Type="int" />
+          <Property Name="EventDescription" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="NomenclaturalEventType">
+          <Key>
+            <PropertyRef Name="NomenclaturalEventTypeID" />
+          </Key>
+          <Property Name="NomenclaturalEventTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="NomenclaturalEventType" Type="nvarchar" MaxLength="50" />
+          <Property Name="NomenclaturalCodeID" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="OrganizationID" />
+          </Key>
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="ParentOrganizationID" Type="int" Nullable="false" />
+          <Property Name="OrganizationName" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="255" />
+          <Property Name="GeoScope" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonID" />
+          </Key>
+          <Property Name="PersonID" Type="int" Nullable="false" />
+          <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="GivenName" Type="nvarchar" MaxLength="255" />
+          <Property Name="FamilyName" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Suffix" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrimaryGivenName" Type="tinyint" Nullable="false" />
+          <Property Name="Gender" Type="tinyint" Nullable="false" />
+          <Property Name="IsEastern" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PK">
+          <Key>
+            <PropertyRef Name="PKID" />
+          </Key>
+          <Property Name="PKID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CorrectID" Type="int" Nullable="false" />
+          <Property Name="TableID" Type="int" Nullable="false" />
+          <Property Name="UUID" Type="uniqueidentifier" />
+          <Property Name="LegacyID" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Protonym">
+          <Key>
+            <PropertyRef Name="ProtonymID" />
+          </Key>
+          <Property Name="ProtonymID" Type="int" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="1" />
+          <Property Name="IsGenderMatched" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reference">
+          <Key>
+            <PropertyRef Name="ReferenceID" />
+          </Key>
+          <Property Name="ReferenceID" Type="int" Nullable="false" />
+          <Property Name="CacheAuthors" Type="nvarchar" MaxLength="255" />
+          <Property Name="CacheReference" Type="nvarchar" MaxLength="500" />
+          <Property Name="NomenclaturalSignificance" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="RegisteredIdentifier">
+          <Key>
+            <PropertyRef Name="RegisteredIdentifierID" />
+          </Key>
+          <Property Name="RegisteredIdentifierID" Type="int" Nullable="false" />
+          <Property Name="RegisteringAgentID" Type="int" />
+          <Property Name="RegistrationTimeStamp" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TaxonNameUsage">
+          <Key>
+            <PropertyRef Name="TaxonNameUsageID" />
+          </Key>
+          <Property Name="TaxonNameUsageID" Type="int" Nullable="false" />
+          <Property Name="ProtonymID" Type="int" Nullable="false" />
+          <Property Name="ReferenceID" Type="int" Nullable="false" />
+          <Property Name="TaxonRankID" Type="int" Nullable="false" />
+          <Property Name="ValidUsageID" Type="int" Nullable="false" />
+          <Property Name="ParentUsageID" Type="int" Nullable="false" />
+          <Property Name="NameElement" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="VerbatimNameString" Type="nvarchar" MaxLength="255" />
+          <Property Name="Page" Type="nvarchar" MaxLength="255" />
+          <Property Name="PageQualifier" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsNothoTaxon" Type="bit" Nullable="false" />
+          <Property Name="CacheNameComplete" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TaxonRank">
+          <Key>
+            <PropertyRef Name="TaxonRankID" />
+          </Key>
+          <Property Name="TaxonRankID" Type="int" Nullable="false" />
+          <Property Name="RankSort" Type="int" Nullable="false" />
+          <Property Name="NomenclaturalCodeID" Type="tinyint" Nullable="false" />
+          <Property Name="RankName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Abbreviation" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="Suffix" Type="nvarchar" MaxLength="50" />
+          <Property Name="Italicize" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Typification">
+          <Key>
+            <PropertyRef Name="TypificationID" />
+          </Key>
+          <Property Name="TypificationID" Type="int" Nullable="false" />
+          <Property Name="TaxonNameUsageID" Type="int" />
+          <Property Name="TypificationTypeID" Type="int" />
+          <Property Name="TypeNameTaxonNameUsageID" Type="int" />
+          <Property Name="CollectionPreservationLocation" Type="nvarchar" MaxLength="255" />
+          <Property Name="CollectionAccessionNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="CollectorsName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CollectorsCollectionNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="CollectionDate" Type="nvarchar" MaxLength="255" />
+          <Property Name="CollectionLocality" Type="nvarchar" MaxLength="255" />
+          <Property Name="CollectionContext" Type="nvarchar" MaxLength="255" />
+          <Property Name="CollectionGUID" Type="nvarchar" MaxLength="255" />
+          <Property Name="CachedTypification" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TypificationType">
+          <Key>
+            <PropertyRef Name="TypificationTypeID" />
+          </Key>
+          <Property Name="TypificationTypeID" Type="int" Nullable="false" />
+          <Property Name="TypeOfType" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Username">
+          <Key>
+            <PropertyRef Name="UsernameID" />
+          </Key>
+          <Property Name="UsernameID" Type="int" Nullable="false" />
+          <Property Name="AgentID" Type="int" Nullable="false" />
+          <Property Name="SponsorID" Type="int" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <Association Name="FK_Agent_Agent">
+          <End Role="Agent" Type="GNUBModel.Store.Agent" Multiplicity="1" />
+          <End Role="Agent1" Type="GNUBModel.Store.Agent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="Agent1">
+              <PropertyRef Name="ValidAgentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Agent_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Agent" Type="GNUBModel.Store.Agent" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comment_Agent">
+          <End Role="Agent" Type="GNUBModel.Store.Agent" Multiplicity="1" />
+          <End Role="Comment" Type="GNUBModel.Store.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="AuthorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comment_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Comment" Type="GNUBModel.Store.Comment" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="CommentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comment_PK1">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Comment" Type="GNUBModel.Store.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="PKID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Hybrid_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Hybrid" Type="GNUBModel.Store.Hybrid" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Hybrid">
+              <PropertyRef Name="HybridID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Hybrid_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="1" />
+          <End Role="Hybrid" Type="GNUBModel.Store.Hybrid" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="Hybrid">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Hybrid_TaxonNameUsage1">
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="1" />
+          <End Role="Hybrid" Type="GNUBModel.Store.Hybrid" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="Hybrid">
+              <PropertyRef Name="HybridParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Identifier_IdentifierDomain">
+          <End Role="IdentifierDomain" Type="GNUBModel.Store.IdentifierDomain" Multiplicity="1" />
+          <End Role="Identifier" Type="GNUBModel.Store.Identifier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IdentifierDomain">
+              <PropertyRef Name="IdentifierDomainID" />
+            </Principal>
+            <Dependent Role="Identifier">
+              <PropertyRef Name="IdentifierDomainID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Identifier_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Identifier" Type="GNUBModel.Store.Identifier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Identifier">
+              <PropertyRef Name="PKID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Identifier_PK1">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Identifier" Type="GNUBModel.Store.Identifier" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Identifier">
+              <PropertyRef Name="IdentifierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IdentifierDomain_Agent">
+          <End Role="Agent" Type="GNUBModel.Store.Agent" Multiplicity="0..1" />
+          <End Role="IdentifierDomain" Type="GNUBModel.Store.IdentifierDomain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="IdentifierDomain">
+              <PropertyRef Name="AgentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IdentifierDomain_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="IdentifierDomain" Type="GNUBModel.Store.IdentifierDomain" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="IdentifierDomain">
+              <PropertyRef Name="IdentifierDomainID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewCombination_Protonym">
+          <End Role="Protonym" Type="GNUBModel.Store.Protonym" Multiplicity="0..1" />
+          <End Role="NewCombination" Type="GNUBModel.Store.NewCombination" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Protonym">
+              <PropertyRef Name="ProtonymID" />
+            </Principal>
+            <Dependent Role="NewCombination">
+              <PropertyRef Name="CacheGenusProtonymID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewCombination_Protonym1">
+          <End Role="Protonym" Type="GNUBModel.Store.Protonym" Multiplicity="0..1" />
+          <End Role="NewCombination" Type="GNUBModel.Store.NewCombination" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Protonym">
+              <PropertyRef Name="ProtonymID" />
+            </Principal>
+            <Dependent Role="NewCombination">
+              <PropertyRef Name="CacheSpeciesProtonymID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewCombination_Protonym2">
+          <End Role="Protonym" Type="GNUBModel.Store.Protonym" Multiplicity="0..1" />
+          <End Role="NewCombination" Type="GNUBModel.Store.NewCombination" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Protonym">
+              <PropertyRef Name="ProtonymID" />
+            </Principal>
+            <Dependent Role="NewCombination">
+              <PropertyRef Name="CacheInfraspecificProtonymID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewCombination_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="1" />
+          <End Role="NewCombination" Type="GNUBModel.Store.NewCombination" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="NewCombination">
+              <PropertyRef Name="NewCombinationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NomenclaturalAct_NomenclaturalAct">
+          <End Role="NomenclaturalEvent" Type="GNUBModel.Store.NomenclaturalEvent" Multiplicity="0..1" />
+          <End Role="NomenclaturalEvent1" Type="GNUBModel.Store.NomenclaturalEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NomenclaturalEvent">
+              <PropertyRef Name="NomenclaturalEventID" />
+            </Principal>
+            <Dependent Role="NomenclaturalEvent1">
+              <PropertyRef Name="RelatedNomenclaturalEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NomenclaturalAct_NomenclaturalActType">
+          <End Role="NomenclaturalEventType" Type="GNUBModel.Store.NomenclaturalEventType" Multiplicity="1" />
+          <End Role="NomenclaturalEvent" Type="GNUBModel.Store.NomenclaturalEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NomenclaturalEventType">
+              <PropertyRef Name="NomenclaturalEventTypeID" />
+            </Principal>
+            <Dependent Role="NomenclaturalEvent">
+              <PropertyRef Name="NomenclaturalEventTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NomenclaturalAct_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NomenclaturalEvent" Type="GNUBModel.Store.NomenclaturalEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="NomenclaturalEvent">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NomenclaturalActType_NomenclaturalCode">
+          <End Role="NomenclaturalCode" Type="GNUBModel.Store.NomenclaturalCode" Multiplicity="0..1" />
+          <End Role="NomenclaturalEventType" Type="GNUBModel.Store.NomenclaturalEventType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NomenclaturalCode">
+              <PropertyRef Name="NomenclaturalCodeID" />
+            </Principal>
+            <Dependent Role="NomenclaturalEventType">
+              <PropertyRef Name="NomenclaturalCodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NomenclaturalEvent_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="NomenclaturalEvent" Type="GNUBModel.Store.NomenclaturalEvent" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="NomenclaturalEvent">
+              <PropertyRef Name="NomenclaturalEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organization_Agent">
+          <End Role="Agent" Type="GNUBModel.Store.Agent" Multiplicity="1" />
+          <End Role="Organization" Type="GNUBModel.Store.Organization" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="Organization">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organization_Organization">
+          <End Role="Organization" Type="GNUBModel.Store.Organization" Multiplicity="1" />
+          <End Role="Organization1" Type="GNUBModel.Store.Organization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="OrganizationID" />
+            </Principal>
+            <Dependent Role="Organization1">
+              <PropertyRef Name="ParentOrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Person_Agent">
+          <End Role="Agent" Type="GNUBModel.Store.Agent" Multiplicity="1" />
+          <End Role="Person" Type="GNUBModel.Store.Person" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="Person">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PK_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="PK1" Type="GNUBModel.Store.PK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="PK1">
+              <PropertyRef Name="CorrectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Protonym_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="1" />
+          <End Role="Protonym" Type="GNUBModel.Store.Protonym" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="Protonym">
+              <PropertyRef Name="ProtonymID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reference_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Reference" Type="GNUBModel.Store.Reference" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Reference">
+              <PropertyRef Name="ReferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonNameUsage_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonNameUsage_Protonym">
+          <End Role="Protonym" Type="GNUBModel.Store.Protonym" Multiplicity="1" />
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Protonym">
+              <PropertyRef Name="ProtonymID" />
+            </Principal>
+            <Dependent Role="TaxonNameUsage">
+              <PropertyRef Name="ProtonymID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonNameUsage_Reference">
+          <End Role="Reference" Type="GNUBModel.Store.Reference" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reference">
+              <PropertyRef Name="ReferenceID" />
+            </Principal>
+            <Dependent Role="TaxonNameUsage">
+              <PropertyRef Name="ReferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonNameUsage_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="1" />
+          <End Role="TaxonNameUsage1" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="TaxonNameUsage1">
+              <PropertyRef Name="ValidUsageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonNameUsage_TaxonNameUsage1">
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="1" />
+          <End Role="TaxonNameUsage1" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="TaxonNameUsage1">
+              <PropertyRef Name="ParentUsageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonNameUsage_TaxonRank">
+          <End Role="TaxonRank" Type="GNUBModel.Store.TaxonRank" Multiplicity="1" />
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonRank">
+              <PropertyRef Name="TaxonRankID" />
+            </Principal>
+            <Dependent Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonRankID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonRank_NomenclaturalCode">
+          <End Role="NomenclaturalCode" Type="GNUBModel.Store.NomenclaturalCode" Multiplicity="1" />
+          <End Role="TaxonRank" Type="GNUBModel.Store.TaxonRank" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NomenclaturalCode">
+              <PropertyRef Name="NomenclaturalCodeID" />
+            </Principal>
+            <Dependent Role="TaxonRank">
+              <PropertyRef Name="NomenclaturalCodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonRank_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="TaxonRank" Type="GNUBModel.Store.TaxonRank" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="TaxonRank">
+              <PropertyRef Name="TaxonRankID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Typification_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Typification" Type="GNUBModel.Store.Typification" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Typification">
+              <PropertyRef Name="TypificationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Typification_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.Store.TaxonNameUsage" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Typification" Type="GNUBModel.Store.Typification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="Typification">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Typification_TypificationType">
+          <End Role="TypificationType" Type="GNUBModel.Store.TypificationType" Multiplicity="0..1" />
+          <End Role="Typification" Type="GNUBModel.Store.Typification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypificationType">
+              <PropertyRef Name="TypificationTypeID" />
+            </Principal>
+            <Dependent Role="Typification">
+              <PropertyRef Name="TypificationTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Username_Agent">
+          <End Role="Agent" Type="GNUBModel.Store.Agent" Multiplicity="1" />
+          <End Role="Username" Type="GNUBModel.Store.Username" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="Username">
+              <PropertyRef Name="AgentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Username_Agent1">
+          <End Role="Agent" Type="GNUBModel.Store.Agent" Multiplicity="1" />
+          <End Role="Username" Type="GNUBModel.Store.Username" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="Username">
+              <PropertyRef Name="SponsorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Username_PK">
+          <End Role="PK" Type="GNUBModel.Store.PK" Multiplicity="1" />
+          <End Role="Username" Type="GNUBModel.Store.Username" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Username">
+              <PropertyRef Name="UsernameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GNUBModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="GNUBEntities">
+          <EntitySet Name="Agent" EntityType="GNUBModel.Agent" />
+          <EntitySet Name="Comment" EntityType="GNUBModel.Comment" />
+          <EntitySet Name="Hybrid" EntityType="GNUBModel.Hybrid" />
+          <EntitySet Name="Identifier" EntityType="GNUBModel.Identifier" />
+          <EntitySet Name="IdentifierDomain" EntityType="GNUBModel.IdentifierDomain" />
+          <EntitySet Name="NewCombination" EntityType="GNUBModel.NewCombination" />
+          <EntitySet Name="NomenclaturalCode" EntityType="GNUBModel.NomenclaturalCode" />
+          <EntitySet Name="NomenclaturalEvent" EntityType="GNUBModel.NomenclaturalEvent" />
+          <EntitySet Name="NomenclaturalEventType" EntityType="GNUBModel.NomenclaturalEventType" />
+          <EntitySet Name="Organization" EntityType="GNUBModel.Organization" />
+          <EntitySet Name="Person" EntityType="GNUBModel.Person" />
+          <EntitySet Name="PK" EntityType="GNUBModel.PK" />
+          <EntitySet Name="Protonym" EntityType="GNUBModel.Protonym" />
+          <EntitySet Name="Reference" EntityType="GNUBModel.Reference" />
+          <EntitySet Name="RegisteredIdentifier" EntityType="GNUBModel.RegisteredIdentifier" />
+          <EntitySet Name="TaxonNameUsage" EntityType="GNUBModel.TaxonNameUsage" />
+          <EntitySet Name="TaxonRank" EntityType="GNUBModel.TaxonRank" />
+          <EntitySet Name="Typification" EntityType="GNUBModel.Typification" />
+          <EntitySet Name="TypificationType" EntityType="GNUBModel.TypificationType" />
+          <EntitySet Name="Username" EntityType="GNUBModel.Username" />
+          <AssociationSet Name="FK_Agent_Agent" Association="GNUBModel.FK_Agent_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Agent1" EntitySet="Agent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Agent_PK" Association="GNUBModel.FK_Agent_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Agent" EntitySet="Agent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_Agent" Association="GNUBModel.FK_Comment_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IdentifierDomain_Agent" Association="GNUBModel.FK_IdentifierDomain_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="IdentifierDomain" EntitySet="IdentifierDomain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organization_Agent" Association="GNUBModel.FK_Organization_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Organization" EntitySet="Organization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Person_Agent" Association="GNUBModel.FK_Person_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Person" EntitySet="Person" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Username_Agent" Association="GNUBModel.FK_Username_Agent">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Username" EntitySet="Username" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Username_Agent1" Association="GNUBModel.FK_Username_Agent1">
+            <End Role="Agent" EntitySet="Agent" />
+            <End Role="Username" EntitySet="Username" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_PK" Association="GNUBModel.FK_Comment_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_PK1" Association="GNUBModel.FK_Comment_PK1">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Hybrid_PK" Association="GNUBModel.FK_Hybrid_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Hybrid" EntitySet="Hybrid" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Hybrid_TaxonNameUsage" Association="GNUBModel.FK_Hybrid_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="Hybrid" EntitySet="Hybrid" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Hybrid_TaxonNameUsage1" Association="GNUBModel.FK_Hybrid_TaxonNameUsage1">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="Hybrid" EntitySet="Hybrid" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Identifier_IdentifierDomain" Association="GNUBModel.FK_Identifier_IdentifierDomain">
+            <End Role="IdentifierDomain" EntitySet="IdentifierDomain" />
+            <End Role="Identifier" EntitySet="Identifier" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Identifier_PK" Association="GNUBModel.FK_Identifier_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Identifier" EntitySet="Identifier" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Identifier_PK1" Association="GNUBModel.FK_Identifier_PK1">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Identifier" EntitySet="Identifier" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IdentifierDomain_PK" Association="GNUBModel.FK_IdentifierDomain_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="IdentifierDomain" EntitySet="IdentifierDomain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewCombination_Protonym" Association="GNUBModel.FK_NewCombination_Protonym">
+            <End Role="Protonym" EntitySet="Protonym" />
+            <End Role="NewCombination" EntitySet="NewCombination" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewCombination_Protonym1" Association="GNUBModel.FK_NewCombination_Protonym1">
+            <End Role="Protonym" EntitySet="Protonym" />
+            <End Role="NewCombination" EntitySet="NewCombination" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewCombination_Protonym2" Association="GNUBModel.FK_NewCombination_Protonym2">
+            <End Role="Protonym" EntitySet="Protonym" />
+            <End Role="NewCombination" EntitySet="NewCombination" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewCombination_TaxonNameUsage" Association="GNUBModel.FK_NewCombination_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="NewCombination" EntitySet="NewCombination" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalActType_NomenclaturalCode" Association="GNUBModel.FK_NomenclaturalActType_NomenclaturalCode">
+            <End Role="NomenclaturalCode" EntitySet="NomenclaturalCode" />
+            <End Role="NomenclaturalEventType" EntitySet="NomenclaturalEventType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonRank_NomenclaturalCode" Association="GNUBModel.FK_TaxonRank_NomenclaturalCode">
+            <End Role="NomenclaturalCode" EntitySet="NomenclaturalCode" />
+            <End Role="TaxonRank" EntitySet="TaxonRank" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalAct_NomenclaturalAct" Association="GNUBModel.FK_NomenclaturalAct_NomenclaturalAct">
+            <End Role="NomenclaturalEvent" EntitySet="NomenclaturalEvent" />
+            <End Role="NomenclaturalEvent1" EntitySet="NomenclaturalEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalAct_NomenclaturalActType" Association="GNUBModel.FK_NomenclaturalAct_NomenclaturalActType">
+            <End Role="NomenclaturalEventType" EntitySet="NomenclaturalEventType" />
+            <End Role="NomenclaturalEvent" EntitySet="NomenclaturalEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalAct_TaxonNameUsage" Association="GNUBModel.FK_NomenclaturalAct_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="NomenclaturalEvent" EntitySet="NomenclaturalEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NomenclaturalEvent_PK" Association="GNUBModel.FK_NomenclaturalEvent_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="NomenclaturalEvent" EntitySet="NomenclaturalEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organization_Organization" Association="GNUBModel.FK_Organization_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Organization1" EntitySet="Organization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PK_PK" Association="GNUBModel.FK_PK_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="PK1" EntitySet="PK" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reference_PK" Association="GNUBModel.FK_Reference_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Reference" EntitySet="Reference" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_PK" Association="GNUBModel.FK_TaxonNameUsage_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonRank_PK" Association="GNUBModel.FK_TaxonRank_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="TaxonRank" EntitySet="TaxonRank" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Typification_PK" Association="GNUBModel.FK_Typification_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Typification" EntitySet="Typification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Username_PK" Association="GNUBModel.FK_Username_PK">
+            <End Role="PK" EntitySet="PK" />
+            <End Role="Username" EntitySet="Username" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Protonym_TaxonNameUsage" Association="GNUBModel.FK_Protonym_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="Protonym" EntitySet="Protonym" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_Protonym" Association="GNUBModel.FK_TaxonNameUsage_Protonym">
+            <End Role="Protonym" EntitySet="Protonym" />
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_Reference" Association="GNUBModel.FK_TaxonNameUsage_Reference">
+            <End Role="Reference" EntitySet="Reference" />
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_TaxonNameUsage" Association="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="TaxonNameUsage1" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_TaxonNameUsage1" Association="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage1">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="TaxonNameUsage1" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaxonNameUsage_TaxonRank" Association="GNUBModel.FK_TaxonNameUsage_TaxonRank">
+            <End Role="TaxonRank" EntitySet="TaxonRank" />
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Typification_TaxonNameUsage" Association="GNUBModel.FK_Typification_TaxonNameUsage">
+            <End Role="TaxonNameUsage" EntitySet="TaxonNameUsage" />
+            <End Role="Typification" EntitySet="Typification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Typification_TypificationType" Association="GNUBModel.FK_Typification_TypificationType">
+            <End Role="TypificationType" EntitySet="TypificationType" />
+            <End Role="Typification" EntitySet="Typification" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="AgentID" />
+          </Key>
+          <Property Name="AgentID" Type="Int32" Nullable="false" />
+          <Property Name="IsAmbiguous" Type="Boolean" Nullable="false" />
+          <Property Name="BirthDate" Type="DateTime" />
+          <Property Name="DeathDate" Type="DateTime" />
+          <Property Name="CacheFullAgentName" Type="String" Nullable="false" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Agent1" Relationship="GNUBModel.FK_Agent_Agent" FromRole="Agent" ToRole="Agent1" />
+          <NavigationProperty Name="Agent2" Relationship="GNUBModel.FK_Agent_Agent" FromRole="Agent1" ToRole="Agent" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_Agent_PK" FromRole="Agent" ToRole="PK" />
+          <NavigationProperty Name="Comment" Relationship="GNUBModel.FK_Comment_Agent" FromRole="Agent" ToRole="Comment" />
+          <NavigationProperty Name="IdentifierDomain" Relationship="GNUBModel.FK_IdentifierDomain_Agent" FromRole="Agent" ToRole="IdentifierDomain" />
+          <NavigationProperty Name="Organization" Relationship="GNUBModel.FK_Organization_Agent" FromRole="Agent" ToRole="Organization" />
+          <NavigationProperty Name="Person" Relationship="GNUBModel.FK_Person_Agent" FromRole="Agent" ToRole="Person" />
+          <NavigationProperty Name="Username" Relationship="GNUBModel.FK_Username_Agent" FromRole="Agent" ToRole="Username" />
+          <NavigationProperty Name="Username1" Relationship="GNUBModel.FK_Username_Agent1" FromRole="Agent" ToRole="Username" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="Int32" Nullable="false" />
+          <Property Name="CommentType" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Comment1" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" />
+          <NavigationProperty Name="Agent" Relationship="GNUBModel.FK_Comment_Agent" FromRole="Comment" ToRole="Agent" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_Comment_PK" FromRole="Comment" ToRole="PK" />
+          <NavigationProperty Name="PK1" Relationship="GNUBModel.FK_Comment_PK1" FromRole="Comment" ToRole="PK" />
+        </EntityType>
+        <EntityType Name="Hybrid">
+          <Key>
+            <PropertyRef Name="HybridID" />
+          </Key>
+          <Property Name="HybridID" Type="Int32" Nullable="false" />
+          <Property Name="Sequence" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_Hybrid_PK" FromRole="Hybrid" ToRole="PK" />
+          <NavigationProperty Name="TaxonNameUsage" Relationship="GNUBModel.FK_Hybrid_TaxonNameUsage" FromRole="Hybrid" ToRole="TaxonNameUsage" />
+          <NavigationProperty Name="TaxonNameUsage1" Relationship="GNUBModel.FK_Hybrid_TaxonNameUsage1" FromRole="Hybrid" ToRole="TaxonNameUsage" />
+        </EntityType>
+        <EntityType Name="Identifier">
+          <Key>
+            <PropertyRef Name="IdentifierID" />
+          </Key>
+          <Property Name="IdentifierID" Type="Int32" Nullable="false" />
+          <Property Name="Identifier1" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ResolutionNote" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="IdentifierDomain" Relationship="GNUBModel.FK_Identifier_IdentifierDomain" FromRole="Identifier" ToRole="IdentifierDomain" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_Identifier_PK" FromRole="Identifier" ToRole="PK" />
+          <NavigationProperty Name="PK1" Relationship="GNUBModel.FK_Identifier_PK1" FromRole="Identifier" ToRole="PK" />
+        </EntityType>
+        <EntityType Name="IdentifierDomain">
+          <Key>
+            <PropertyRef Name="IdentifierDomainID" />
+          </Key>
+          <Property Name="IdentifierDomainID" Type="Int32" Nullable="false" />
+          <Property Name="IdentifierClassID" Type="Byte" Nullable="false" />
+          <Property Name="Abbreviation" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IdentifierDomain1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ObjectType" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="IsRegistry" Type="Boolean" Nullable="false" />
+          <Property Name="URLPrefix" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="URLSuffix" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="LogoPath" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Agent" Relationship="GNUBModel.FK_IdentifierDomain_Agent" FromRole="IdentifierDomain" ToRole="Agent" />
+          <NavigationProperty Name="Identifier" Relationship="GNUBModel.FK_Identifier_IdentifierDomain" FromRole="IdentifierDomain" ToRole="Identifier" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_IdentifierDomain_PK" FromRole="IdentifierDomain" ToRole="PK" />
+        </EntityType>
+        <EntityType Name="NewCombination">
+          <Key>
+            <PropertyRef Name="NewCombinationID" />
+          </Key>
+          <Property Name="NewCombinationID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Protonym" Relationship="GNUBModel.FK_NewCombination_Protonym" FromRole="NewCombination" ToRole="Protonym" />
+          <NavigationProperty Name="Protonym1" Relationship="GNUBModel.FK_NewCombination_Protonym1" FromRole="NewCombination" ToRole="Protonym" />
+          <NavigationProperty Name="Protonym2" Relationship="GNUBModel.FK_NewCombination_Protonym2" FromRole="NewCombination" ToRole="Protonym" />
+          <NavigationProperty Name="TaxonNameUsage" Relationship="GNUBModel.FK_NewCombination_TaxonNameUsage" FromRole="NewCombination" ToRole="TaxonNameUsage" />
+        </EntityType>
+        <EntityType Name="NomenclaturalCode">
+          <Key>
+            <PropertyRef Name="NomenclaturalCodeID" />
+          </Key>
+          <Property Name="NomenclaturalCodeID" Type="Byte" Nullable="false" />
+          <Property Name="NomenclaturalCode1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NomenclaturalCodeLabel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="NomenclaturalEventType" Relationship="GNUBModel.FK_NomenclaturalActType_NomenclaturalCode" FromRole="NomenclaturalCode" ToRole="NomenclaturalEventType" />
+          <NavigationProperty Name="TaxonRank" Relationship="GNUBModel.FK_TaxonRank_NomenclaturalCode" FromRole="NomenclaturalCode" ToRole="TaxonRank" />
+        </EntityType>
+        <EntityType Name="NomenclaturalEvent">
+          <Key>
+            <PropertyRef Name="NomenclaturalEventID" />
+          </Key>
+          <Property Name="NomenclaturalEventID" Type="Int32" Nullable="false" />
+          <Property Name="EventDescription" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="NomenclaturalEvent1" Relationship="GNUBModel.FK_NomenclaturalAct_NomenclaturalAct" FromRole="NomenclaturalEvent" ToRole="NomenclaturalEvent1" />
+          <NavigationProperty Name="NomenclaturalEvent2" Relationship="GNUBModel.FK_NomenclaturalAct_NomenclaturalAct" FromRole="NomenclaturalEvent1" ToRole="NomenclaturalEvent" />
+          <NavigationProperty Name="NomenclaturalEventType" Relationship="GNUBModel.FK_NomenclaturalAct_NomenclaturalActType" FromRole="NomenclaturalEvent" ToRole="NomenclaturalEventType" />
+          <NavigationProperty Name="TaxonNameUsage" Relationship="GNUBModel.FK_NomenclaturalAct_TaxonNameUsage" FromRole="NomenclaturalEvent" ToRole="TaxonNameUsage" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_NomenclaturalEvent_PK" FromRole="NomenclaturalEvent" ToRole="PK" />
+        </EntityType>
+        <EntityType Name="NomenclaturalEventType">
+          <Key>
+            <PropertyRef Name="NomenclaturalEventTypeID" />
+          </Key>
+          <Property Name="NomenclaturalEventTypeID" Type="Byte" Nullable="false" />
+          <Property Name="NomenclaturalEventType1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="NomenclaturalCode" Relationship="GNUBModel.FK_NomenclaturalActType_NomenclaturalCode" FromRole="NomenclaturalEventType" ToRole="NomenclaturalCode" />
+          <NavigationProperty Name="NomenclaturalEvent" Relationship="GNUBModel.FK_NomenclaturalAct_NomenclaturalActType" FromRole="NomenclaturalEventType" ToRole="NomenclaturalEvent" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="OrganizationID" />
+          </Key>
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="OrganizationName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Abbreviation" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="GeoScope" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="Agent" Relationship="GNUBModel.FK_Organization_Agent" FromRole="Organization" ToRole="Agent" />
+          <NavigationProperty Name="Organization1" Relationship="GNUBModel.FK_Organization_Organization" FromRole="Organization" ToRole="Organization1" />
+          <NavigationProperty Name="Organization2" Relationship="GNUBModel.FK_Organization_Organization" FromRole="Organization1" ToRole="Organization" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonID" />
+          </Key>
+          <Property Name="PersonID" Type="Int32" Nullable="false" />
+          <Property Name="Prefix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GivenName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FamilyName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Suffix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PrimaryGivenName" Type="Byte" Nullable="false" />
+          <Property Name="Gender" Type="Byte" Nullable="false" />
+          <Property Name="IsEastern" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Agent" Relationship="GNUBModel.FK_Person_Agent" FromRole="Person" ToRole="Agent" />
+        </EntityType>
+        <EntityType Name="PK">
+          <Key>
+            <PropertyRef Name="PKID" />
+          </Key>
+          <Property Name="PKID" Type="Int32" Nullable="false" />
+          <Property Name="TableID" Type="Int32" Nullable="false" />
+          <Property Name="UUID" Type="Guid" />
+          <Property Name="LegacyID" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Agent" Relationship="GNUBModel.FK_Agent_PK" FromRole="PK" ToRole="Agent" />
+          <NavigationProperty Name="Comment" Relationship="GNUBModel.FK_Comment_PK" FromRole="PK" ToRole="Comment" />
+          <NavigationProperty Name="Comment1" Relationship="GNUBModel.FK_Comment_PK1" FromRole="PK" ToRole="Comment" />
+          <NavigationProperty Name="Hybrid" Relationship="GNUBModel.FK_Hybrid_PK" FromRole="PK" ToRole="Hybrid" />
+          <NavigationProperty Name="Identifier" Relationship="GNUBModel.FK_Identifier_PK" FromRole="PK" ToRole="Identifier" />
+          <NavigationProperty Name="Identifier1" Relationship="GNUBModel.FK_Identifier_PK1" FromRole="PK" ToRole="Identifier" />
+          <NavigationProperty Name="IdentifierDomain" Relationship="GNUBModel.FK_IdentifierDomain_PK" FromRole="PK" ToRole="IdentifierDomain" />
+          <NavigationProperty Name="NomenclaturalEvent" Relationship="GNUBModel.FK_NomenclaturalEvent_PK" FromRole="PK" ToRole="NomenclaturalEvent" />
+          <NavigationProperty Name="PK1" Relationship="GNUBModel.FK_PK_PK" FromRole="PK" ToRole="PK1" />
+          <NavigationProperty Name="PK2" Relationship="GNUBModel.FK_PK_PK" FromRole="PK1" ToRole="PK" />
+          <NavigationProperty Name="Reference" Relationship="GNUBModel.FK_Reference_PK" FromRole="PK" ToRole="Reference" />
+          <NavigationProperty Name="TaxonNameUsage" Relationship="GNUBModel.FK_TaxonNameUsage_PK" FromRole="PK" ToRole="TaxonNameUsage" />
+          <NavigationProperty Name="TaxonRank" Relationship="GNUBModel.FK_TaxonRank_PK" FromRole="PK" ToRole="TaxonRank" />
+          <NavigationProperty Name="Typification" Relationship="GNUBModel.FK_Typification_PK" FromRole="PK" ToRole="Typification" />
+          <NavigationProperty Name="Username" Relationship="GNUBModel.FK_Username_PK" FromRole="PK" ToRole="Username" />
+        </EntityType>
+        <EntityType Name="Protonym">
+          <Key>
+            <PropertyRef Name="ProtonymID" />
+          </Key>
+          <Property Name="ProtonymID" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="IsGenderMatched" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="NewCombination" Relationship="GNUBModel.FK_NewCombination_Protonym" FromRole="Protonym" ToRole="NewCombination" />
+          <NavigationProperty Name="NewCombination1" Relationship="GNUBModel.FK_NewCombination_Protonym1" FromRole="Protonym" ToRole="NewCombination" />
+          <NavigationProperty Name="NewCombination2" Relationship="GNUBModel.FK_NewCombination_Protonym2" FromRole="Protonym" ToRole="NewCombination" />
+          <NavigationProperty Name="TaxonNameUsage" Relationship="GNUBModel.FK_Protonym_TaxonNameUsage" FromRole="Protonym" ToRole="TaxonNameUsage" />
+          <NavigationProperty Name="TaxonNameUsage1" Relationship="GNUBModel.FK_TaxonNameUsage_Protonym" FromRole="Protonym" ToRole="TaxonNameUsage" />
+        </EntityType>
+        <EntityType Name="Reference">
+          <Key>
+            <PropertyRef Name="ReferenceID" />
+          </Key>
+          <Property Name="ReferenceID" Type="Int32" Nullable="false" />
+          <Property Name="CacheAuthors" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CacheReference" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="NomenclaturalSignificance" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_Reference_PK" FromRole="Reference" ToRole="PK" />
+          <NavigationProperty Name="TaxonNameUsage" Relationship="GNUBModel.FK_TaxonNameUsage_Reference" FromRole="Reference" ToRole="TaxonNameUsage" />
+        </EntityType>
+        <EntityType Name="RegisteredIdentifier">
+          <Key>
+            <PropertyRef Name="RegisteredIdentifierID" />
+          </Key>
+          <Property Name="RegisteredIdentifierID" Type="Int32" Nullable="false" />
+          <Property Name="RegisteringAgentID" Type="Int32" />
+          <Property Name="RegistrationTimeStamp" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="TaxonNameUsage">
+          <Key>
+            <PropertyRef Name="TaxonNameUsageID" />
+          </Key>
+          <Property Name="TaxonNameUsageID" Type="Int32" Nullable="false" />
+          <Property Name="NameElement" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="VerbatimNameString" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Page" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PageQualifier" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="IsNothoTaxon" Type="Boolean" Nullable="false" />
+          <Property Name="CacheNameComplete" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Hybrid" Relationship="GNUBModel.FK_Hybrid_TaxonNameUsage" FromRole="TaxonNameUsage" ToRole="Hybrid" />
+          <NavigationProperty Name="Hybrid1" Relationship="GNUBModel.FK_Hybrid_TaxonNameUsage1" FromRole="TaxonNameUsage" ToRole="Hybrid" />
+          <NavigationProperty Name="NewCombination" Relationship="GNUBModel.FK_NewCombination_TaxonNameUsage" FromRole="TaxonNameUsage" ToRole="NewCombination" />
+          <NavigationProperty Name="NomenclaturalEvent" Relationship="GNUBModel.FK_NomenclaturalAct_TaxonNameUsage" FromRole="TaxonNameUsage" ToRole="NomenclaturalEvent" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_TaxonNameUsage_PK" FromRole="TaxonNameUsage" ToRole="PK" />
+          <NavigationProperty Name="Protonym" Relationship="GNUBModel.FK_Protonym_TaxonNameUsage" FromRole="TaxonNameUsage" ToRole="Protonym" />
+          <NavigationProperty Name="Protonym1" Relationship="GNUBModel.FK_TaxonNameUsage_Protonym" FromRole="TaxonNameUsage" ToRole="Protonym" />
+          <NavigationProperty Name="Reference" Relationship="GNUBModel.FK_TaxonNameUsage_Reference" FromRole="TaxonNameUsage" ToRole="Reference" />
+          <NavigationProperty Name="TaxonNameUsage1" Relationship="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage" FromRole="TaxonNameUsage" ToRole="TaxonNameUsage1" />
+          <NavigationProperty Name="TaxonNameUsage2" Relationship="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage" FromRole="TaxonNameUsage1" ToRole="TaxonNameUsage" />
+          <NavigationProperty Name="TaxonNameUsage11" Relationship="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage1" FromRole="TaxonNameUsage" ToRole="TaxonNameUsage1" />
+          <NavigationProperty Name="TaxonNameUsage3" Relationship="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage1" FromRole="TaxonNameUsage1" ToRole="TaxonNameUsage" />
+          <NavigationProperty Name="TaxonRank" Relationship="GNUBModel.FK_TaxonNameUsage_TaxonRank" FromRole="TaxonNameUsage" ToRole="TaxonRank" />
+          <NavigationProperty Name="Typification" Relationship="GNUBModel.FK_Typification_TaxonNameUsage" FromRole="TaxonNameUsage" ToRole="Typification" />
+        </EntityType>
+        <EntityType Name="TaxonRank">
+          <Key>
+            <PropertyRef Name="TaxonRankID" />
+          </Key>
+          <Property Name="TaxonRankID" Type="Int32" Nullable="false" />
+          <Property Name="RankSort" Type="Int32" Nullable="false" />
+          <Property Name="RankName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Abbreviation" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Prefix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Suffix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Italicize" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="NomenclaturalCode" Relationship="GNUBModel.FK_TaxonRank_NomenclaturalCode" FromRole="TaxonRank" ToRole="NomenclaturalCode" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_TaxonRank_PK" FromRole="TaxonRank" ToRole="PK" />
+          <NavigationProperty Name="TaxonNameUsage" Relationship="GNUBModel.FK_TaxonNameUsage_TaxonRank" FromRole="TaxonRank" ToRole="TaxonNameUsage" />
+        </EntityType>
+        <EntityType Name="Typification">
+          <Key>
+            <PropertyRef Name="TypificationID" />
+          </Key>
+          <Property Name="TypificationID" Type="Int32" Nullable="false" />
+          <Property Name="TypeNameTaxonNameUsageID" Type="Int32" />
+          <Property Name="CollectionPreservationLocation" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CollectionAccessionNumber" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CollectorsName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CollectorsCollectionNumber" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CollectionDate" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CollectionLocality" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CollectionContext" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CollectionGUID" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CachedTypification" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_Typification_PK" FromRole="Typification" ToRole="PK" />
+          <NavigationProperty Name="TaxonNameUsage" Relationship="GNUBModel.FK_Typification_TaxonNameUsage" FromRole="Typification" ToRole="TaxonNameUsage" />
+          <NavigationProperty Name="TypificationType" Relationship="GNUBModel.FK_Typification_TypificationType" FromRole="Typification" ToRole="TypificationType" />
+        </EntityType>
+        <EntityType Name="TypificationType">
+          <Key>
+            <PropertyRef Name="TypificationTypeID" />
+          </Key>
+          <Property Name="TypificationTypeID" Type="Int32" Nullable="false" />
+          <Property Name="TypeOfType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Typification" Relationship="GNUBModel.FK_Typification_TypificationType" FromRole="TypificationType" ToRole="Typification" />
+        </EntityType>
+        <EntityType Name="Username">
+          <Key>
+            <PropertyRef Name="UsernameID" />
+          </Key>
+          <Property Name="UsernameID" Type="Int32" Nullable="false" />
+          <Property Name="Username1" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Agent" Relationship="GNUBModel.FK_Username_Agent" FromRole="Username" ToRole="Agent" />
+          <NavigationProperty Name="Agent1" Relationship="GNUBModel.FK_Username_Agent1" FromRole="Username" ToRole="Agent" />
+          <NavigationProperty Name="PK" Relationship="GNUBModel.FK_Username_PK" FromRole="Username" ToRole="PK" />
+        </EntityType>
+        <Association Name="FK_Agent_Agent">
+          <End Role="Agent" Type="GNUBModel.Agent" Multiplicity="1" />
+          <End Role="Agent1" Type="GNUBModel.Agent" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Agent_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Agent" Type="GNUBModel.Agent" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comment_Agent">
+          <End Role="Agent" Type="GNUBModel.Agent" Multiplicity="1" />
+          <End Role="Comment" Type="GNUBModel.Comment" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_IdentifierDomain_Agent">
+          <End Role="Agent" Type="GNUBModel.Agent" Multiplicity="0..1" />
+          <End Role="IdentifierDomain" Type="GNUBModel.IdentifierDomain" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Organization_Agent">
+          <End Role="Agent" Type="GNUBModel.Agent" Multiplicity="1" />
+          <End Role="Organization" Type="GNUBModel.Organization" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="Organization">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Person_Agent">
+          <End Role="Agent" Type="GNUBModel.Agent" Multiplicity="1" />
+          <End Role="Person" Type="GNUBModel.Person" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Agent">
+              <PropertyRef Name="AgentID" />
+            </Principal>
+            <Dependent Role="Person">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Username_Agent">
+          <End Role="Agent" Type="GNUBModel.Agent" Multiplicity="1" />
+          <End Role="Username" Type="GNUBModel.Username" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Username_Agent1">
+          <End Role="Agent" Type="GNUBModel.Agent" Multiplicity="1" />
+          <End Role="Username" Type="GNUBModel.Username" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Comment_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Comment" Type="GNUBModel.Comment" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="CommentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comment_PK1">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Comment" Type="GNUBModel.Comment" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Hybrid_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Hybrid" Type="GNUBModel.Hybrid" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Hybrid">
+              <PropertyRef Name="HybridID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Hybrid_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="1" />
+          <End Role="Hybrid" Type="GNUBModel.Hybrid" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Hybrid_TaxonNameUsage1">
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="1" />
+          <End Role="Hybrid" Type="GNUBModel.Hybrid" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Identifier_IdentifierDomain">
+          <End Role="IdentifierDomain" Type="GNUBModel.IdentifierDomain" Multiplicity="1" />
+          <End Role="Identifier" Type="GNUBModel.Identifier" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Identifier_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Identifier" Type="GNUBModel.Identifier" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Identifier_PK1">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Identifier" Type="GNUBModel.Identifier" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Identifier">
+              <PropertyRef Name="IdentifierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IdentifierDomain_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="IdentifierDomain" Type="GNUBModel.IdentifierDomain" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="IdentifierDomain">
+              <PropertyRef Name="IdentifierDomainID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewCombination_Protonym">
+          <End Role="Protonym" Type="GNUBModel.Protonym" Multiplicity="0..1" />
+          <End Role="NewCombination" Type="GNUBModel.NewCombination" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_NewCombination_Protonym1">
+          <End Role="Protonym" Type="GNUBModel.Protonym" Multiplicity="0..1" />
+          <End Role="NewCombination" Type="GNUBModel.NewCombination" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_NewCombination_Protonym2">
+          <End Role="Protonym" Type="GNUBModel.Protonym" Multiplicity="0..1" />
+          <End Role="NewCombination" Type="GNUBModel.NewCombination" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_NewCombination_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="1" />
+          <End Role="NewCombination" Type="GNUBModel.NewCombination" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="NewCombination">
+              <PropertyRef Name="NewCombinationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NomenclaturalActType_NomenclaturalCode">
+          <End Role="NomenclaturalCode" Type="GNUBModel.NomenclaturalCode" Multiplicity="0..1" />
+          <End Role="NomenclaturalEventType" Type="GNUBModel.NomenclaturalEventType" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TaxonRank_NomenclaturalCode">
+          <End Role="NomenclaturalCode" Type="GNUBModel.NomenclaturalCode" Multiplicity="1" />
+          <End Role="TaxonRank" Type="GNUBModel.TaxonRank" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_NomenclaturalAct_NomenclaturalAct">
+          <End Role="NomenclaturalEvent" Type="GNUBModel.NomenclaturalEvent" Multiplicity="0..1" />
+          <End Role="NomenclaturalEvent1" Type="GNUBModel.NomenclaturalEvent" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_NomenclaturalAct_NomenclaturalActType">
+          <End Role="NomenclaturalEventType" Type="GNUBModel.NomenclaturalEventType" Multiplicity="1" />
+          <End Role="NomenclaturalEvent" Type="GNUBModel.NomenclaturalEvent" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_NomenclaturalAct_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NomenclaturalEvent" Type="GNUBModel.NomenclaturalEvent" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_NomenclaturalEvent_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="NomenclaturalEvent" Type="GNUBModel.NomenclaturalEvent" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="NomenclaturalEvent">
+              <PropertyRef Name="NomenclaturalEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organization_Organization">
+          <End Role="Organization" Type="GNUBModel.Organization" Multiplicity="1" />
+          <End Role="Organization1" Type="GNUBModel.Organization" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_PK_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="PK1" Type="GNUBModel.PK" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Reference_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Reference" Type="GNUBModel.Reference" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Reference">
+              <PropertyRef Name="ReferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonNameUsage_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonRank_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="TaxonRank" Type="GNUBModel.TaxonRank" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="TaxonRank">
+              <PropertyRef Name="TaxonRankID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Typification_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Typification" Type="GNUBModel.Typification" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Typification">
+              <PropertyRef Name="TypificationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Username_PK">
+          <End Role="PK" Type="GNUBModel.PK" Multiplicity="1" />
+          <End Role="Username" Type="GNUBModel.Username" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PK">
+              <PropertyRef Name="PKID" />
+            </Principal>
+            <Dependent Role="Username">
+              <PropertyRef Name="UsernameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Protonym_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="1" />
+          <End Role="Protonym" Type="GNUBModel.Protonym" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TaxonNameUsage">
+              <PropertyRef Name="TaxonNameUsageID" />
+            </Principal>
+            <Dependent Role="Protonym">
+              <PropertyRef Name="ProtonymID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaxonNameUsage_Protonym">
+          <End Role="Protonym" Type="GNUBModel.Protonym" Multiplicity="1" />
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TaxonNameUsage_Reference">
+          <End Role="Reference" Type="GNUBModel.Reference" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TaxonNameUsage_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="1" />
+          <End Role="TaxonNameUsage1" Type="GNUBModel.TaxonNameUsage" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TaxonNameUsage_TaxonNameUsage1">
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="1" />
+          <End Role="TaxonNameUsage1" Type="GNUBModel.TaxonNameUsage" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_TaxonNameUsage_TaxonRank">
+          <End Role="TaxonRank" Type="GNUBModel.TaxonRank" Multiplicity="1" />
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Typification_TaxonNameUsage">
+          <End Role="TaxonNameUsage" Type="GNUBModel.TaxonNameUsage" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Typification" Type="GNUBModel.Typification" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Typification_TypificationType">
+          <End Role="TypificationType" Type="GNUBModel.TypificationType" Multiplicity="0..1" />
+          <End Role="Typification" Type="GNUBModel.Typification" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="GNUBModelStoreContainer" CdmEntityContainer="GNUBEntities">
+          <EntitySetMapping Name="Agent">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Agent)">
+              <MappingFragment StoreEntitySet="Agent">
+                <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+                <ScalarProperty Name="IsAmbiguous" ColumnName="IsAmbiguous" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="DeathDate" ColumnName="DeathDate" />
+                <ScalarProperty Name="CacheFullAgentName" ColumnName="CacheFullAgentName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comment">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Comment)">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+                <ScalarProperty Name="CommentType" ColumnName="CommentType" />
+                <ScalarProperty Name="Comment1" ColumnName="Comment" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hybrid">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Hybrid)">
+              <MappingFragment StoreEntitySet="Hybrid">
+                <ScalarProperty Name="HybridID" ColumnName="HybridID" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Identifier">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Identifier)">
+              <MappingFragment StoreEntitySet="Identifier">
+                <ScalarProperty Name="IdentifierID" ColumnName="IdentifierID" />
+                <ScalarProperty Name="Identifier1" ColumnName="Identifier" />
+                <ScalarProperty Name="ResolutionNote" ColumnName="ResolutionNote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IdentifierDomain">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.IdentifierDomain)">
+              <MappingFragment StoreEntitySet="IdentifierDomain">
+                <ScalarProperty Name="IdentifierDomainID" ColumnName="IdentifierDomainID" />
+                <ScalarProperty Name="IdentifierClassID" ColumnName="IdentifierClassID" />
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="IdentifierDomain1" ColumnName="IdentifierDomain" />
+                <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsRegistry" ColumnName="IsRegistry" />
+                <ScalarProperty Name="URLPrefix" ColumnName="URLPrefix" />
+                <ScalarProperty Name="URLSuffix" ColumnName="URLSuffix" />
+                <ScalarProperty Name="LogoPath" ColumnName="LogoPath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewCombination">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.NewCombination)">
+              <MappingFragment StoreEntitySet="NewCombination">
+                <ScalarProperty Name="NewCombinationID" ColumnName="NewCombinationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NomenclaturalCode">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.NomenclaturalCode)">
+              <MappingFragment StoreEntitySet="NomenclaturalCode">
+                <ScalarProperty Name="NomenclaturalCodeID" ColumnName="NomenclaturalCodeID" />
+                <ScalarProperty Name="NomenclaturalCode1" ColumnName="NomenclaturalCode" />
+                <ScalarProperty Name="NomenclaturalCodeLabel" ColumnName="NomenclaturalCodeLabel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NomenclaturalEvent">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.NomenclaturalEvent)">
+              <MappingFragment StoreEntitySet="NomenclaturalEvent">
+                <ScalarProperty Name="NomenclaturalEventID" ColumnName="NomenclaturalEventID" />
+                <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NomenclaturalEventType">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.NomenclaturalEventType)">
+              <MappingFragment StoreEntitySet="NomenclaturalEventType">
+                <ScalarProperty Name="NomenclaturalEventTypeID" ColumnName="NomenclaturalEventTypeID" />
+                <ScalarProperty Name="NomenclaturalEventType1" ColumnName="NomenclaturalEventType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organization">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Organization)">
+              <MappingFragment StoreEntitySet="Organization">
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="GeoScope" ColumnName="GeoScope" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Person)">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+                <ScalarProperty Name="GivenName" ColumnName="GivenName" />
+                <ScalarProperty Name="FamilyName" ColumnName="FamilyName" />
+                <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+                <ScalarProperty Name="PrimaryGivenName" ColumnName="PrimaryGivenName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="IsEastern" ColumnName="IsEastern" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PK">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.PK)">
+              <MappingFragment StoreEntitySet="PK">
+                <ScalarProperty Name="PKID" ColumnName="PKID" />
+                <ScalarProperty Name="TableID" ColumnName="TableID" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+                <ScalarProperty Name="LegacyID" ColumnName="LegacyID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Protonym">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Protonym)">
+              <MappingFragment StoreEntitySet="Protonym">
+                <ScalarProperty Name="ProtonymID" ColumnName="ProtonymID" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="IsGenderMatched" ColumnName="IsGenderMatched" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reference">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Reference)">
+              <MappingFragment StoreEntitySet="Reference">
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+                <ScalarProperty Name="CacheAuthors" ColumnName="CacheAuthors" />
+                <ScalarProperty Name="CacheReference" ColumnName="CacheReference" />
+                <ScalarProperty Name="NomenclaturalSignificance" ColumnName="NomenclaturalSignificance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegisteredIdentifier">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.RegisteredIdentifier)">
+              <MappingFragment StoreEntitySet="RegisteredIdentifier">
+                <ScalarProperty Name="RegisteredIdentifierID" ColumnName="RegisteredIdentifierID" />
+                <ScalarProperty Name="RegisteringAgentID" ColumnName="RegisteringAgentID" />
+                <ScalarProperty Name="RegistrationTimeStamp" ColumnName="RegistrationTimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaxonNameUsage">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.TaxonNameUsage)">
+              <MappingFragment StoreEntitySet="TaxonNameUsage">
+                <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+                <ScalarProperty Name="NameElement" ColumnName="NameElement" />
+                <ScalarProperty Name="VerbatimNameString" ColumnName="VerbatimNameString" />
+                <ScalarProperty Name="Page" ColumnName="Page" />
+                <ScalarProperty Name="PageQualifier" ColumnName="PageQualifier" />
+                <ScalarProperty Name="IsNothoTaxon" ColumnName="IsNothoTaxon" />
+                <ScalarProperty Name="CacheNameComplete" ColumnName="CacheNameComplete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaxonRank">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.TaxonRank)">
+              <MappingFragment StoreEntitySet="TaxonRank">
+                <ScalarProperty Name="TaxonRankID" ColumnName="TaxonRankID" />
+                <ScalarProperty Name="RankSort" ColumnName="RankSort" />
+                <ScalarProperty Name="RankName" ColumnName="RankName" />
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+                <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+                <ScalarProperty Name="Italicize" ColumnName="Italicize" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Typification">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Typification)">
+              <MappingFragment StoreEntitySet="Typification">
+                <ScalarProperty Name="TypificationID" ColumnName="TypificationID" />
+                <ScalarProperty Name="TypeNameTaxonNameUsageID" ColumnName="TypeNameTaxonNameUsageID" />
+                <ScalarProperty Name="CollectionPreservationLocation" ColumnName="CollectionPreservationLocation" />
+                <ScalarProperty Name="CollectionAccessionNumber" ColumnName="CollectionAccessionNumber" />
+                <ScalarProperty Name="CollectorsName" ColumnName="CollectorsName" />
+                <ScalarProperty Name="CollectorsCollectionNumber" ColumnName="CollectorsCollectionNumber" />
+                <ScalarProperty Name="CollectionDate" ColumnName="CollectionDate" />
+                <ScalarProperty Name="CollectionLocality" ColumnName="CollectionLocality" />
+                <ScalarProperty Name="CollectionContext" ColumnName="CollectionContext" />
+                <ScalarProperty Name="CollectionGUID" ColumnName="CollectionGUID" />
+                <ScalarProperty Name="CachedTypification" ColumnName="CachedTypification" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypificationType">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.TypificationType)">
+              <MappingFragment StoreEntitySet="TypificationType">
+                <ScalarProperty Name="TypificationTypeID" ColumnName="TypificationTypeID" />
+                <ScalarProperty Name="TypeOfType" ColumnName="TypeOfType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Username">
+            <EntityTypeMapping TypeName="IsTypeOf(GNUBModel.Username)">
+              <MappingFragment StoreEntitySet="Username">
+                <ScalarProperty Name="UsernameID" ColumnName="UsernameID" />
+                <ScalarProperty Name="Username1" ColumnName="Username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_Agent_Agent" TypeName="GNUBModel.FK_Agent_Agent" StoreEntitySet="Agent">
+            <EndProperty Name="Agent">
+              <ScalarProperty Name="AgentID" ColumnName="ValidAgentID" />
+            </EndProperty>
+            <EndProperty Name="Agent1">
+              <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Agent_PK" TypeName="GNUBModel.FK_Agent_PK" StoreEntitySet="Agent">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="AgentID" />
+            </EndProperty>
+            <EndProperty Name="Agent">
+              <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Comment_Agent" TypeName="GNUBModel.FK_Comment_Agent" StoreEntitySet="Comment">
+            <EndProperty Name="Agent">
+              <ScalarProperty Name="AgentID" ColumnName="AuthorID" />
+            </EndProperty>
+            <EndProperty Name="Comment">
+              <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_IdentifierDomain_Agent" TypeName="GNUBModel.FK_IdentifierDomain_Agent" StoreEntitySet="IdentifierDomain">
+            <EndProperty Name="Agent">
+              <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+            </EndProperty>
+            <EndProperty Name="IdentifierDomain">
+              <ScalarProperty Name="IdentifierDomainID" ColumnName="IdentifierDomainID" />
+            </EndProperty>
+            <Condition ColumnName="AgentID" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Organization_Agent" TypeName="GNUBModel.FK_Organization_Agent" StoreEntitySet="Organization">
+            <EndProperty Name="Agent">
+              <ScalarProperty Name="AgentID" ColumnName="OrganizationID" />
+            </EndProperty>
+            <EndProperty Name="Organization">
+              <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Person_Agent" TypeName="GNUBModel.FK_Person_Agent" StoreEntitySet="Person">
+            <EndProperty Name="Agent">
+              <ScalarProperty Name="AgentID" ColumnName="PersonID" />
+            </EndProperty>
+            <EndProperty Name="Person">
+              <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Username_Agent" TypeName="GNUBModel.FK_Username_Agent" StoreEntitySet="Username">
+            <EndProperty Name="Agent">
+              <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+            </EndProperty>
+            <EndProperty Name="Username">
+              <ScalarProperty Name="UsernameID" ColumnName="UsernameID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Username_Agent1" TypeName="GNUBModel.FK_Username_Agent1" StoreEntitySet="Username">
+            <EndProperty Name="Agent">
+              <ScalarProperty Name="AgentID" ColumnName="SponsorID" />
+            </EndProperty>
+            <EndProperty Name="Username">
+              <ScalarProperty Name="UsernameID" ColumnName="UsernameID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Comment_PK" TypeName="GNUBModel.FK_Comment_PK" StoreEntitySet="Comment">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="CommentID" />
+            </EndProperty>
+            <EndProperty Name="Comment">
+              <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Comment_PK1" TypeName="GNUBModel.FK_Comment_PK1" StoreEntitySet="Comment">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="PKID" />
+            </EndProperty>
+            <EndProperty Name="Comment">
+              <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Hybrid_PK" TypeName="GNUBModel.FK_Hybrid_PK" StoreEntitySet="Hybrid">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="HybridID" />
+            </EndProperty>
+            <EndProperty Name="Hybrid">
+              <ScalarProperty Name="HybridID" ColumnName="HybridID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Hybrid_TaxonNameUsage" TypeName="GNUBModel.FK_Hybrid_TaxonNameUsage" StoreEntitySet="Hybrid">
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+            <EndProperty Name="Hybrid">
+              <ScalarProperty Name="HybridID" ColumnName="HybridID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Hybrid_TaxonNameUsage1" TypeName="GNUBModel.FK_Hybrid_TaxonNameUsage1" StoreEntitySet="Hybrid">
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="HybridParentID" />
+            </EndProperty>
+            <EndProperty Name="Hybrid">
+              <ScalarProperty Name="HybridID" ColumnName="HybridID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Identifier_IdentifierDomain" TypeName="GNUBModel.FK_Identifier_IdentifierDomain" StoreEntitySet="Identifier">
+            <EndProperty Name="IdentifierDomain">
+              <ScalarProperty Name="IdentifierDomainID" ColumnName="IdentifierDomainID" />
+            </EndProperty>
+            <EndProperty Name="Identifier">
+              <ScalarProperty Name="IdentifierID" ColumnName="IdentifierID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Identifier_PK" TypeName="GNUBModel.FK_Identifier_PK" StoreEntitySet="Identifier">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="PKID" />
+            </EndProperty>
+            <EndProperty Name="Identifier">
+              <ScalarProperty Name="IdentifierID" ColumnName="IdentifierID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Identifier_PK1" TypeName="GNUBModel.FK_Identifier_PK1" StoreEntitySet="Identifier">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="IdentifierID" />
+            </EndProperty>
+            <EndProperty Name="Identifier">
+              <ScalarProperty Name="IdentifierID" ColumnName="IdentifierID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_IdentifierDomain_PK" TypeName="GNUBModel.FK_IdentifierDomain_PK" StoreEntitySet="IdentifierDomain">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="IdentifierDomainID" />
+            </EndProperty>
+            <EndProperty Name="IdentifierDomain">
+              <ScalarProperty Name="IdentifierDomainID" ColumnName="IdentifierDomainID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NewCombination_Protonym" TypeName="GNUBModel.FK_NewCombination_Protonym" StoreEntitySet="NewCombination">
+            <EndProperty Name="Protonym">
+              <ScalarProperty Name="ProtonymID" ColumnName="CacheGenusProtonymID" />
+            </EndProperty>
+            <EndProperty Name="NewCombination">
+              <ScalarProperty Name="NewCombinationID" ColumnName="NewCombinationID" />
+            </EndProperty>
+            <Condition ColumnName="CacheGenusProtonymID" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NewCombination_Protonym1" TypeName="GNUBModel.FK_NewCombination_Protonym1" StoreEntitySet="NewCombination">
+            <EndProperty Name="Protonym">
+              <ScalarProperty Name="ProtonymID" ColumnName="CacheSpeciesProtonymID" />
+            </EndProperty>
+            <EndProperty Name="NewCombination">
+              <ScalarProperty Name="NewCombinationID" ColumnName="NewCombinationID" />
+            </EndProperty>
+            <Condition ColumnName="CacheSpeciesProtonymID" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NewCombination_Protonym2" TypeName="GNUBModel.FK_NewCombination_Protonym2" StoreEntitySet="NewCombination">
+            <EndProperty Name="Protonym">
+              <ScalarProperty Name="ProtonymID" ColumnName="CacheInfraspecificProtonymID" />
+            </EndProperty>
+            <EndProperty Name="NewCombination">
+              <ScalarProperty Name="NewCombinationID" ColumnName="NewCombinationID" />
+            </EndProperty>
+            <Condition ColumnName="CacheInfraspecificProtonymID" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NewCombination_TaxonNameUsage" TypeName="GNUBModel.FK_NewCombination_TaxonNameUsage" StoreEntitySet="NewCombination">
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="NewCombinationID" />
+            </EndProperty>
+            <EndProperty Name="NewCombination">
+              <ScalarProperty Name="NewCombinationID" ColumnName="NewCombinationID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NomenclaturalActType_NomenclaturalCode" TypeName="GNUBModel.FK_NomenclaturalActType_NomenclaturalCode" StoreEntitySet="NomenclaturalEventType">
+            <EndProperty Name="NomenclaturalCode">
+              <ScalarProperty Name="NomenclaturalCodeID" ColumnName="NomenclaturalCodeID" />
+            </EndProperty>
+            <EndProperty Name="NomenclaturalEventType">
+              <ScalarProperty Name="NomenclaturalEventTypeID" ColumnName="NomenclaturalEventTypeID" />
+            </EndProperty>
+            <Condition ColumnName="NomenclaturalCodeID" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TaxonRank_NomenclaturalCode" TypeName="GNUBModel.FK_TaxonRank_NomenclaturalCode" StoreEntitySet="TaxonRank">
+            <EndProperty Name="NomenclaturalCode">
+              <ScalarProperty Name="NomenclaturalCodeID" ColumnName="NomenclaturalCodeID" />
+            </EndProperty>
+            <EndProperty Name="TaxonRank">
+              <ScalarProperty Name="TaxonRankID" ColumnName="TaxonRankID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NomenclaturalAct_NomenclaturalAct" TypeName="GNUBModel.FK_NomenclaturalAct_NomenclaturalAct" StoreEntitySet="NomenclaturalEvent">
+            <EndProperty Name="NomenclaturalEvent">
+              <ScalarProperty Name="NomenclaturalEventID" ColumnName="RelatedNomenclaturalEventID" />
+            </EndProperty>
+            <EndProperty Name="NomenclaturalEvent1">
+              <ScalarProperty Name="NomenclaturalEventID" ColumnName="NomenclaturalEventID" />
+            </EndProperty>
+            <Condition ColumnName="RelatedNomenclaturalEventID" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NomenclaturalAct_NomenclaturalActType" TypeName="GNUBModel.FK_NomenclaturalAct_NomenclaturalActType" StoreEntitySet="NomenclaturalEvent">
+            <EndProperty Name="NomenclaturalEventType">
+              <ScalarProperty Name="NomenclaturalEventTypeID" ColumnName="NomenclaturalEventTypeID" />
+            </EndProperty>
+            <EndProperty Name="NomenclaturalEvent">
+              <ScalarProperty Name="NomenclaturalEventID" ColumnName="NomenclaturalEventID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NomenclaturalAct_TaxonNameUsage" TypeName="GNUBModel.FK_NomenclaturalAct_TaxonNameUsage" StoreEntitySet="NomenclaturalEvent">
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+            <EndProperty Name="NomenclaturalEvent">
+              <ScalarProperty Name="NomenclaturalEventID" ColumnName="NomenclaturalEventID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_NomenclaturalEvent_PK" TypeName="GNUBModel.FK_NomenclaturalEvent_PK" StoreEntitySet="NomenclaturalEvent">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="NomenclaturalEventID" />
+            </EndProperty>
+            <EndProperty Name="NomenclaturalEvent">
+              <ScalarProperty Name="NomenclaturalEventID" ColumnName="NomenclaturalEventID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Organization_Organization" TypeName="GNUBModel.FK_Organization_Organization" StoreEntitySet="Organization">
+            <EndProperty Name="Organization">
+              <ScalarProperty Name="OrganizationID" ColumnName="ParentOrganizationID" />
+            </EndProperty>
+            <EndProperty Name="Organization1">
+              <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_PK_PK" TypeName="GNUBModel.FK_PK_PK" StoreEntitySet="PK">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="CorrectID" />
+            </EndProperty>
+            <EndProperty Name="PK1">
+              <ScalarProperty Name="PKID" ColumnName="PKID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Reference_PK" TypeName="GNUBModel.FK_Reference_PK" StoreEntitySet="Reference">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="ReferenceID" />
+            </EndProperty>
+            <EndProperty Name="Reference">
+              <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TaxonNameUsage_PK" TypeName="GNUBModel.FK_TaxonNameUsage_PK" StoreEntitySet="TaxonNameUsage">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TaxonRank_PK" TypeName="GNUBModel.FK_TaxonRank_PK" StoreEntitySet="TaxonRank">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="TaxonRankID" />
+            </EndProperty>
+            <EndProperty Name="TaxonRank">
+              <ScalarProperty Name="TaxonRankID" ColumnName="TaxonRankID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Typification_PK" TypeName="GNUBModel.FK_Typification_PK" StoreEntitySet="Typification">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="TypificationID" />
+            </EndProperty>
+            <EndProperty Name="Typification">
+              <ScalarProperty Name="TypificationID" ColumnName="TypificationID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Username_PK" TypeName="GNUBModel.FK_Username_PK" StoreEntitySet="Username">
+            <EndProperty Name="PK">
+              <ScalarProperty Name="PKID" ColumnName="UsernameID" />
+            </EndProperty>
+            <EndProperty Name="Username">
+              <ScalarProperty Name="UsernameID" ColumnName="UsernameID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Protonym_TaxonNameUsage" TypeName="GNUBModel.FK_Protonym_TaxonNameUsage" StoreEntitySet="Protonym">
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="ProtonymID" />
+            </EndProperty>
+            <EndProperty Name="Protonym">
+              <ScalarProperty Name="ProtonymID" ColumnName="ProtonymID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TaxonNameUsage_Protonym" TypeName="GNUBModel.FK_TaxonNameUsage_Protonym" StoreEntitySet="TaxonNameUsage">
+            <EndProperty Name="Protonym">
+              <ScalarProperty Name="ProtonymID" ColumnName="ProtonymID" />
+            </EndProperty>
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TaxonNameUsage_Reference" TypeName="GNUBModel.FK_TaxonNameUsage_Reference" StoreEntitySet="TaxonNameUsage">
+            <EndProperty Name="Reference">
+              <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+            </EndProperty>
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TaxonNameUsage_TaxonNameUsage" TypeName="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage" StoreEntitySet="TaxonNameUsage">
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="ValidUsageID" />
+            </EndProperty>
+            <EndProperty Name="TaxonNameUsage1">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TaxonNameUsage_TaxonNameUsage1" TypeName="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage1" StoreEntitySet="TaxonNameUsage">
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="ParentUsageID" />
+            </EndProperty>
+            <EndProperty Name="TaxonNameUsage1">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_TaxonNameUsage_TaxonRank" TypeName="GNUBModel.FK_TaxonNameUsage_TaxonRank" StoreEntitySet="TaxonNameUsage">
+            <EndProperty Name="TaxonRank">
+              <ScalarProperty Name="TaxonRankID" ColumnName="TaxonRankID" />
+            </EndProperty>
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Typification_TaxonNameUsage" TypeName="GNUBModel.FK_Typification_TaxonNameUsage" StoreEntitySet="Typification">
+            <EndProperty Name="TaxonNameUsage">
+              <ScalarProperty Name="TaxonNameUsageID" ColumnName="TaxonNameUsageID" />
+            </EndProperty>
+            <EndProperty Name="Typification">
+              <ScalarProperty Name="TypificationID" ColumnName="TypificationID" />
+            </EndProperty>
+            <Condition ColumnName="TaxonNameUsageID" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Typification_TypificationType" TypeName="GNUBModel.FK_Typification_TypificationType" StoreEntitySet="Typification">
+            <EndProperty Name="TypificationType">
+              <ScalarProperty Name="TypificationTypeID" ColumnName="TypificationTypeID" />
+            </EndProperty>
+            <EndProperty Name="Typification">
+              <ScalarProperty Name="TypificationID" ColumnName="TypificationID" />
+            </EndProperty>
+            <Condition ColumnName="TypificationTypeID" IsNull="false" />
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="GNUB">
+        <EntityTypeShape EntityType="GNUBModel.Agent" Width="1.5" PointX="3" PointY="27.125" Height="3.2357796223958317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Comment" Width="1.5" PointX="5.25" PointY="25.5" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Hybrid" Width="1.5" PointX="3" PointY="20.875" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Identifier" Width="1.5" PointX="13.5" PointY="19.875" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.IdentifierDomain" Width="1.5" PointX="8.25" PointY="22" Height="3.0714322916666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.NewCombination" Width="1.5" PointX="10.75" PointY="21.625" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.NomenclaturalCode" Width="1.5" PointX="0.75" PointY="13.875" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.NomenclaturalEvent" Width="1.5" PointX="7.5" PointY="17.75" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.NomenclaturalEventType" Width="1.5" PointX="5.25" PointY="14" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Organization" Width="1.5" PointX="7.125" PointY="30" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Person" Width="1.5" PointX="1.25" PointY="30.625" Height="2.414042968749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.PK" Width="1.5" PointX="0.75" PointY="16.625" Height="4.2218636067708317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Protonym" Width="1.5" PointX="7.5" PointY="26.125" Height="2.2496956380208317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Reference" Width="1.5" PointX="3" PointY="17.25" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.RegisteredIdentifier" Width="1.5" PointX="10.25" PointY="13.25" Height="1.427958984375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.TaxonNameUsage" Width="1.5" PointX="5.25" PointY="16.5" Height="4.3862109375000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.TaxonRank" Width="1.5" PointX="3" PointY="13.5" Height="2.5783902994791674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Typification" Width="1.5" PointX="10.5" PointY="17.125" Height="3.2357796223958317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.TypificationType" Width="1.5" PointX="8.25" PointY="15" Height="1.4279589843750014" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNUBModel.Username" Width="1.5" PointX="5.25" PointY="22.625" Height="1.7566536458333317" IsExpanded="true" />
+        <AssociationConnector Association="GNUBModel.FK_Agent_Agent" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.5319230769230767" PointY="30.360779622395832" />
+          <ConnectorPoint PointX="3.5319230769230767" PointY="30.610779622395832" />
+          <ConnectorPoint PointX="3.9784615384615383" PointY="30.610779622395832" />
+          <ConnectorPoint PointX="3.9784615384615383" PointY="30.360779622395832" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Agent_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="20.846863606770832" />
+          <ConnectorPoint PointX="1.5" PointY="28.742889811197916" />
+          <ConnectorPoint PointX="3" PointY="28.742889811197916" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Comment_Agent" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="27.355174153645834" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="27.355174153645834" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="27.355174153645834" />
+          <ConnectorPoint PointX="5.25" PointY="27.355174153645834" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_IdentifierDomain_Agent" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="29.142913132161457" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="29.142913132161457" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="29.142913132161457" />
+          <ConnectorPoint PointX="9.40625" PointY="29.142913132161457" />
+          <ConnectorPoint PointX="9.40625" PointY="25.071432291666667" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Organization_Agent" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="30.180389811197916" />
+          <ConnectorPoint PointX="7.125" PointY="30.180389811197916" />
+          </AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Person_Agent" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.2347090384615385" PointY="30.360779622395832" />
+          <ConnectorPoint PointX="3.2347090384615385" PointY="31.832021484374998" />
+          <ConnectorPoint PointX="2.75" PointY="31.832021484374998" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Username_Agent" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="28.377080891927083" />
+          <ConnectorPoint PointX="4.875" PointY="28.377080891927083" />
+          <ConnectorPoint PointX="4.875" PointY="23.503326822916666" />
+          <ConnectorPoint PointX="5.25" PointY="23.503326822916666" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Username_Agent1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="29.911135626302084" />
+          <ConnectorPoint PointX="5" PointY="29.911135626302084" />
+          <ConnectorPoint PointX="5" PointY="23.973742234374996" />
+          <ConnectorPoint PointX="5.25" PointY="23.973742234374996" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Comment_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="20.846863606770832" />
+          <ConnectorPoint PointX="1.9062525" PointY="26.28125" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="26.28125" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="26.28125" />
+          <ConnectorPoint PointX="5.25" PointY="26.28125" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Comment_PK1" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.0937475" PointY="20.846863606770832" />
+          <ConnectorPoint PointX="1.0937475" PointY="25.8593725" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="25.8593725" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="25.8593725" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="25.8593725" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="25.8593725" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="25.8593725" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="25.8593725" />
+          <ConnectorPoint PointX="5.25" PointY="25.8593725" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Hybrid_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.10937875" PointY="20.846863606770832" />
+          <ConnectorPoint PointX="2.10937875" PointY="21.753326822916666" />
+          <ConnectorPoint PointX="3" PointY="21.753326822916666" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Hybrid_TaxonNameUsage" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="20.886210937500003" />
+          <ConnectorPoint PointX="6" PointY="22.025222055288459" />
+          <ConnectorPoint PointX="4.5" PointY="22.025222055288459" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Hybrid_TaxonNameUsage1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="20.886210937500003" />
+          <ConnectorPoint PointX="6" PointY="21.49379046474359" />
+          <ConnectorPoint PointX="4.5" PointY="21.49379046474359" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Identifier_IdentifierDomain" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="24.25779296875" />
+          <ConnectorPoint PointX="14.25" PointY="24.25779296875" />
+          <ConnectorPoint PointX="14.25" PointY="21.796000976562503" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Identifier_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="16.625" />
+          <ConnectorPoint PointX="1.5" PointY="16.375" />
+          <ConnectorPoint PointX="5" PointY="16.375" />
+          <ConnectorPoint PointX="5" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="12.072916666666666" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="12.239583333333334" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="12.791666666666666" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="12.958333333333334" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="13.125" PointY="21.136210937500003" />
+          <ConnectorPoint PointX="13.125" PointY="20.835500488281252" />
+          <ConnectorPoint PointX="13.5" PointY="20.835500488281252" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Identifier_PK1" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062519999999998" PointY="16.625" />
+          <ConnectorPoint PointX="1.9062519999999998" PointY="16.5" />
+          <ConnectorPoint PointX="4.75" PointY="16.5" />
+          <ConnectorPoint PointX="4.75" PointY="21.261210937500003" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="21.261210937500003" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="21.261210937500003" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="21.261210937500003" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="21.261210937500003" />
+          <ConnectorPoint PointX="12.072916666666666" PointY="21.261210937500003" />
+          <ConnectorPoint PointX="12.239583333333334" PointY="21.261210937500003" />
+          <ConnectorPoint PointX="12.875" PointY="21.261210937500003" />
+          <ConnectorPoint PointX="12.875" PointY="20.323998244140626" />
+          <ConnectorPoint PointX="13.5" PointY="20.323998244140626" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_IdentifierDomain_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.70312625" PointY="20.846863606770832" />
+          <ConnectorPoint PointX="1.70312625" PointY="24.75779296875" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="24.75779296875" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="24.75779296875" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="24.75779296875" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="24.75779296875" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="24.75779296875" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="24.75779296875" />
+          <ConnectorPoint PointX="7.5572891666666671" PointY="24.75779296875" />
+          <ConnectorPoint PointX="7.7239558333333331" PointY="24.75779296875" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="24.75779296875" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="24.75779296875" />
+          <ConnectorPoint PointX="7.9635441666666678" PointY="24.75779296875" />
+          <ConnectorPoint PointX="8.1302108333333347" PointY="24.75779296875" />
+          <ConnectorPoint PointX="8.25" PointY="24.75779296875" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NewCombination_Protonym" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.84375" PointY="26.125" />
+          <ConnectorPoint PointX="7.84375" PointY="21.78125" />
+          <ConnectorPoint PointX="10.75" PointY="21.78125" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NewCombination_Protonym1" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.0468775" PointY="26.125" />
+          <ConnectorPoint PointX="8.0468775" PointY="21.8906275" />
+          <ConnectorPoint PointX="10.75" PointY="21.8906275" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NewCombination_Protonym2" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.6406225" PointY="26.125" />
+          <ConnectorPoint PointX="7.6406225" PointY="21.6718725" />
+          <ConnectorPoint PointX="10.75" PointY="21.6718725" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NewCombination_TaxonNameUsage" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.78125" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="16.78125" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="16.78125" />
+          <ConnectorPoint PointX="11.822916666666666" PointY="16.78125" />
+          <ConnectorPoint PointX="11.989583333333334" PointY="16.78125" />
+          <ConnectorPoint PointX="12.15625" PointY="16.78125" />
+          <ConnectorPoint PointX="12.15625" PointY="21.625" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NomenclaturalActType_NomenclaturalCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="15.631653645833332" />
+          <ConnectorPoint PointX="1.5" PointY="16.203390299479167" />
+          <ConnectorPoint PointX="4.875" PointY="16.203390299479167" />
+          <ConnectorPoint PointX="4.875" PointY="14.796153157552084" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="14.796153157552084" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="14.796153157552084" />
+          <ConnectorPoint PointX="5.25" PointY="14.796153157552084" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_TaxonRank_NomenclaturalCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="14.753326822916666" />
+          <ConnectorPoint PointX="3" PointY="14.753326822916666" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NomenclaturalAct_NomenclaturalAct" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="19.835348307291667" />
+          <ConnectorPoint PointX="8.25" PointY="20.085348307291667" />
+          <ConnectorPoint PointX="8.5823076923076922" PointY="20.085348307291667" />
+          <ConnectorPoint PointX="8.5823076923076922" PointY="19.835348307291667" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NomenclaturalAct_NomenclaturalActType" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="14.46875" />
+          <ConnectorPoint PointX="7.84375" PointY="14.46875" />
+          <ConnectorPoint PointX="7.84375" PointY="17.75" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NomenclaturalAct_TaxonNameUsage" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="18.792674153645834" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="18.792674153645834" />
+          <ConnectorPoint PointX="7.083333333333333" PointY="18.792674153645834" />
+          <ConnectorPoint PointX="7.5" PointY="18.792674153645834" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_NomenclaturalEvent_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="18.735931803385416" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="18.735931803385416" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="18.735931803385416" />
+          <ConnectorPoint PointX="2.75" PointY="18.735931803385416" />
+          <ConnectorPoint PointX="2.75" PointY="19.421000976562503" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="19.421000976562503" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="19.421000976562503" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="19.421000976562503" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="19.421000976562503" />
+          <ConnectorPoint PointX="5.125" PointY="19.421000976562503" />
+          <ConnectorPoint PointX="5.125" PointY="21.011210937500003" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="21.011210937500003" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="21.011210937500003" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="21.011210937500003" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="21.011210937500003" />
+          <ConnectorPoint PointX="8.25" PointY="21.011210937500003" />
+          <ConnectorPoint PointX="8.25" PointY="19.835348307291667" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Organization_Organization" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.6569230769230776" PointY="32.085348307291667" />
+          <ConnectorPoint PointX="7.6569230769230776" PointY="32.335348307291667" />
+          <ConnectorPoint PointX="8.10346153846154" PointY="32.335348307291667" />
+          <ConnectorPoint PointX="8.10346153846154" PointY="32.085348307291667" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_PK_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="0.75" PointY="18.078169220753203" />
+          <ConnectorPoint PointX="0.5" PointY="18.078169220753203" />
+          <ConnectorPoint PointX="0.5" PointY="19.42501641376202" />
+          <ConnectorPoint PointX="0.75" PointY="19.42501641376202" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Reference_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="17.930465901692706" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="17.930465901692706" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="17.930465901692706" />
+          <ConnectorPoint PointX="3" PointY="17.930465901692706" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_TaxonNameUsage_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="20.196432291666667" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="20.196432291666664" />
+          <ConnectorPoint PointX="5.208333333333333" PointY="20.196432291666667" />
+          <ConnectorPoint PointX="5.25" PointY="20.196432291666667" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_TaxonRank_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.093748" PointY="16.625" />
+          <ConnectorPoint PointX="1.093748" PointY="15.881653645833332" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="15.881653645833332" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="15.881653645833332" />
+          <ConnectorPoint PointX="2.5" PointY="15.881653645833332" />
+          <ConnectorPoint PointX="2.5" PointY="15.447110561197917" />
+          <ConnectorPoint PointX="3" PointY="15.447110561197917" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Typification_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="17.246480950846355" />
+          <ConnectorPoint PointX="2.5" PointY="17.246480950846355" />
+          <ConnectorPoint PointX="2.5" PointY="19.671000976562503" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="19.671000976562503" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="19.671000976562503" />
+          <ConnectorPoint PointX="4.875" PointY="19.671000976562503" />
+          <ConnectorPoint PointX="4.875" PointY="21.198710937500003" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="21.198710937500003" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="21.198710937500003" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="21.198710937500003" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="21.198710937500003" />
+          <ConnectorPoint PointX="11.25" PointY="21.198710937500003" />
+          <ConnectorPoint PointX="11.25" PointY="20.360779622395832" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Username_PK" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.29687375" PointY="20.846863606770832" />
+          <ConnectorPoint PointX="1.29687375" PointY="23.067487734375" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="23.067487734375" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="23.067487734375" />
+          <ConnectorPoint PointX="1.6197929166666667" PointY="23.067487734375" />
+          <ConnectorPoint PointX="1.7864595833333332" PointY="23.067487734375" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="23.067487734375" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="23.067487734375" />
+          <ConnectorPoint PointX="5.25" PointY="23.067487734375" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Protonym_TaxonNameUsage" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="19.870694545572917" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="19.870694545572917" />
+          <ConnectorPoint PointX="7.083333333333333" PointY="19.870694545572917" />
+          <ConnectorPoint PointX="7.125" PointY="19.870694545572917" />
+          <ConnectorPoint PointX="7.125" PointY="27.249847819010416" />
+          <ConnectorPoint PointX="7.5" PointY="27.249847819010416" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_TaxonNameUsage_Protonym" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="26.656171909505211" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="26.656171909505211" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="26.656171909505211" />
+          <ConnectorPoint PointX="7" PointY="26.656171909505211" />
+          <ConnectorPoint PointX="7" PointY="17.786962076822917" />
+          <ConnectorPoint PointX="6.75" PointY="17.786962076822917" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_TaxonNameUsage_Reference" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.210500488281252" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="18.210500488281252" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="18.210500488281252" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="18.210500488281252" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="18.210500488281252" />
+          <ConnectorPoint PointX="5.25" PointY="18.210500488281252" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="16.5" />
+          <ConnectorPoint PointX="6" PointY="16.25" />
+          <ConnectorPoint PointX="6.3323076923076922" PointY="16.25" />
+          <ConnectorPoint PointX="6.3323076923076922" PointY="16.5" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_TaxonNameUsage_TaxonNameUsage1" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.7819230769230767" PointY="20.886210937500003" />
+          <ConnectorPoint PointX="5.7819230769230767" PointY="21.073710937500003" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="21.073710937500003" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="21.073710937500003" />
+          <ConnectorPoint PointX="6.2284615384615378" PointY="21.073710937500003" />
+          <ConnectorPoint PointX="6.2284615384615378" PointY="20.886210937500003" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_TaxonNameUsage_TaxonRank" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.148077078776041" />
+          <ConnectorPoint PointX="5" PointY="14.148077078776041" />
+          <ConnectorPoint PointX="5" PointY="15.842306315104167" />
+          <ConnectorPoint PointX="6" PointY="15.842306315104167" />
+          <ConnectorPoint PointX="6" PointY="16.5" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Typification_TaxonNameUsage" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="17.393481038411458" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="17.393481038411458" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="17.393481038411458" />
+          <ConnectorPoint PointX="10.5" PointY="17.393481038411458" /></AssociationConnector>
+        <AssociationConnector Association="GNUBModel.FK_Typification_TypificationType" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="15.936056315104167" />
+          <ConnectorPoint PointX="11.90625" PointY="15.936056315104167" />
+          <ConnectorPoint PointX="11.90625" PointY="17.125" /></AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
