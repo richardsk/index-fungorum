@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="GNUB">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="gnub.bishopmuseum.org:deepreef">
+          <Created>2012-03-16T11:05:29.0778219-10:00</Created>
+          <Type>SQL</Type>
+          <Server>gnub.bishopmuseum.org</Server>
+          <UserName>deepreef</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>GNUBIF</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="HelperSQL.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HelperSQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IFToGNUB.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:gnub.bishopmuseum.org:False:deepreef</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>gnub.bishopmuseum.org</AssociatedConnSrvName>
+          <AssociatedConnUserName>deepreef</AssociatedConnUserName>
+          <FullPath>IFToGNUB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TransferIFRecord.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:gnub.bishopmuseum.org:False:deepreef</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>gnub.bishopmuseum.org</AssociatedConnSrvName>
+          <AssociatedConnUserName>deepreef</AssociatedConnUserName>
+          <FullPath>TransferIFRecord.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UpdateIFTNURecord.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:gnub.bishopmuseum.org:False:deepreef</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>gnub.bishopmuseum.org</AssociatedConnSrvName>
+          <AssociatedConnUserName>deepreef</AssociatedConnUserName>
+          <FullPath>UpdateIFTNURecord.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprDelete_TaxonNameUsage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sprDelete_TaxonNameUsage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprInsertUpdate_Hybrid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:gnub.bishopmuseum.org:False:deepreef</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>gnub.bishopmuseum.org</AssociatedConnSrvName>
+          <AssociatedConnUserName>deepreef</AssociatedConnUserName>
+          <FullPath>sprInsertUpdate_Hybrid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprInsertUpdate_Name.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sprInsertUpdate_Name.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprInsertUpdate_NomenEvent.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sprInsertUpdate_NomenEvent.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprInsertUpdate_PubListRef.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:gnub.bishopmuseum.org:False:deepreef</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>gnub.bishopmuseum.org</AssociatedConnSrvName>
+          <AssociatedConnUserName>deepreef</AssociatedConnUserName>
+          <FullPath>sprInsertUpdate_PubListRef.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprInsertUpdate_Reference.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:gnub.bishopmuseum.org:False:deepreef</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>gnub.bishopmuseum.org</AssociatedConnSrvName>
+          <AssociatedConnUserName>deepreef</AssociatedConnUserName>
+          <FullPath>sprInsertUpdate_Reference.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprRun_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sprRun_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprSelect_ModifiedTNUs.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sprSelect_ModifiedTNUs.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprSelect_NumDiffProvRecords.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sprSelect_NumDiffProvRecords.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprSelect_TNUDetails.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sprSelect_TNUDetails.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sprSelect_UpdateStatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sprSelect_UpdateStatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tgNomCode.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>tgNomCode.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tgNomStatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>tgNomStatus.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/TDWG/GNUB/IFTransfer</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>.</SccLocalPath>
+  <SccProvider>MSSCCI:SourceGear Vault Classic Client</SccProvider>
+</SqlWorkbenchSqlProject>

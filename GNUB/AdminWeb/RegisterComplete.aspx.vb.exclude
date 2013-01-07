@@ -1,0 +1,54 @@
+﻿
+Partial Class RegisterComplete
+    Inherits System.Web.UI.Page
+
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        If Request.QueryString.Get("uid") IsNot Nothing Then
+
+            Dim gda As New GNUBDataAccess.GNUBAdminEntities
+            Dim u = From users In gda.User Select users.Password, users.UserLogin Where UserLogin = Request.QueryString.Get("uid")
+
+            Dim sha As New System.Security.Cryptography.SHA1CryptoServiceProvider
+            Dim pwd As Byte() = sha.ComputeHash(UTF8Encoding.UTF8.GetBytes(Request.QueryString.Get("pwd")))
+
+            If pwd.Equals(u.First.Password) Then
+                errLabel.Text = "Registration successful.  Password needs to be set."
+            Else
+                regPanel.Visible = False
+                errLabel.Text = "Error with registration.  Contact the administrator for further help."
+                Dim lnk As New HyperLink
+                lnk.Target = "mailto:" + ConfigurationManager.AppSettings.Get("FromEmail")
+                lnk.Text = "Administrator: " + ConfigurationManager.AppSettings.Get("FromEmail")
+                Form.Controls.Add(lnk)
+            End If
+
+        End If
+
+    End Sub
+
+    Protected Sub doneBtn_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles doneBtn.Click
+        If pwdText.Text.Length > 0 AndAlso confirmPwdText.Text.Length > 0 AndAlso pwdText.Text = confirmPwdText.Text Then
+            Try
+                Dim gda As New GNUBDataAccess.GNUBAdminEntities
+                Dim u = From users In gda.User Where users.UserLogin = Request.QueryString.Get("uid")
+
+                Dim sha As New System.Security.Cryptography.SHA1CryptoServiceProvider
+                Dim pwd As Byte() = sha.ComputeHash(UTF8Encoding.UTF8.GetBytes(pwdText.Text))
+
+                u.First.Password = pwd
+                gda.SaveChanges()
+
+                Session("User") = u.First.UserLogin
+                Response.Redirect("~/default.aspx")
+
+            Catch ex As Exception
+                errLabel.Text = "Error updating password."
+            End Try
+
+        Else
+            errLabel.Text = "Passwords do not match."
+        End If
+    End Sub
+End Class
